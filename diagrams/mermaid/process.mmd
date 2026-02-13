@@ -1,0 +1,35 @@
+flowchart TD
+    Start([Start: Teacher receives email from Principal/Secretary OR recognizes end of quarter/semester is near])
+
+    D1{Is it time to finalize grades?}
+    S2[Step 2: Log in to PowerSchool with valid username and password]
+    S3[Step 3: Open PowerTeacher Pro under a currently taught class]
+    S4[Step 4: Navigate to Grading → Score Sheet, cycle through all classes, verify all quarter/semester grades line by line]
+    S5[Step 5: Open Settings → Traditional Grade Calculations, select class, choose Actions → Edit, verify grade weights]
+    S6[Step 6: Save grade calculation changes before exiting]
+    S7[Step 7: Navigate to Grading → Grades → Traditional to view final quarter/semester grade]
+    D2{Is the final grade correct?}
+    S8[Step 8: Mark 'Final Grade Status' as complete at bottom of screen]
+    D3{Are all classes finalized?}
+    S10[Step 10: Send email to Secretary confirming grades are stored, then log out]
+
+    End([End: All grades stored in PowerSchool and email confirmation sent to Secretary])
+    EndNoAction([End: No action needed])
+
+    Start --> D1
+    D1 -- Yes --> S2
+    D1 -- No --> EndNoAction
+    S2 --> S3
+    S3 --> S4
+    S4 --> S5
+    S5 --> S6
+    S6 --> S7
+    S7 --> D2
+    D2 -- Yes --> S8
+    D2 -- No --> S4
+    S8 --> D3
+    D3 -- Yes --> S10
+    D3 -- No --> S7
+    S10 --> End
+
+    %% Note: Secretary follow-up actions after receiving email are [TBD] per SOP
