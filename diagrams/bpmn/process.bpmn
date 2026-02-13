@@ -10,113 +10,143 @@
              exporterVersion="1.0">
 
   <collaboration id="Collaboration_1">
-    <participant id="Participant_Teacher" name="Teacher" processRef="Process_GradeFinalization" />
+    <participant id="Participant_Pool" name="Grade Finalization Process" processRef="Process_GradeFinalization" />
   </collaboration>
 
   <process id="Process_GradeFinalization" name="Grade Finalization Process" isExecutable="false">
 
-    <!-- Start Event -->
-    <startEvent id="StartEvent_1" name="Receive grading reminder or recognize end of quarter/semester">
-      <outgoing>Flow_Start_to_G1</outgoing>
+    <laneSet id="LaneSet_1">
+      <lane id="Lane_Administrator" name="Administrator">
+        <flowNodeRef>StartEvent_1</flowNodeRef>
+        <flowNodeRef>Task_SendReminder</flowNodeRef>
+      </lane>
+      <lane id="Lane_Teacher" name="Teacher">
+        <flowNodeRef>Gateway_1</flowNodeRef>
+        <flowNodeRef>EndEvent_NoAction</flowNodeRef>
+        <flowNodeRef>Task_2</flowNodeRef>
+        <flowNodeRef>Task_3</flowNodeRef>
+        <flowNodeRef>Task_4</flowNodeRef>
+        <flowNodeRef>Task_5</flowNodeRef>
+        <flowNodeRef>Task_6</flowNodeRef>
+        <flowNodeRef>Task_7</flowNodeRef>
+        <flowNodeRef>Gateway_2</flowNodeRef>
+        <flowNodeRef>Task_8</flowNodeRef>
+        <flowNodeRef>Gateway_3</flowNodeRef>
+        <flowNodeRef>Task_10</flowNodeRef>
+      </lane>
+      <lane id="Lane_Secretary" name="Secretary">
+        <flowNodeRef>Task_ReceiveConfirmation</flowNodeRef>
+        <flowNodeRef>EndEvent_Complete</flowNodeRef>
+      </lane>
+    </laneSet>
+
+    <!-- === Administrator Lane === -->
+
+    <startEvent id="StartEvent_1" name="Grading window begins">
+      <outgoing>Flow_Start_to_Send</outgoing>
     </startEvent>
 
-    <!-- Decision 1 -->
+    <task id="Task_SendReminder" name="Send grading reminder email to teachers">
+      <incoming>Flow_Start_to_Send</incoming>
+      <outgoing>Flow_Send_to_G1</outgoing>
+    </task>
+
+    <!-- === Teacher Lane === -->
+
     <exclusiveGateway id="Gateway_1" name="Is it time to finalize grades?">
-      <incoming>Flow_Start_to_G1</incoming>
+      <incoming>Flow_Send_to_G1</incoming>
       <outgoing>Flow_G1_Yes</outgoing>
       <outgoing>Flow_G1_No</outgoing>
     </exclusiveGateway>
 
-    <!-- End: No action -->
     <endEvent id="EndEvent_NoAction" name="No action needed">
       <incoming>Flow_G1_No</incoming>
     </endEvent>
 
-    <!-- Step 2 -->
     <task id="Task_2" name="Log in to PowerSchool">
       <incoming>Flow_G1_Yes</incoming>
       <outgoing>Flow_T2_T3</outgoing>
     </task>
 
-    <!-- Step 3 -->
     <task id="Task_3" name="Open PowerTeacher Pro under a currently taught class">
       <incoming>Flow_T2_T3</incoming>
       <outgoing>Flow_T3_T4</outgoing>
     </task>
 
-    <!-- Step 4 -->
     <task id="Task_4" name="Navigate to Grading → Score Sheet; verify all grades line by line">
       <incoming>Flow_T3_T4</incoming>
       <incoming>Flow_G2_No</incoming>
       <outgoing>Flow_T4_T5</outgoing>
     </task>
 
-    <!-- Step 5 -->
     <task id="Task_5" name="Open Settings → Traditional Grade Calculations; verify grade weights">
       <incoming>Flow_T4_T5</incoming>
       <outgoing>Flow_T5_T6</outgoing>
     </task>
 
-    <!-- Step 6 -->
     <task id="Task_6" name="Save grade calculation changes">
       <incoming>Flow_T5_T6</incoming>
       <outgoing>Flow_T6_T7</outgoing>
     </task>
 
-    <!-- Step 7 -->
     <task id="Task_7" name="Navigate to Grading → Grades → Traditional; view final grade">
       <incoming>Flow_T6_T7</incoming>
       <incoming>Flow_G3_No</incoming>
       <outgoing>Flow_T7_G2</outgoing>
     </task>
 
-    <!-- Decision 2 -->
     <exclusiveGateway id="Gateway_2" name="Is the final grade correct?">
       <incoming>Flow_T7_G2</incoming>
       <outgoing>Flow_G2_Yes</outgoing>
       <outgoing>Flow_G2_No</outgoing>
     </exclusiveGateway>
 
-    <!-- Step 8 -->
     <task id="Task_8" name="Mark Final Grade Status as complete">
       <incoming>Flow_G2_Yes</incoming>
       <outgoing>Flow_T8_G3</outgoing>
     </task>
 
-    <!-- Decision 3 -->
     <exclusiveGateway id="Gateway_3" name="Are all classes finalized?">
       <incoming>Flow_T8_G3</incoming>
       <outgoing>Flow_G3_Yes</outgoing>
       <outgoing>Flow_G3_No</outgoing>
     </exclusiveGateway>
 
-    <!-- Step 10 -->
     <task id="Task_10" name="Send email to Secretary confirming grades are stored; log out">
       <incoming>Flow_G3_Yes</incoming>
-      <outgoing>Flow_T10_End</outgoing>
+      <outgoing>Flow_T10_Receive</outgoing>
     </task>
 
-    <!-- End: Complete -->
-    <endEvent id="EndEvent_Complete" name="All grades stored and confirmation sent">
-      <incoming>Flow_T10_End</incoming>
+    <!-- === Secretary Lane === -->
+
+    <task id="Task_ReceiveConfirmation" name="Receive grade confirmation email">
+      <incoming>Flow_T10_Receive</incoming>
+      <outgoing>Flow_Receive_End</outgoing>
+    </task>
+
+    <endEvent id="EndEvent_Complete" name="All grades stored and confirmation received">
+      <incoming>Flow_Receive_End</incoming>
     </endEvent>
 
-    <!-- Sequence Flows -->
-    <sequenceFlow id="Flow_Start_to_G1" sourceRef="StartEvent_1" targetRef="Gateway_1" />
-    <sequenceFlow id="Flow_G1_Yes"      name="Yes" sourceRef="Gateway_1" targetRef="Task_2" />
-    <sequenceFlow id="Flow_G1_No"       name="No"  sourceRef="Gateway_1" targetRef="EndEvent_NoAction" />
-    <sequenceFlow id="Flow_T2_T3"       sourceRef="Task_2"    targetRef="Task_3" />
-    <sequenceFlow id="Flow_T3_T4"       sourceRef="Task_3"    targetRef="Task_4" />
-    <sequenceFlow id="Flow_T4_T5"       sourceRef="Task_4"    targetRef="Task_5" />
-    <sequenceFlow id="Flow_T5_T6"       sourceRef="Task_5"    targetRef="Task_6" />
-    <sequenceFlow id="Flow_T6_T7"       sourceRef="Task_6"    targetRef="Task_7" />
-    <sequenceFlow id="Flow_T7_G2"       sourceRef="Task_7"    targetRef="Gateway_2" />
-    <sequenceFlow id="Flow_G2_Yes"      name="Yes" sourceRef="Gateway_2" targetRef="Task_8" />
-    <sequenceFlow id="Flow_G2_No"       name="No"  sourceRef="Gateway_2" targetRef="Task_4" />
-    <sequenceFlow id="Flow_T8_G3"       sourceRef="Task_8"    targetRef="Gateway_3" />
-    <sequenceFlow id="Flow_G3_Yes"      name="Yes" sourceRef="Gateway_3" targetRef="Task_10" />
-    <sequenceFlow id="Flow_G3_No"       name="No"  sourceRef="Gateway_3" targetRef="Task_7" />
-    <sequenceFlow id="Flow_T10_End"     sourceRef="Task_10"   targetRef="EndEvent_Complete" />
+    <!-- === Sequence Flows === -->
+
+    <sequenceFlow id="Flow_Start_to_Send" sourceRef="StartEvent_1"        targetRef="Task_SendReminder" />
+    <sequenceFlow id="Flow_Send_to_G1"    sourceRef="Task_SendReminder"    targetRef="Gateway_1" />
+    <sequenceFlow id="Flow_G1_Yes"        name="Yes" sourceRef="Gateway_1" targetRef="Task_2" />
+    <sequenceFlow id="Flow_G1_No"         name="No"  sourceRef="Gateway_1" targetRef="EndEvent_NoAction" />
+    <sequenceFlow id="Flow_T2_T3"         sourceRef="Task_2"    targetRef="Task_3" />
+    <sequenceFlow id="Flow_T3_T4"         sourceRef="Task_3"    targetRef="Task_4" />
+    <sequenceFlow id="Flow_T4_T5"         sourceRef="Task_4"    targetRef="Task_5" />
+    <sequenceFlow id="Flow_T5_T6"         sourceRef="Task_5"    targetRef="Task_6" />
+    <sequenceFlow id="Flow_T6_T7"         sourceRef="Task_6"    targetRef="Task_7" />
+    <sequenceFlow id="Flow_T7_G2"         sourceRef="Task_7"    targetRef="Gateway_2" />
+    <sequenceFlow id="Flow_G2_Yes"        name="Yes" sourceRef="Gateway_2" targetRef="Task_8" />
+    <sequenceFlow id="Flow_G2_No"         name="No"  sourceRef="Gateway_2" targetRef="Task_4" />
+    <sequenceFlow id="Flow_T8_G3"         sourceRef="Task_8"    targetRef="Gateway_3" />
+    <sequenceFlow id="Flow_G3_Yes"        name="Yes" sourceRef="Gateway_3" targetRef="Task_10" />
+    <sequenceFlow id="Flow_G3_No"         name="No"  sourceRef="Gateway_3" targetRef="Task_7" />
+    <sequenceFlow id="Flow_T10_Receive"   sourceRef="Task_10"   targetRef="Task_ReceiveConfirmation" />
+    <sequenceFlow id="Flow_Receive_End"   sourceRef="Task_ReceiveConfirmation" targetRef="EndEvent_Complete" />
 
   </process>
 
@@ -124,160 +154,195 @@
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_1">
 
       <!-- Pool -->
-      <bpmndi:BPMNShape id="Participant_Teacher_di" bpmnElement="Participant_Teacher" isHorizontal="true">
-        <omgdc:Bounds x="120" y="80" width="1820" height="380" />
+      <bpmndi:BPMNShape id="Participant_Pool_di" bpmnElement="Participant_Pool" isHorizontal="true">
+        <omgdc:Bounds x="120" y="60" width="2000" height="620" />
       </bpmndi:BPMNShape>
 
-      <!-- Start Event -->
+      <!-- Lane: Administrator -->
+      <bpmndi:BPMNShape id="Lane_Administrator_di" bpmnElement="Lane_Administrator" isHorizontal="true">
+        <omgdc:Bounds x="150" y="60" width="1970" height="150" />
+      </bpmndi:BPMNShape>
+
+      <!-- Lane: Teacher -->
+      <bpmndi:BPMNShape id="Lane_Teacher_di" bpmnElement="Lane_Teacher" isHorizontal="true">
+        <omgdc:Bounds x="150" y="210" width="1970" height="320" />
+      </bpmndi:BPMNShape>
+
+      <!-- Lane: Secretary -->
+      <bpmndi:BPMNShape id="Lane_Secretary_di" bpmnElement="Lane_Secretary" isHorizontal="true">
+        <omgdc:Bounds x="150" y="530" width="1970" height="150" />
+      </bpmndi:BPMNShape>
+
+      <!-- === Administrator Lane Elements === -->
+
       <bpmndi:BPMNShape id="StartEvent_1_di" bpmnElement="StartEvent_1">
-        <omgdc:Bounds x="180" y="232" width="36" height="36" />
+        <omgdc:Bounds x="202" y="117" width="36" height="36" />
       </bpmndi:BPMNShape>
 
-      <!-- Gateway 1 -->
+      <bpmndi:BPMNShape id="Task_SendReminder_di" bpmnElement="Task_SendReminder">
+        <omgdc:Bounds x="290" y="95" width="100" height="80" />
+      </bpmndi:BPMNShape>
+
+      <!-- === Teacher Lane Elements === -->
+
       <bpmndi:BPMNShape id="Gateway_1_di" bpmnElement="Gateway_1" isMarkerVisible="true">
-        <omgdc:Bounds x="265" y="225" width="50" height="50" />
+        <omgdc:Bounds x="435" y="345" width="50" height="50" />
       </bpmndi:BPMNShape>
 
-      <!-- End: No action -->
       <bpmndi:BPMNShape id="EndEvent_NoAction_di" bpmnElement="EndEvent_NoAction">
-        <omgdc:Bounds x="272" y="382" width="36" height="36" />
+        <omgdc:Bounds x="442" y="472" width="36" height="36" />
       </bpmndi:BPMNShape>
 
-      <!-- Task 2 -->
       <bpmndi:BPMNShape id="Task_2_di" bpmnElement="Task_2">
-        <omgdc:Bounds x="370" y="210" width="100" height="80" />
+        <omgdc:Bounds x="540" y="330" width="100" height="80" />
       </bpmndi:BPMNShape>
 
-      <!-- Task 3 -->
       <bpmndi:BPMNShape id="Task_3_di" bpmnElement="Task_3">
-        <omgdc:Bounds x="520" y="210" width="100" height="80" />
+        <omgdc:Bounds x="690" y="330" width="100" height="80" />
       </bpmndi:BPMNShape>
 
-      <!-- Task 4 -->
       <bpmndi:BPMNShape id="Task_4_di" bpmnElement="Task_4">
-        <omgdc:Bounds x="670" y="210" width="100" height="80" />
+        <omgdc:Bounds x="840" y="330" width="100" height="80" />
       </bpmndi:BPMNShape>
 
-      <!-- Task 5 -->
       <bpmndi:BPMNShape id="Task_5_di" bpmnElement="Task_5">
-        <omgdc:Bounds x="820" y="210" width="100" height="80" />
+        <omgdc:Bounds x="990" y="330" width="100" height="80" />
       </bpmndi:BPMNShape>
 
-      <!-- Task 6 -->
       <bpmndi:BPMNShape id="Task_6_di" bpmnElement="Task_6">
-        <omgdc:Bounds x="970" y="210" width="100" height="80" />
+        <omgdc:Bounds x="1140" y="330" width="100" height="80" />
       </bpmndi:BPMNShape>
 
-      <!-- Task 7 -->
       <bpmndi:BPMNShape id="Task_7_di" bpmnElement="Task_7">
-        <omgdc:Bounds x="1120" y="210" width="100" height="80" />
+        <omgdc:Bounds x="1290" y="330" width="100" height="80" />
       </bpmndi:BPMNShape>
 
-      <!-- Gateway 2 -->
       <bpmndi:BPMNShape id="Gateway_2_di" bpmnElement="Gateway_2" isMarkerVisible="true">
-        <omgdc:Bounds x="1275" y="225" width="50" height="50" />
+        <omgdc:Bounds x="1445" y="345" width="50" height="50" />
       </bpmndi:BPMNShape>
 
-      <!-- Task 8 -->
       <bpmndi:BPMNShape id="Task_8_di" bpmnElement="Task_8">
-        <omgdc:Bounds x="1380" y="210" width="100" height="80" />
+        <omgdc:Bounds x="1550" y="330" width="100" height="80" />
       </bpmndi:BPMNShape>
 
-      <!-- Gateway 3 -->
       <bpmndi:BPMNShape id="Gateway_3_di" bpmnElement="Gateway_3" isMarkerVisible="true">
-        <omgdc:Bounds x="1535" y="225" width="50" height="50" />
+        <omgdc:Bounds x="1705" y="345" width="50" height="50" />
       </bpmndi:BPMNShape>
 
-      <!-- Task 10 -->
       <bpmndi:BPMNShape id="Task_10_di" bpmnElement="Task_10">
-        <omgdc:Bounds x="1640" y="210" width="100" height="80" />
+        <omgdc:Bounds x="1810" y="330" width="100" height="80" />
       </bpmndi:BPMNShape>
 
-      <!-- End: Complete -->
+      <!-- === Secretary Lane Elements === -->
+
+      <bpmndi:BPMNShape id="Task_ReceiveConfirmation_di" bpmnElement="Task_ReceiveConfirmation">
+        <omgdc:Bounds x="1810" y="565" width="100" height="80" />
+      </bpmndi:BPMNShape>
+
       <bpmndi:BPMNShape id="EndEvent_Complete_di" bpmnElement="EndEvent_Complete">
-        <omgdc:Bounds x="1800" y="232" width="36" height="36" />
+        <omgdc:Bounds x="1962" y="587" width="36" height="36" />
       </bpmndi:BPMNShape>
 
-      <!-- Edges -->
-      <bpmndi:BPMNEdge id="Flow_Start_to_G1_di" bpmnElement="Flow_Start_to_G1">
-        <omgdi:waypoint x="216" y="250" />
-        <omgdi:waypoint x="265" y="250" />
+      <!-- === Edges === -->
+
+      <!-- Start → Send Reminder -->
+      <bpmndi:BPMNEdge id="Flow_Start_to_Send_di" bpmnElement="Flow_Start_to_Send">
+        <omgdi:waypoint x="238" y="135" />
+        <omgdi:waypoint x="290" y="135" />
       </bpmndi:BPMNEdge>
 
+      <!-- Send Reminder → Gateway 1 (crosses from Admin to Teacher lane) -->
+      <bpmndi:BPMNEdge id="Flow_Send_to_G1_di" bpmnElement="Flow_Send_to_G1">
+        <omgdi:waypoint x="390" y="135" />
+        <omgdi:waypoint x="460" y="135" />
+        <omgdi:waypoint x="460" y="345" />
+      </bpmndi:BPMNEdge>
+
+      <!-- Gateway 1 → Yes → Task 2 -->
       <bpmndi:BPMNEdge id="Flow_G1_Yes_di" bpmnElement="Flow_G1_Yes">
-        <omgdi:waypoint x="315" y="250" />
-        <omgdi:waypoint x="370" y="250" />
+        <omgdi:waypoint x="485" y="370" />
+        <omgdi:waypoint x="540" y="370" />
       </bpmndi:BPMNEdge>
 
+      <!-- Gateway 1 → No → End (No action) -->
       <bpmndi:BPMNEdge id="Flow_G1_No_di" bpmnElement="Flow_G1_No">
-        <omgdi:waypoint x="290" y="275" />
-        <omgdi:waypoint x="290" y="382" />
+        <omgdi:waypoint x="460" y="395" />
+        <omgdi:waypoint x="460" y="472" />
       </bpmndi:BPMNEdge>
 
       <bpmndi:BPMNEdge id="Flow_T2_T3_di" bpmnElement="Flow_T2_T3">
-        <omgdi:waypoint x="470" y="250" />
-        <omgdi:waypoint x="520" y="250" />
+        <omgdi:waypoint x="640" y="370" />
+        <omgdi:waypoint x="690" y="370" />
       </bpmndi:BPMNEdge>
 
       <bpmndi:BPMNEdge id="Flow_T3_T4_di" bpmnElement="Flow_T3_T4">
-        <omgdi:waypoint x="620" y="250" />
-        <omgdi:waypoint x="670" y="250" />
+        <omgdi:waypoint x="790" y="370" />
+        <omgdi:waypoint x="840" y="370" />
       </bpmndi:BPMNEdge>
 
       <bpmndi:BPMNEdge id="Flow_T4_T5_di" bpmnElement="Flow_T4_T5">
-        <omgdi:waypoint x="770" y="250" />
-        <omgdi:waypoint x="820" y="250" />
+        <omgdi:waypoint x="940" y="370" />
+        <omgdi:waypoint x="990" y="370" />
       </bpmndi:BPMNEdge>
 
       <bpmndi:BPMNEdge id="Flow_T5_T6_di" bpmnElement="Flow_T5_T6">
-        <omgdi:waypoint x="920" y="250" />
-        <omgdi:waypoint x="970" y="250" />
+        <omgdi:waypoint x="1090" y="370" />
+        <omgdi:waypoint x="1140" y="370" />
       </bpmndi:BPMNEdge>
 
       <bpmndi:BPMNEdge id="Flow_T6_T7_di" bpmnElement="Flow_T6_T7">
-        <omgdi:waypoint x="1070" y="250" />
-        <omgdi:waypoint x="1120" y="250" />
+        <omgdi:waypoint x="1240" y="370" />
+        <omgdi:waypoint x="1290" y="370" />
       </bpmndi:BPMNEdge>
 
       <bpmndi:BPMNEdge id="Flow_T7_G2_di" bpmnElement="Flow_T7_G2">
-        <omgdi:waypoint x="1220" y="250" />
-        <omgdi:waypoint x="1275" y="250" />
+        <omgdi:waypoint x="1390" y="370" />
+        <omgdi:waypoint x="1445" y="370" />
       </bpmndi:BPMNEdge>
 
+      <!-- Gateway 2 → Yes → Task 8 -->
       <bpmndi:BPMNEdge id="Flow_G2_Yes_di" bpmnElement="Flow_G2_Yes">
-        <omgdi:waypoint x="1325" y="250" />
-        <omgdi:waypoint x="1380" y="250" />
+        <omgdi:waypoint x="1495" y="370" />
+        <omgdi:waypoint x="1550" y="370" />
       </bpmndi:BPMNEdge>
 
-      <!-- Loop back: Gateway 2 No → Task 4 -->
+      <!-- Gateway 2 → No → Task 4 (loop back below) -->
       <bpmndi:BPMNEdge id="Flow_G2_No_di" bpmnElement="Flow_G2_No">
-        <omgdi:waypoint x="1300" y="275" />
-        <omgdi:waypoint x="1300" y="350" />
-        <omgdi:waypoint x="720" y="350" />
-        <omgdi:waypoint x="720" y="290" />
+        <omgdi:waypoint x="1470" y="395" />
+        <omgdi:waypoint x="1470" y="470" />
+        <omgdi:waypoint x="890" y="470" />
+        <omgdi:waypoint x="890" y="410" />
       </bpmndi:BPMNEdge>
 
       <bpmndi:BPMNEdge id="Flow_T8_G3_di" bpmnElement="Flow_T8_G3">
-        <omgdi:waypoint x="1480" y="250" />
-        <omgdi:waypoint x="1535" y="250" />
+        <omgdi:waypoint x="1650" y="370" />
+        <omgdi:waypoint x="1705" y="370" />
       </bpmndi:BPMNEdge>
 
+      <!-- Gateway 3 → Yes → Task 10 -->
       <bpmndi:BPMNEdge id="Flow_G3_Yes_di" bpmnElement="Flow_G3_Yes">
-        <omgdi:waypoint x="1585" y="250" />
-        <omgdi:waypoint x="1640" y="250" />
+        <omgdi:waypoint x="1755" y="370" />
+        <omgdi:waypoint x="1810" y="370" />
       </bpmndi:BPMNEdge>
 
-      <!-- Loop back: Gateway 3 No → Task 7 -->
+      <!-- Gateway 3 → No → Task 7 (loop back above) -->
       <bpmndi:BPMNEdge id="Flow_G3_No_di" bpmnElement="Flow_G3_No">
-        <omgdi:waypoint x="1560" y="275" />
-        <omgdi:waypoint x="1560" y="150" />
-        <omgdi:waypoint x="1170" y="150" />
-        <omgdi:waypoint x="1170" y="210" />
+        <omgdi:waypoint x="1730" y="345" />
+        <omgdi:waypoint x="1730" y="270" />
+        <omgdi:waypoint x="1340" y="270" />
+        <omgdi:waypoint x="1340" y="330" />
       </bpmndi:BPMNEdge>
 
-      <bpmndi:BPMNEdge id="Flow_T10_End_di" bpmnElement="Flow_T10_End">
-        <omgdi:waypoint x="1740" y="250" />
-        <omgdi:waypoint x="1800" y="250" />
+      <!-- Task 10 → Receive Confirmation (crosses from Teacher to Secretary lane) -->
+      <bpmndi:BPMNEdge id="Flow_T10_Receive_di" bpmnElement="Flow_T10_Receive">
+        <omgdi:waypoint x="1860" y="410" />
+        <omgdi:waypoint x="1860" y="565" />
+      </bpmndi:BPMNEdge>
+
+      <!-- Receive Confirmation → End -->
+      <bpmndi:BPMNEdge id="Flow_Receive_End_di" bpmnElement="Flow_Receive_End">
+        <omgdi:waypoint x="1910" y="605" />
+        <omgdi:waypoint x="1962" y="605" />
       </bpmndi:BPMNEdge>
 
     </bpmndi:BPMNPlane>
