@@ -250,3 +250,38 @@
 
 - `process-package/validation-log.md` (Entry 2 added)
 - `process-package/CLAUDE.md` (updated with validation status and next steps)
+
+---
+
+## Entry 9 — Screenshots and README Rework
+
+**Date:** 2026-02-15
+**Tool:** Claude Code (CLI)
+
+### Prompt
+
+> Add screenshots from the network drive to the artifacts folder (.png files only). Then rework the README to include: what this project is and why it matters, how to navigate the folder structure, how to regenerate diagrams (step-by-step), what files are source-of-truth vs generated, and where to find versioning and change history.
+
+### What Was Done
+
+1. Copied 8 `.png` screenshot files from `\\COLUM-FILE\Faculty\jgeanuracos\Desktop\UC Teach\IT7039 SS\M02 SOPv0\` to `artifacts/screenshots/`.
+2. Rewrote `README.md` from scratch with five new sections:
+   - **What This Project Is** — explains the purpose and why standardizing grade finalization matters.
+   - **Folder Structure** — updated tree including the new screenshots, with inline annotations.
+   - **Source of Truth vs. Generated Files** — table distinguishing authored files (SOP.md, glossary) from generated outputs (SVG, PNG).
+   - **Regenerating Diagrams** — numbered step-by-step instructions (prerequisites, Mermaid, BPMN).
+   - **Versioning and Change History** — points to CHANGELOG.md, validation-log.md, and git history.
+3. Updated `CHANGELOG.md` with a `[1.2.0]` entry for the screenshots and README rework.
+
+### Key Decisions
+
+- Version bumped to 1.2.0 (minor) since new content was added (screenshots) and the README was substantially expanded.
+- Screenshot filenames were kept as-is from the source to preserve recognizability.
+- The README now explicitly labels `SOP.md` as the single source of truth, with a clear workflow: edit SOP first → update diagram sources → regenerate rendered outputs.
+- Non-`.png` files in the source directory were intentionally excluded per user request.
+
+### Output
+
+- `process-package/artifacts/screenshots/` (8 new .png files)
+- `process-package/README.md` (rewritten)
+- `process-package/CHANGELOG.md` (v1.2.0 added)

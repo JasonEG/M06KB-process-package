@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0] — 2026-02-15
+
+### Added
+
+- 8 PowerSchool screenshots added to `artifacts/screenshots/` (gradebook, weights, grade status, completion email, etc.).
+- Reworked `README.md` with sections for project purpose, folder navigation, source-of-truth vs. generated files, step-by-step diagram regeneration, and versioning/change history.
+
 ## [1.1.1] — 2026-02-15
 
 ### Added
