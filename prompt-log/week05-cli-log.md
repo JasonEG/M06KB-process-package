@@ -162,3 +162,32 @@
 - `process-package/diagrams/bpmn/process.png` (regenerated)
 - `process-package/README.md` (expanded)
 - `process-package/CHANGELOG.md` (v1.1.0 added)
+
+---
+
+## Entry 6 — CLAUDE.md Git Repository Fix
+
+**Date:** 2026-02-15
+**Tool:** Claude Code (CLI)
+
+### Prompt
+
+> Check out the CLAUDE.md file and give me a rundown of the directory. Investigate why git is not detected and fix it.
+
+### What Was Done
+
+1. Discovered that Claude Code did not detect a git repository at the `M05CLI` root directory.
+2. Investigated the prompt log and found that the git repo was initialized inside `process-package/` (Entry 2), not at the `M05CLI` root.
+3. Confirmed the repo at `process-package/` was healthy — on branch `master`, up to date with `origin`, clean working tree, 7 commits.
+4. Updated `CLAUDE.md` with a new **Git Repository** section documenting that the repo lives inside `process-package/` and all git operations must be run from there.
+5. Moved `CLAUDE.md` from the `M05CLI` root into `process-package/` so it is tracked by the git repository.
+6. Committed and pushed the change to `origin/master`.
+
+### Key Decisions
+
+- Added explicit git location guidance to `CLAUDE.md` to prevent future confusion about where the repo root is.
+- Moved `CLAUDE.md` into the repo rather than restructuring the repo, since all other project files already live in `process-package/`.
+
+### Output
+
+- `process-package/CLAUDE.md` (moved from `M05CLI/CLAUDE.md`, updated with git repo section)
