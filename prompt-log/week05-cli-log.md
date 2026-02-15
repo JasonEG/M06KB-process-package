@@ -191,3 +191,32 @@
 ### Output
 
 - `process-package/CLAUDE.md` (moved from `M05CLI/CLAUDE.md`, updated with git repo section)
+
+---
+
+## Entry 7 — SOP / Mermaid / BPMN Validation
+
+**Date:** 2026-02-15
+**Tool:** Claude Code (CLI)
+
+### Prompt
+
+> Validate that the SOP, Mermaid diagram, and BPMN diagram all describe the same process. Record the results in a validation log file.
+
+### What Was Done
+
+1. Read all three artifacts (`SOP.md`, `process.mmd`, `process.bpmn`) and compared them step-by-step.
+2. Verified that all 10 SOP steps, 3 decision points, and all loop-back targets match across all three artifacts.
+3. Identified two intentional differences in the BPMN: `Task_SendReminder` (Administrator) and `Task_ReceiveConfirmation` (Secretary), which represent roles from the SOP's roles section but are not numbered steps.
+4. Created `validation-log.md` in `process-package/` to record this and future validation checks.
+
+### Key Decisions
+
+- Result: **PASS** — all three artifacts are consistent.
+- The BPMN's additional Admin/Secretary tasks were noted as intentional expansions, not inconsistencies.
+- The Mermaid diagram was left as-is, scoped to the Teacher's 10 numbered steps.
+- Created a dedicated validation log file rather than embedding results in the prompt log, to support future validation entries.
+
+### Output
+
+- `process-package/validation-log.md` (new file)
