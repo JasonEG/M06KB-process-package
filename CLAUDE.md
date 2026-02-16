@@ -4,7 +4,15 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a **process package** for Module 05 (CLI). It is a documentation deliverable, not a software project — there is no source code, build system, or test suite.
+This is a **process package** for Module 06 (Knowledge Base). It builds on the Module 05 (CLI) process package and is a documentation deliverable, not a software project — there is no source code, build system, or test suite.
+
+## Working Directory
+
+The working directory for this project is on the network drive:
+
+```
+\\COLUM-FILE\Faculty\jgeanuracos\Desktop\UC Teach\IT7039 SS\M06 KB\process-package\
+```
 
 ## Repository Structure
 
@@ -18,16 +26,16 @@ All content lives under `process-package/`:
   - `bpmn/process.bpmn` + `process.png` — BPMN 2.0 process diagram
   - `mermaid/process.mmd` + `process.svg` — Mermaid flowchart
 - **artifacts/** — Supporting materials (`examples/`, `screenshots/`)
-- **prompt-log/** — AI prompt interaction logs (`week05-cli-log.md`)
+- **prompt-log/** — AI prompt interaction logs
 
-## Git Repository
+## Origin
 
-The git repository is located inside `process-package/`, **not** at the `M05CLI` root. All git operations (commit, push, status, etc.) must be run from the `process-package/` directory.
+This process package was originally created for Module 05 (CLI) and copied here for Module 06 (KB). The M05 version remains at:
 
-- **Remote:** `https://github.com/JasonEG/M05CLI-process-package.git`
-- **Branch:** `master`
+- **Local:** `C:\Users\jgeanuracos\Documents\M05CLI\process-package\`
+- **GitHub:** `https://github.com/JasonEG/M05CLI-process-package.git` (branch `master`)
 
-## Working in This Repo
+## Working in This Project
 
 - All documents are Markdown. Edits should preserve existing heading structure.
 - Diagrams exist in both source format (`.mmd`, `.bpmn`) and rendered format (`.svg`, `.png`). When updating a diagram, edit the source file; the rendered file should be regenerated.
@@ -37,13 +45,17 @@ The git repository is located inside `process-package/`, **not** at the `M05CLI`
 
 ## Where We Left Off
 
-**Date:** 2026-02-15
+**Date:** 2026-02-16
+**Module transition:** M05 CLI → M06 KB
 
-Completed validations:
-1. **SOP ↔ Mermaid ↔ BPMN** — PASS. All steps, decisions, and loop-backs match. BPMN includes additional Admin/Secretary tasks from the SOP roles section (intentional).
-2. **Glossary ↔ SOP** — PASS with one minor gap. "Traditional Grades" (Step 7 screen) is not in the glossary but was deemed not necessary to add.
+Baseline state (carried over from M05 v1.2.0):
+1. SOP, diagrams (BPMN + Mermaid), glossary, README, CHANGELOG — all consistent and validated.
+2. 8 PowerSchool screenshots in `artifacts/screenshots/`.
+3. `artifacts/examples/` is still empty.
+4. Prompt log current through Entry 9.
 
-Next steps to pick up:
-- Any further validation checks the user wants to run
-- The `artifacts/examples/` and `artifacts/screenshots/` directories are still empty — may need supporting evidence added
-- CHANGELOG could be updated if more changes are made
+Next steps:
+- Review and adapt the process package contents for M06 (Knowledge Base) requirements
+- Update SOP, diagrams, glossary, and README as needed for the new module context
+- Add any new artifacts or examples required for M06
+- Set up a new git repo if needed for M06 submission
