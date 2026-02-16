@@ -25,6 +25,9 @@ All content lives under `process-package/`:
 - **diagrams/** — Process visualizations
   - `bpmn/process.bpmn` + `process.png` — BPMN 2.0 process diagram
   - `mermaid/process.mmd` + `process.svg` — Mermaid flowchart
+- **docs/** — Knowledge-base deliverables
+  - `source/` — Markdown source files (`SOP_v1.md`, `KB_Page.md`, `Quick_Reference.md`)
+  - `exports/` — PDF exports of source files
 - **artifacts/** — Supporting materials (`examples/`, `screenshots/`)
 - **prompt-log/** — AI prompt interaction logs
 
@@ -34,6 +37,11 @@ This process package was originally created for Module 05 (CLI) and copied here 
 
 - **Local:** `C:\Users\jgeanuracos\Documents\M05CLI\process-package\`
 - **GitHub:** `https://github.com/JasonEG/M05CLI-process-package.git` (branch `master`)
+
+## Git Repository
+
+- **Remote:** `https://github.com/JasonEG/M06KB-process-package.git`
+- **Branch:** `master`
 
 ## Working in This Project
 
@@ -48,14 +56,18 @@ This process package was originally created for Module 05 (CLI) and copied here 
 **Date:** 2026-02-16
 **Module transition:** M05 CLI → M06 KB
 
-Baseline state (carried over from M05 v1.2.0):
+Current state (v1.3.0):
 1. SOP, diagrams (BPMN + Mermaid), glossary, README, CHANGELOG — all consistent and validated.
 2. 8 PowerSchool screenshots in `artifacts/screenshots/`.
 3. `artifacts/examples/` is still empty.
-4. Prompt log current through Entry 9.
+4. Prompt log current through Entry 10.
+5. `docs/` folder created with `source/` and `exports/` subdirectories.
+6. `docs/source/SOP_v1.md` populated from `SOP.md` (readable Markdown format).
+7. `docs/source/KB_Page.md` and `docs/source/Quick_Reference.md` are empty, pending content.
+8. PDFs in `docs/exports/` are placeholders.
 
 Next steps:
-- Review and adapt the process package contents for M06 (Knowledge Base) requirements
-- Update SOP, diagrams, glossary, and README as needed for the new module context
-- Add any new artifacts or examples required for M06
-- Set up a new git repo if needed for M06 submission
+- Populate `KB_Page.md` with knowledge-base article content
+- Populate `Quick_Reference.md` with a condensed reference guide
+- Export finalized source files to PDF and replace placeholders in `docs/exports/`
+- Update diagrams, glossary, and README as needed for the KB module context

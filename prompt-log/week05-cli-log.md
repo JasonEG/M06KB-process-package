@@ -285,3 +285,38 @@
 - `process-package/artifacts/screenshots/` (8 new .png files)
 - `process-package/README.md` (rewritten)
 - `process-package/CHANGELOG.md` (v1.2.0 added)
+
+---
+
+## Entry 10 — M06 KB Docs Folder Structure and SOP_v1
+
+**Date:** 2026-02-16
+**Tool:** Claude Code (CLI)
+
+### Prompt
+
+> Inside of the process-package folder, create a docs folder with source and exports subfolders. Populate SOP_v1.md from the existing SOP.md.
+
+### What Was Done
+
+1. Created `docs/source/` and `docs/exports/` directories under `process-package/`.
+2. Created three source Markdown files: `SOP_v1.md`, `KB_Page.md`, `Quick_Reference.md`.
+3. Created three placeholder PDF files: `SOP_v1.pdf`, `KB_Page.pdf`, `Quick_Reference.pdf` in `docs/exports/`.
+4. Converted `SOP.md` (JSON format) into a clean, human-readable Markdown document and wrote it to `docs/source/SOP_v1.md`.
+   - Structured with sections: Purpose, Scope, Roles & Responsibilities, Prerequisites, Inputs & Outputs, Procedure (10 steps with decision points), and Exceptions.
+   - Used tables for Roles and Exceptions, blockquotes for decision points, and bold navigation paths.
+
+### Key Decisions
+
+- The JSON-structured SOP was converted to readable Markdown rather than copied verbatim, to serve as a polished knowledge-base-ready document.
+- PDF files in `docs/exports/` are empty placeholders to be replaced once source files are finalized.
+- `KB_Page.md` and `Quick_Reference.md` were created empty, to be populated in subsequent steps.
+
+### Output
+
+- `process-package/docs/source/SOP_v1.md` (populated from SOP.md)
+- `process-package/docs/source/KB_Page.md` (empty)
+- `process-package/docs/source/Quick_Reference.md` (empty)
+- `process-package/docs/exports/SOP_v1.pdf` (placeholder)
+- `process-package/docs/exports/KB_Page.pdf` (placeholder)
+- `process-package/docs/exports/Quick_Reference.pdf` (placeholder)

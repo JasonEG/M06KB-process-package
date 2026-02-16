@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.3.0] — 2026-02-16
+
+### Added
+
+- `docs/` folder structure with `source/` and `exports/` subdirectories for knowledge-base deliverables.
+- `docs/source/SOP_v1.md` — human-readable Markdown SOP converted from the JSON-formatted `SOP.md`.
+- `docs/source/KB_Page.md` and `docs/source/Quick_Reference.md` (empty, pending content).
+- Placeholder PDFs in `docs/exports/` (`SOP_v1.pdf`, `KB_Page.pdf`, `Quick_Reference.pdf`).
+
 ## [1.2.0] — 2026-02-15
 
 ### Added
