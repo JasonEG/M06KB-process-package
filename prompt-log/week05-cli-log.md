@@ -320,3 +320,74 @@
 - `process-package/docs/exports/SOP_v1.pdf` (placeholder)
 - `process-package/docs/exports/KB_Page.pdf` (placeholder)
 - `process-package/docs/exports/Quick_Reference.pdf` (placeholder)
+
+---
+
+## Entry 11 — KB_Page.md Population
+
+**Date:** 2026-02-17
+**Tool:** Claude Code (CLI)
+
+### Prompt
+
+> Convert this SOP into a scannable KB page with headings: TL;DR, When to use, Prerequisites, Roles, Steps (simplified), Exceptions/Troubleshooting, Links/Resources, Owner + Last updated. Do not invent steps. Flag missing info as [TBD].
+
+### What Was Done
+
+1. Read `docs/source/SOP_v1.md`, `SOP.md`, and `glossary.md` to gather all source content before writing.
+2. Wrote `docs/source/KB_Page.md` with 8 sections derived strictly from SOP v1.5.
+3. Simplified the 10 SOP steps into plain-language one-liners preserving nav paths and decision logic.
+4. Exceptions section formatted as a 3-column table (Problem / What to Do / Escalate If…) matching the SOP's trigger/resolution/escalation structure.
+5. Flagged 5 items as [TBD]: Secretary follow-up actions, process owner, KB page author, PowerSchool login URL, IT support link, review cycle.
+6. In review, resolved all [TBD] items except Secretary follow-up actions:
+   - Owner and KB page author: `jgeanuracos`
+   - Review cycle: January and May
+   - PowerSchool login URL: `https://ps-co.metasolutions.net`
+   - IT Help Desk: `https://ww3.autotask.net/ClientPortal/login.aspx?ci=302139&accountId=431`
+
+### Key Decisions
+
+- Steps 5 and 6 from the SOP (verify weights / save and repeat) merged into one bullet with a "repeat per class" note — user confirmed this was appropriate for the KB format.
+- "Do not use this process to enter individual assignment grades" line included from the SOP's out-of-scope section to set audience expectations.
+- Relative links to SOP, glossary, and diagrams preserved as framework; noted for update if published to a portal.
+
+### Output
+
+- `process-package/docs/source/KB_Page.md` (populated)
+
+---
+
+## Entry 12 — Quick_Reference.md Population and Revision
+
+**Date:** 2026-02-17
+**Tool:** Claude Code (CLI)
+
+### Prompt (initial)
+
+> Work on Quick_Reference.md [condensed reference guide].
+
+### Prompt (revision)
+
+> Check what you just created against these parameters: a 1-page quick reference: 6–10 bullet steps max, include if/then decision points, include escalation/contact info, include common failure points. Preserve approvals and required checks.
+
+### What Was Done
+
+1. Wrote initial `Quick_Reference.md` with a 9-item checklist, Key Reminders table, Quick Troubleshooting table, and Key Links table.
+2. Evaluated the initial version against the 5 stated parameters — identified three gaps: no if/then decision points, escalation contact not prominent, required checks not visually distinguished.
+3. Rewrote the file to address all gaps:
+   - Merged email + log out into one step, reducing to 8 steps (within 6–10).
+   - Integrated inline if/then decision branches into Steps 1, 4, 6, and 7.
+   - Added `[REQUIRED]` badge to Steps 4, 5, and 7 (required checks/approvals).
+   - Expanded troubleshooting to a 3-column table (Problem / Fix / Escalate To) with escalation path per row.
+   - Added a dedicated **Escalation** section with the IT Help Desk link.
+   - Folded the 10%/90% weight detail directly into Step 5; removed the separate Key Reminders table.
+
+### Key Decisions
+
+- All content sourced strictly from SOP v1.5 — nothing invented.
+- Secretary follow-up escalation not included (remains [TBD] in the SOP).
+- Key Reminders section removed in revision; its content was redistributed inline where it is most actionable.
+
+### Output
+
+- `process-package/docs/source/Quick_Reference.md` (populated and revised)

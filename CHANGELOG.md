@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.4.0] — 2026-02-17
+
+### Added
+
+- `docs/source/KB_Page.md` — Knowledge-base article with 8 sections (TL;DR, When to Use, Prerequisites, Roles, Steps (Simplified), Exceptions/Troubleshooting, Links/Resources, Owner + Last Updated). Populated from SOP v1.5. One remaining gap flagged as [TBD]: Secretary follow-up actions after notification.
+- `docs/source/Quick_Reference.md` — 1-page quick reference with 8-step checklist, inline if/then decision points, `[REQUIRED]` markers on required checks (Steps 4, 5, 7), Common Failure Points table with escalation column, and a dedicated Escalation section.
+
+### Changed
+
+- `docs/source/KB_Page.md`: Owner (jgeanuracos), review cycle (January and May), PowerSchool login URL, and IT Help Desk link populated — all previously [TBD].
+
 ## [1.3.0] — 2026-02-16
 
 ### Added
