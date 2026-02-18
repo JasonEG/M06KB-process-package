@@ -391,3 +391,33 @@
 ### Output
 
 - `process-package/docs/source/Quick_Reference.md` (populated and revised)
+
+---
+
+## Entry 13 — Checklist.md Creation
+
+**Date:** 2026-02-18
+**Tool:** Claude Code (CLI)
+
+### Prompt
+
+> Convert the procedure into a checklist with checkboxes, using the format: [ ] action verb + object + success condition. Keep the same sequence and decision logic.
+
+### What Was Done
+
+1. Read `docs/source/SOP_v1.md` and `docs/source/Quick_Reference.md` for source content and existing step structure.
+2. Created `docs/source/Checklist.md` with all 10 SOP steps converted to GitHub-flavored markdown checkboxes.
+3. Applied the requested format to each step: `[ ] action verb + object + success condition`.
+4. Preserved all three decision points from the SOP as inline if/then branches beneath the relevant steps (Steps 1, 7, and 9).
+5. Updated `CHANGELOG.md` with a `[1.5.0]` entry.
+
+### Key Decisions
+
+- Created a new file rather than modifying Quick_Reference.md, since the checklist follows the full 10-step SOP sequence (Quick_Reference merged Steps 5 and 6).
+- Decision logic rendered as indented `→ if X → do Y` lines rather than separate checkbox items, to keep them non-actionable and visually subordinate.
+- Loop-back targets named explicitly (e.g., "return to Verify Grades (Step 4)") to match SOP cross-references.
+
+### Output
+
+- `process-package/docs/source/Checklist.md` (new file)
+- `process-package/CHANGELOG.md` (v1.5.0 added)

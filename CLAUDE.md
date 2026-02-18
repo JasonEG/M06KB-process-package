@@ -26,7 +26,7 @@ All content lives under `process-package/`:
   - `bpmn/process.bpmn` + `process.png` — BPMN 2.0 process diagram
   - `mermaid/process.mmd` + `process.svg` — Mermaid flowchart
 - **docs/** — Knowledge-base deliverables
-  - `source/` — Markdown source files (`SOP_v1.md`, `KB_Page.md`, `Quick_Reference.md`)
+  - `source/` — Markdown source files (`SOP_v1.md`, `KB_Page.md`, `Quick_Reference.md`, `Checklist.md`)
   - `exports/` — PDF exports of source files
 - **artifacts/** — Supporting materials (`examples/`, `screenshots/`)
 - **prompt-log/** — AI prompt interaction logs
@@ -53,18 +53,19 @@ This process package was originally created for Module 05 (CLI) and copied here 
 
 ## Where We Left Off
 
-**Date:** 2026-02-17
+**Date:** 2026-02-18
 **Module transition:** M05 CLI → M06 KB
 
-Current state (v1.4.0):
+Current state (v1.5.0):
 1. SOP, diagrams (BPMN + Mermaid), glossary, README, CHANGELOG — all consistent and validated.
 2. 8 PowerSchool screenshots in `artifacts/screenshots/`.
 3. `artifacts/examples/` is still empty.
-4. Prompt log current through Entry 12.
+4. Prompt log current through Entry 13.
 5. `docs/source/SOP_v1.md` populated from `SOP.md` (readable Markdown format).
 6. `docs/source/KB_Page.md` populated — 8 sections, all [TBD] items resolved except Secretary follow-up actions after notification.
 7. `docs/source/Quick_Reference.md` populated — 8-step checklist with inline if/then decision points, [REQUIRED] markers, Common Failure Points table with escalation column, and dedicated Escalation section.
-8. PDFs in `docs/exports/` are still placeholders.
+8. `docs/source/Checklist.md` populated — 10-step procedural checklist with GitHub-flavored markdown checkboxes; format: action verb + object + success condition; decision logic preserved as inline if/then branches.
+9. PDFs in `docs/exports/` are still placeholders.
 
 Next steps:
 - Export finalized source files to PDF and replace placeholders in `docs/exports/`

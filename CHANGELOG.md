@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.5.0] — 2026-02-18
+
+### Added
+
+- `docs/source/Checklist.md` — 10-step procedural checklist with GitHub-flavored markdown checkboxes. Each step follows the format: action verb + object + success condition. Decision logic from the SOP (Steps 1, 7, 9) preserved as inline if/then branches.
+
 ## [1.4.0] — 2026-02-17
 
 ### Added
