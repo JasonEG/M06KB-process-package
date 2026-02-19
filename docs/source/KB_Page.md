@@ -60,9 +60,9 @@ Before you start, confirm you have all of the following:
 
 7. **Review the final grade.** Go to **Grading → Grades → Traditional** to view the calculated final grade for the class. If the grade is incorrect, return to Step 4.
 
-8. **Mark grades complete.** Scroll to **Final Grade Status** at the bottom of the screen and check **"Semester or Quarter Final Grades Are Complete."** An optional comment may be entered.
+8. **Mark grades complete.** Scroll to **Final Grade Status** at the bottom of the screen and check **"Semester or Quarter Final Grades Are Complete."** An optional comment may be entered. **Save before exiting.**
 
-9. **Repeat Steps 7–8 for all classes** using the grading-period drop-down at the top of the screen.
+9. **Repeat for all classes** using the grading-period drop-down at the top of the screen. If all classes are finalized → proceed to Step 10. If not → return to Step 7.
 
 10. **Notify the secretary.** Send an email confirming all grades are stored in PowerSchool, then log out.
 

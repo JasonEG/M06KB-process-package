@@ -421,3 +421,70 @@
 
 - `process-package/docs/source/Checklist.md` (new file)
 - `process-package/CHANGELOG.md` (v1.5.0 added)
+
+---
+
+## Entry 14 — KB_Page.md Cross-Artifact Validation and Fix
+
+**Date:** 2026-02-18
+**Tool:** Claude Code (CLI)
+
+### Prompt
+
+> Examine Checklist.md, Quick_Reference.md, and KB_Page.md against SOP_v1.md and check to see if we removed a prerequisite, approval, or decision rule.
+
+### What Was Done
+
+1. Read all four documents simultaneously and compared every prerequisite, approval gate, and decision rule from SOP_v1.md against each derived document.
+2. Found all three decision points and all approval gates (Step 4 correction gate, Step 5 weight spec, Step 6 save requirement) correctly present in Checklist.md and Quick_Reference.md.
+3. Identified two omissions in KB_Page.md:
+   - **Step 8:** Missing "Save" after the Final Grade Status checkbox instruction. Checklist and Quick Reference both explicitly include Save at this step; KB_Page did not.
+   - **Step 9:** Decision 3 ("Are all classes finalized?") was implicit only — "Repeat Steps 7–8 for all classes" — with no explicit Yes/No branches or loop-back target. Checklist and Quick Reference both state the decision explicitly.
+4. Applied both fixes to `docs/source/KB_Page.md`.
+5. Added CHANGELOG entry v1.5.1 and this prompt log entry.
+
+### Key Decisions
+
+- Step 8 fix phrased as "Save before exiting" to match the language used in Step 6 (same pattern: verify → save before exiting).
+- Step 9 decision rewritten as an inline if/then: "If all classes are finalized → proceed to Step 10. If not → return to Step 7." — consistent with the style used in Steps 7 and 9 of Checklist.md.
+- All prerequisites (credentials, class list, grading period) were confirmed present in KB_Page's prerequisites table; no changes needed there.
+- Checklist and Quick Reference have no explicit prerequisites section — noted as expected for those formats, not flagged as a defect.
+
+### Output
+
+- `process-package/docs/source/KB_Page.md` (Step 8 and Step 9 corrected)
+- `process-package/CHANGELOG.md` (v1.5.1 added)
+
+---
+
+## Entry 15 — Glossary URL Addition and README M06 Update
+
+**Date:** 2026-02-18
+**Tool:** Claude Code (CLI)
+
+### Prompt
+
+> Can we update the diagrams/glossary next? [followed by] Add the URL to the glossary PowerSchool entry. [followed by] Update the readme first please. [followed by] Yes, batch the changelog and prompt log now.
+
+### What Was Done
+
+1. Read all three diagram/glossary files simultaneously and compared against SOP_v1.md and the KB docs.
+2. Confirmed both diagrams (Mermaid and BPMN) are accurate and consistent with SOP v1.5 — no changes needed.
+3. Identified one glossary gap: the PowerSchool login URL (`ps-co.metasolutions.net`) is documented in `KB_Page.md` and `Quick_Reference.md` but was absent from the glossary's PowerSchool entry.
+4. Added the login URL to the `glossary.md` PowerSchool entry.
+5. Read `README.md` and identified three M06 gaps: module label still said "Module 05 — CLI"; the `docs/` folder was entirely absent from the folder structure tree; the Source of Truth table had no entries for any `docs/source/` files.
+6. Applied three README fixes: updated module label to "Module 06 — KB"; added full `docs/` tree to the folder structure; added all four `docs/source/` files and `docs/exports/*.pdf` to the Source of Truth table.
+7. Added CHANGELOG entry v1.5.2 and this prompt log entry.
+
+### Key Decisions
+
+- Diagrams required no changes — the process itself hasn't changed between M05 and M06, only the documentation deliverable format has.
+- URL added as a markdown hyperlink inline in the glossary table cell, consistent with the link style used in KB_Page and Quick_Reference.
+- Checklist.pdf not added to the folder structure or exports — no PDF placeholder was created for it in v1.3.0, and no PDF export has been requested yet.
+- README Source of Truth table labels `docs/source/` files as "Authored" (not generated) since they are hand-edited Markdown, and `docs/exports/` as "Generated" since they will be produced from the source files.
+
+### Output
+
+- `process-package/glossary.md` (PowerSchool URL added)
+- `process-package/README.md` (module label, folder structure, source of truth table updated)
+- `process-package/CHANGELOG.md` (v1.5.2 added)

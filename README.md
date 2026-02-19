@@ -1,6 +1,6 @@
 # Grade Finalization Process Package
 
-Module 05 — CLI Process Package
+Module 06 — KB Process Package
 
 ## What This Project Is
 
@@ -38,6 +38,17 @@ process-package/
 │       ├── Trad Grade Calc.png
 │       └── Weights screen.png
 │
+├── docs/
+│   ├── source/
+│   │   ├── SOP_v1.md          # Human-readable SOP (derived from SOP.md)
+│   │   ├── KB_Page.md         # Knowledge-base article
+│   │   ├── Quick_Reference.md # 1-page quick reference guide
+│   │   └── Checklist.md       # Procedural checklist with checkboxes
+│   └── exports/
+│       ├── SOP_v1.pdf         # PDF export (placeholder)
+│       ├── KB_Page.pdf        # PDF export (placeholder)
+│       └── Quick_Reference.pdf # PDF export (placeholder)
+│
 └── prompt-log/
     └── week05-cli-log.md      # AI prompt interaction log
 ```
@@ -53,6 +64,11 @@ process-package/
 | `diagrams/bpmn/process.png` | **Generated** from `process.bpmn`. Do not hand-edit. |
 | `glossary.md` | Authored reference — defines terms used in the SOP. |
 | `validation-log.md` | Authored reference — records consistency checks between artifacts. |
+| `docs/source/SOP_v1.md` | Authored — human-readable SOP derived from `SOP.md`. |
+| `docs/source/KB_Page.md` | Authored — knowledge-base article derived from `SOP.md`. |
+| `docs/source/Quick_Reference.md` | Authored — 1-page quick reference derived from `SOP.md`. |
+| `docs/source/Checklist.md` | Authored — procedural checklist derived from `SOP.md`. |
+| `docs/exports/*.pdf` | **Generated** from the corresponding `docs/source/` files. Do not hand-edit. |
 
 When making process changes, always update **SOP.md first**, then update the diagram source files to match, and finally regenerate the rendered outputs.
 

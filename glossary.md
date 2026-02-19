@@ -12,7 +12,7 @@
 
 | Term | Definition |
 |------|------------|
-| **PowerSchool** | The student information system (SIS) used to store and manage student grades. Teachers log in to PowerSchool to access grading functions. |
+| **PowerSchool** | The student information system (SIS) used to store and manage student grades. Teachers log in to PowerSchool to access grading functions. Login: [ps-co.metasolutions.net](https://ps-co.metasolutions.net) |
 | **PowerTeacher Pro** | A grading module within PowerSchool that teachers use to enter scores, configure grade calculations, and finalize quarter/semester grades. Accessed by selecting it under a currently taught class. |
 | **Score Sheet** | A screen in PowerTeacher Pro (Grading → Score Sheet) where teachers review and verify individual assignment and grade entries for each class. |
 | **Traditional Grade Calculations** | A settings screen in PowerTeacher Pro (Settings → Traditional Grade Calculations) where grade category weights (e.g., 10% exam, 90% coursework) are configured per class. |

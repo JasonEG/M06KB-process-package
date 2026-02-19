@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.5.2] — 2026-02-18
+
+### Changed
+
+- `glossary.md` PowerSchool entry: Added login URL (`ps-co.metasolutions.net`) to match the URL already documented in `KB_Page.md` and `Quick_Reference.md`.
+- `README.md`: Updated module label from "Module 05 — CLI" to "Module 06 — KB".
+- `README.md` Folder Structure: Added full `docs/` tree (`source/` with `SOP_v1.md`, `KB_Page.md`, `Quick_Reference.md`, `Checklist.md`; `exports/` with three PDF placeholders).
+- `README.md` Source of Truth table: Added entries for all four `docs/source/` files and `docs/exports/*.pdf`.
+
+## [1.5.1] — 2026-02-18
+
+### Fixed
+
+- `docs/source/KB_Page.md` Step 8: Added "Save before exiting" after the Final Grade Status checkbox instruction — omission identified during cross-artifact validation against Checklist.md and Quick_Reference.md.
+- `docs/source/KB_Page.md` Step 9: Replaced implicit "Repeat Steps 7–8 for all classes" with an explicit decision rule — "If all classes are finalized → proceed to Step 10. If not → return to Step 7." — matching the decision logic present in Checklist.md and Quick_Reference.md.
+
 ## [1.5.0] — 2026-02-18
 
 ### Added
