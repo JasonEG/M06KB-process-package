@@ -488,3 +488,74 @@
 - `process-package/glossary.md` (PowerSchool URL added)
 - `process-package/README.md` (module label, folder structure, source of truth table updated)
 - `process-package/CHANGELOG.md` (v1.5.2 added)
+
+---
+
+## Entry 16 — README "Start Here" Navigation Section
+
+**Date:** 2026-02-19
+**Tool:** Claude Code (CLI)
+
+### Prompt
+
+> Does our readme have an easy to find, accessible link to the KB document? [followed by] Yes, add that section near the top and please make it so it is welcoming to any user.
+
+### What Was Done
+
+1. Read `README.md` and confirmed no clickable links to any `docs/source/` files existed — only plain-text paths in the folder tree and Source of Truth table.
+2. Added a "Start Here" section between "What This Project Is" and "Folder Structure" containing:
+   - A 4-row navigation table linking directly to `KB_Page.md`, `Quick_Reference.md`, `Checklist.md`, and `SOP_v1.md` with plain-language descriptions of when to use each.
+   - Role-based guidance directing teachers to the quick-reference docs and administrators/trainers to the full SOP and KB article.
+   - A horizontal rule to visually separate the navigation section from the technical folder structure below.
+3. Updated `CHANGELOG.md` with a `[1.5.3]` entry and updated `CLAUDE.md` to v1.5.3.
+
+### Key Decisions
+
+- Placed the section above the folder structure so any user landing on the README encounters navigation before technical detail.
+- Used a table format for scannability — single-column bullet lists would have been harder to parse at a glance.
+- Role guidance kept to two sentences to remain welcoming without being prescriptive.
+
+### Output
+
+- `process-package/README.md` ("Start Here" section added)
+- `process-package/CHANGELOG.md` (v1.5.3 added)
+- `process-package/CLAUDE.md` (updated to v1.5.3)
+
+---
+
+## Entry 17 — Narrated Walkthrough Outline
+
+**Date:** 2026-02-19
+**Tool:** Claude Code (CLI)
+
+### Prompt
+
+> Write a 1–3 minute narrated walkthrough outline with time stamps (0:00–0:15, etc.). Focus on why it matters, the main steps, where users get stuck, and where to get help.
+
+### What Was Done
+
+1. Read `docs/source/KB_Page.md` and `docs/source/Quick_Reference.md` for source content before writing.
+2. Created `artifacts/examples/walkthrough-outline.md` — a narrated script outline targeting 1:45–2:00 with six timestamped segments:
+   - `[0:00–0:15]` Hook — why grade finalization matters (stakes: transcript errors)
+   - `[0:15–0:30]` When to start — principal/secretary email or end-of-period recognition
+   - `[0:30–1:00]` Main steps — log in, Score Sheet verification, Traditional Grade Calculations weights
+   - `[1:00–1:25]` Marking complete and notifying — Final Grade Status checkbox, secretary email, log out
+   - `[1:25–1:45]` Where users get stuck — three documented failure points with fixes
+   - `[1:45–2:00]` Where to get help — KB article and IT Help Desk portal
+3. Included production notes on narration pace, screen recording guidance, closed captions, and chapter menu.
+4. Updated `CHANGELOG.md` with a `[1.5.4]` entry and updated `CLAUDE.md` to v1.5.4.
+5. Committed all v1.5.3 and v1.5.4 changes and pushed to `origin/master` on GitHub (commit `adcd883`).
+
+### Key Decisions
+
+- Tone specified as calm, direct, and encouraging — the audience is under a deadline and needs confidence, not formality.
+- Failure points drawn strictly from the Exceptions/Troubleshooting table in `KB_Page.md` — nothing invented.
+- Saved to `artifacts/examples/` since that directory is designated for supporting materials referenced by the SOP.
+- Production notes included to make the outline usable by anyone recording the video, not just the original author.
+
+### Output
+
+- `process-package/artifacts/examples/walkthrough-outline.md` (new file)
+- `process-package/CHANGELOG.md` (v1.5.4 added)
+- `process-package/CLAUDE.md` (updated to v1.5.4)
+- GitHub: commit `adcd883` pushed to `origin/master`
