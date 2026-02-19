@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.5.4] — 2026-02-19
+
+### Added
+
+- `artifacts/examples/walkthrough-outline.md` — Narrated walkthrough outline (1:45–2:00) with timestamps covering why grade finalization matters, the main steps, common failure points, and escalation resources.
+
+## [1.5.3] — 2026-02-19
+
+### Changed
+
+- `README.md`: Added "Start Here" section above Folder Structure with a role-based navigation table linking directly to `KB_Page.md`, `Quick_Reference.md`, `Checklist.md`, and `SOP_v1.md`. Includes audience-specific guidance for teachers and administrators.
+
 ## [1.5.2] — 2026-02-18
 
 ### Changed

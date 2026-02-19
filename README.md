@@ -8,6 +8,22 @@ This repository is a **process package** that documents how teachers finalize qu
 
 Getting this process right matters because grade finalization is high-stakes and time-sensitive. A missed weight setting or an un-stored grade can cascade into transcript errors. This package gives teachers a single reference they can follow step by step, and gives administrators a basis for training, auditing, and continuous improvement.
 
+## Start Here
+
+Not sure where to look? Here are the most useful documents for getting started:
+
+| I want to… | Go here |
+|---|---|
+| Get a full explanation of the process | [Knowledge Base Article](docs/source/KB_Page.md) |
+| See all steps at a glance | [Quick Reference Guide](docs/source/Quick_Reference.md) |
+| Follow along step by step | [Procedural Checklist](docs/source/Checklist.md) |
+| Read the complete, authoritative procedure | [Standard Operating Procedure](docs/source/SOP_v1.md) |
+
+If you are a **teacher**, the [Quick Reference Guide](docs/source/Quick_Reference.md) and [Checklist](docs/source/Checklist.md) are the best places to start.
+If you are an **administrator or trainer**, the [Knowledge Base Article](docs/source/KB_Page.md) and [SOP](docs/source/SOP_v1.md) have the full detail you need.
+
+---
+
 ## Folder Structure
 
 ```

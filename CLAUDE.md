@@ -53,10 +53,10 @@ This process package was originally created for Module 05 (CLI) and copied here 
 
 ## Where We Left Off
 
-**Date:** 2026-02-18
+**Date:** 2026-02-19 (updated)
 **Module transition:** M05 CLI → M06 KB
 
-Current state (v1.5.2):
+Current state (v1.5.4):
 1. SOP, diagrams (BPMN + Mermaid), glossary, README, CHANGELOG — all consistent and validated.
 2. 8 PowerSchool screenshots in `artifacts/screenshots/`.
 3. `artifacts/examples/` is still empty.
@@ -66,8 +66,9 @@ Current state (v1.5.2):
 7. `docs/source/Quick_Reference.md` populated — 8-step checklist with inline if/then decision points, [REQUIRED] markers, Common Failure Points table with escalation column, and dedicated Escalation section.
 8. `docs/source/Checklist.md` populated — 10-step procedural checklist with GitHub-flavored markdown checkboxes; format: action verb + object + success condition; decision logic preserved as inline if/then branches.
 9. `glossary.md` — PowerSchool login URL added (v1.5.2).
-10. `README.md` — Updated to M06 KB; docs/ folder added to structure tree and Source of Truth table (v1.5.2).
-11. PDFs in `docs/exports/` are still placeholders.
+10. `README.md` — "Start Here" section added above Folder Structure with role-based navigation table linking directly to all four docs/source/ files (v1.5.3).
+11. `artifacts/examples/walkthrough-outline.md` — Narrated walkthrough outline with timestamps (v1.5.4).
+12. PDFs in `docs/exports/` are still placeholders.
 
 Next steps:
 - Export finalized source files to PDF and replace placeholders in `docs/exports/`
