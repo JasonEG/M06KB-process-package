@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.6.1] — 2026-02-20
+
+### Changed
+
+- `docs/source/KB_Page.md`: Editorial improvements for clarity and skimmability — no meaning changed, SOP alignment preserved.
+  - `## TL;DR` → `## Summary`; paragraph replaced with 4 scannable bullets.
+  - `## Steps (Simplified)` → `## Steps`
+  - `## Exceptions / Troubleshooting` → `## Troubleshooting`
+  - `## Links / Resources` → `## Related Documents and Tools`
+  - `## Owner + Last Updated` → `## Document Info`
+  - Jargon: "grading window is open" → "grade finalization period has started"; "allocated as percentages or total points" → "split across other assignments or categories"; "grading-period drop-down" → "grading period menu"; "contact support" → "contact IT support" (×2).
+  - Link text: removed filenames and technical acronyms ("Mermaid", "BPMN") from all link labels.
+  - Last updated date bumped to 2026-02-20.
+- `docs/exports/KB_Page.pdf`: Regenerated from updated source.
+
 ## [1.6.0] — 2026-02-20
 
 ### Added
