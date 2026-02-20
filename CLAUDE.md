@@ -56,18 +56,18 @@ This process package was originally created for Module 05 (CLI) and copied here 
 **Date:** 2026-02-20 (updated)
 **Module transition:** M05 CLI → M06 KB
 
-Current state (v1.6.0):
+Current state (v1.6.1):
 1. SOP, diagrams (BPMN + Mermaid), glossary, README, CHANGELOG — all consistent and validated.
 2. 8 PowerSchool screenshots in `artifacts/screenshots/`.
 3. `artifacts/examples/walkthrough-outline.md` — Narrated walkthrough outline with timestamps (v1.5.4).
 4. Prompt log current through Entry 17.
 5. `docs/source/SOP_v1.md` populated from `SOP.md` (readable Markdown format).
-6. `docs/source/KB_Page.md` populated — 8 sections, all [TBD] items resolved except Secretary follow-up actions after notification. Step 8 Save and Step 9 explicit decision rule fixed (v1.5.1).
+6. `docs/source/KB_Page.md` — editorial improvements applied (v1.6.1): headings renamed, TL;DR replaced with Summary bullets, jargon replaced with plain language, link text cleaned up. SOP step numbering and decision rules unchanged.
 7. `docs/source/Quick_Reference.md` populated — 8-step checklist with inline if/then decision points, [REQUIRED] markers, Common Failure Points table with escalation column, and dedicated Escalation section.
 8. `docs/source/Checklist.md` populated — 10-step procedural checklist with GitHub-flavored markdown checkboxes; format: action verb + object + success condition; decision logic preserved as inline if/then branches.
 9. `glossary.md` — PowerSchool login URL added (v1.5.2).
 10. `README.md` — "Start Here" section with role-based navigation table; folder structure and Source of Truth table include all four PDF exports (v1.6.0).
-11. `docs/exports/` — All four PDFs generated and in place: `SOP_v1.pdf`, `KB_Page.pdf`, `Quick_Reference.pdf`, `Checklist.pdf`. Cross-validated: no prerequisites, approval gates, or decision rules missing from any document.
+11. `docs/exports/` — All four PDFs generated and in place: `SOP_v1.pdf`, `KB_Page.pdf`, `Quick_Reference.pdf`, `Checklist.pdf`. `KB_Page.pdf` regenerated after v1.6.1 edits.
 
 Next steps:
-- Commit and push all changes to GitHub
+- No outstanding items — project is current and pushed to GitHub.
