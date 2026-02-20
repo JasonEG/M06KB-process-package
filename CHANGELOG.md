@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.6.0] — 2026-02-20
+
+### Added
+
+- `docs/exports/Checklist.pdf` — PDF export of `docs/source/Checklist.md` (new; no placeholder existed previously).
+
+### Changed
+
+- `docs/exports/SOP_v1.pdf` — Replaced placeholder with generated PDF export of `docs/source/SOP_v1.md`.
+- `docs/exports/KB_Page.pdf` — Replaced placeholder with generated PDF export of `docs/source/KB_Page.md`.
+- `docs/exports/Quick_Reference.pdf` — Replaced placeholder with generated PDF export of `docs/source/Quick_Reference.md`.
+- `README.md` Folder Structure: Added `Checklist.pdf` to the `docs/exports/` tree.
+- `README.md` Source of Truth table: Added `docs/exports/Checklist.pdf` entry.
+
 ## [1.5.4] — 2026-02-19
 
 ### Added

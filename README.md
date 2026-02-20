@@ -61,9 +61,10 @@ process-package/
 │   │   ├── Quick_Reference.md # 1-page quick reference guide
 │   │   └── Checklist.md       # Procedural checklist with checkboxes
 │   └── exports/
-│       ├── SOP_v1.pdf         # PDF export (placeholder)
-│       ├── KB_Page.pdf        # PDF export (placeholder)
-│       └── Quick_Reference.pdf # PDF export (placeholder)
+│       ├── SOP_v1.pdf         # PDF export
+│       ├── KB_Page.pdf        # PDF export
+│       ├── Quick_Reference.pdf # PDF export
+│       └── Checklist.pdf      # PDF export
 │
 └── prompt-log/
     └── week05-cli-log.md      # AI prompt interaction log
@@ -84,7 +85,10 @@ process-package/
 | `docs/source/KB_Page.md` | Authored — knowledge-base article derived from `SOP.md`. |
 | `docs/source/Quick_Reference.md` | Authored — 1-page quick reference derived from `SOP.md`. |
 | `docs/source/Checklist.md` | Authored — procedural checklist derived from `SOP.md`. |
-| `docs/exports/*.pdf` | **Generated** from the corresponding `docs/source/` files. Do not hand-edit. |
+| `docs/exports/SOP_v1.pdf` | **Generated** from `docs/source/SOP_v1.md`. Do not hand-edit. |
+| `docs/exports/KB_Page.pdf` | **Generated** from `docs/source/KB_Page.md`. Do not hand-edit. |
+| `docs/exports/Quick_Reference.pdf` | **Generated** from `docs/source/Quick_Reference.md`. Do not hand-edit. |
+| `docs/exports/Checklist.pdf` | **Generated** from `docs/source/Checklist.md`. Do not hand-edit. |
 
 When making process changes, always update **SOP.md first**, then update the diagram source files to match, and finally regenerate the rendered outputs.
 
