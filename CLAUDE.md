@@ -60,7 +60,7 @@ Current state (v1.6.1):
 1. SOP, diagrams (BPMN + Mermaid), glossary, README, CHANGELOG — all consistent and validated.
 2. 8 PowerSchool screenshots in `artifacts/screenshots/`.
 3. `artifacts/examples/walkthrough-outline.md` — Narrated walkthrough outline with timestamps (v1.5.4).
-4. Prompt log current through Entry 17.
+4. Prompt log current through Entry 19.
 5. `docs/source/SOP_v1.md` populated from `SOP.md` (readable Markdown format).
 6. `docs/source/KB_Page.md` — editorial improvements applied (v1.6.1): headings renamed, TL;DR replaced with Summary bullets, jargon replaced with plain language, link text cleaned up. SOP step numbering and decision rules unchanged.
 7. `docs/source/Quick_Reference.md` populated — 8-step checklist with inline if/then decision points, [REQUIRED] markers, Common Failure Points table with escalation column, and dedicated Escalation section.

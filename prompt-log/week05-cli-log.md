@@ -559,3 +559,87 @@
 - `process-package/CHANGELOG.md` (v1.5.4 added)
 - `process-package/CLAUDE.md` (updated to v1.5.4)
 - GitHub: commit `adcd883` pushed to `origin/master`
+
+---
+
+## Entry 18 — PDF Export of All Four Source Documents
+
+**Date:** 2026-02-20
+**Tool:** Claude Code (CLI)
+
+### Prompt
+
+> Export all four source documents to PDF and make sure all supporting files are updated.
+
+### What Was Done
+
+1. Used `md-to-pdf` to generate PDF exports of all four source Markdown files in `docs/source/`.
+2. Replaced the three existing placeholder PDFs (`SOP_v1.pdf`, `KB_Page.pdf`, `Quick_Reference.pdf`) with the generated files in `docs/exports/`.
+3. Created `docs/exports/Checklist.pdf` as a new export — no placeholder had existed for it previously.
+4. Cross-validated all four PDFs against their source Markdown files to confirm no prerequisites, approval gates, or decision rules were missing from any document.
+5. Updated `README.md`: added `Checklist.pdf` to the `docs/exports/` folder tree and added it to the Source of Truth table; removed "placeholder" labels from all four PDF entries.
+6. Added CHANGELOG entry v1.6.0 and updated CLAUDE.md to v1.6.0.
+7. Committed all changes and pushed to `origin/master` (commit `f2f9b19`).
+
+### Key Decisions
+
+- `md-to-pdf` used for all four exports to ensure consistent formatting across documents.
+- Checklist.pdf added as a new file rather than a placeholder since it was ready to export.
+- README "placeholder" labels removed to reflect that all exports now contain real content.
+
+### Output
+
+- `process-package/docs/exports/SOP_v1.pdf` (generated; replaced placeholder)
+- `process-package/docs/exports/KB_Page.pdf` (generated; replaced placeholder)
+- `process-package/docs/exports/Quick_Reference.pdf` (generated; replaced placeholder)
+- `process-package/docs/exports/Checklist.pdf` (new; no prior placeholder)
+- `process-package/README.md` (folder tree and Source of Truth table updated)
+- `process-package/CHANGELOG.md` (v1.6.0 added)
+- `process-package/CLAUDE.md` (updated to v1.6.0)
+- GitHub: commit `f2f9b19` pushed to `origin/master`
+
+---
+
+## Entry 19 — KB_Page.md Editorial Improvements
+
+**Date:** 2026-02-20
+**Tool:** Claude Code (CLI)
+
+### Prompt
+
+> Review KB_Page.md for clarity and skimmability. Improve headings, replace jargon with plain language, and clean up link text — without changing any SOP step numbering, decision rules, or meaning.
+
+### What Was Done
+
+1. Read `docs/source/KB_Page.md` in full before making changes.
+2. Renamed five section headings for clarity and plain language:
+   - `## TL;DR` → `## Summary`
+   - `## Steps (Simplified)` → `## Steps`
+   - `## Exceptions / Troubleshooting` → `## Troubleshooting`
+   - `## Links / Resources` → `## Related Documents and Tools`
+   - `## Owner + Last Updated` → `## Document Info`
+3. Replaced the `## Summary` paragraph with 4 scannable bullet points covering the core audience, trigger, actions, and outcome.
+4. Replaced jargon throughout with plain language:
+   - "grading window is open" → "grade finalization period has started"
+   - "allocated as percentages or total points" → "split across other assignments or categories"
+   - "grading-period drop-down" → "grading period menu"
+   - "contact support" → "contact IT support" (two occurrences)
+5. Cleaned up all link text: removed filenames and technical acronyms ("Mermaid", "BPMN") from link labels.
+6. Bumped the Last Updated date to 2026-02-20.
+7. Regenerated `docs/exports/KB_Page.pdf` from the updated source.
+8. Added CHANGELOG entry v1.6.1 and updated CLAUDE.md to v1.6.1.
+9. Committed all changes and pushed to `origin/master` (commits `3bdfe8c`, `cf67a62`).
+
+### Key Decisions
+
+- SOP step numbering, decision rules, and all procedural content preserved exactly — editorial changes only.
+- TL;DR renamed to Summary because "TL;DR" is informal and may not be recognized by all users.
+- Link text cleaned of filenames and tool names to be navigable without technical knowledge.
+
+### Output
+
+- `process-package/docs/source/KB_Page.md` (editorial improvements applied)
+- `process-package/docs/exports/KB_Page.pdf` (regenerated from updated source)
+- `process-package/CHANGELOG.md` (v1.6.1 added)
+- `process-package/CLAUDE.md` (updated to v1.6.1)
+- GitHub: commits `3bdfe8c` and `cf67a62` pushed to `origin/master`
