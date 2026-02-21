@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.6.2] — 2026-02-21
+
+### Changed
+
+- `docs/source/KB_Page.md`: Publish-readiness improvements — content and meaning preserved, no SOP alignment changes.
+  - Added YAML front matter block: 7 tags (`PowerSchool`, `Grading`, `Grade Finalization`, `Quarter`, `Semester`, `Teacher`, `PowerTeacher Pro`) and `category: Academic Processes` for platform discoverability.
+  - `## Summary`: Added plain-language intro sentence before bullet list describing what the process is and when it applies.
+  - `## Document Info`: Owner and author fields updated from username (`jgeanuracos`) to full name and mailto link (`Jason Geanuracos — jgeanuracos@clsdraiders.org`).
+  - Added `## Frequently Asked Questions` section (5 entries) between Troubleshooting and Related Documents: no-email trigger, all-classes requirement, quarter vs. semester difference, correcting grades after marking complete, and login/IT escalation.
+  - Added clickable screenshot links below Steps 4, 5, 8, and 10, referencing images in `artifacts/screenshots/` (URL-encoded filenames).
+- `docs/exports/KB_Page.pdf`: Regenerated from updated source using `md-to-pdf`.
+
 ## [1.6.1] — 2026-02-20
 
 ### Changed

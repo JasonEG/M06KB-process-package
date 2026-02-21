@@ -643,3 +643,39 @@
 - `process-package/CHANGELOG.md` (v1.6.1 added)
 - `process-package/CLAUDE.md` (updated to v1.6.1)
 - GitHub: commits `3bdfe8c` and `cf67a62` pushed to `origin/master`
+
+---
+
+## Entry 20 — KB_Page.md Publish-Readiness Improvements
+
+**Date:** 2026-02-21
+**Tool:** Claude Code (CLI)
+
+### Prompt
+
+> Examine KB_Page.md against a publish-ready KB page checklist. Fix: tags/categories for discoverability, owner contact info, summary intro sentence, FAQ section, and screenshot links.
+
+### What Was Done
+
+1. Read `docs/source/KB_Page.md` in full and performed a gap analysis against 8 publish-readiness criteria.
+2. Added YAML front matter block at the top of the file: 7 tags and `category: Academic Processes`.
+3. Added a plain-language intro sentence to `## Summary` before the existing bullet list.
+4. Updated `## Document Info`: replaced username `jgeanuracos` with `Jason Geanuracos — jgeanuracos@clsdraiders.org` (as a mailto link) in both the Process Owner and KB Page Author rows.
+5. Added `## Frequently Asked Questions` section (5 Q&A entries) between Troubleshooting and Related Documents, covering: no-email trigger, all-classes requirement, quarter vs. semester difference, correcting grades after marking complete, and login/IT escalation.
+6. Added clickable screenshot links (URL-encoded) below Steps 4, 5, 8, and 10, referencing images already in `artifacts/screenshots/`. Step 5 includes three links (Traditional Grade Calc menu, Quarter weights, Semester weights); Step 8 includes two (Quarter and Semester Final Grade Status).
+7. Regenerated `docs/exports/KB_Page.pdf` using `md-to-pdf`; moved output from `docs/source/` to `docs/exports/`.
+8. Added CHANGELOG entry v1.6.2 and updated CLAUDE.md to v1.6.2.
+
+### Key Decisions
+
+- YAML front matter retained in source for platform discoverability; renders as a small block at top of PDF (acceptable for now).
+- Screenshot links use URL-encoded filenames (spaces → `%20`) for cross-platform compatibility.
+- `Weights screen.png` not linked — determined to be redundant with the more specific quarter/semester weights screenshots already linked in Step 5.
+- Secretary `[TBD]` row left unchanged — not addressed in this session.
+
+### Output
+
+- `process-package/docs/source/KB_Page.md` (publish-readiness improvements applied)
+- `process-package/docs/exports/KB_Page.pdf` (regenerated from updated source)
+- `process-package/CHANGELOG.md` (v1.6.2 added)
+- `process-package/CLAUDE.md` (updated to v1.6.2)
