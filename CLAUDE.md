@@ -56,19 +56,20 @@ This process package was originally created for Module 05 (CLI) and copied here 
 **Date:** 2026-02-21 (updated)
 **Module transition:** M05 CLI → M06 KB
 
-Current state (v1.6.2):
+Current state (v1.6.3):
 1. SOP, diagrams (BPMN + Mermaid), glossary, README, CHANGELOG — all consistent and validated.
 2. 8 PowerSchool screenshots in `artifacts/screenshots/`.
 3. `artifacts/examples/walkthrough-outline.md` — Narrated walkthrough outline with timestamps (v1.5.4).
-4. Prompt log current through Entry 20.
+4. Prompt log current through Entry 21.
 5. `docs/source/SOP_v1.md` populated from `SOP.md` (readable Markdown format).
 6. `docs/source/KB_Page.md` — publish-readiness improvements applied (v1.6.2): YAML front matter with tags/category, plain-language Summary intro sentence, owner contact updated to full name and email, FAQ section added (5 entries), clickable screenshot links added to Steps 4, 5, 8, and 10.
-7. `docs/source/Quick_Reference.md` populated — 8-step checklist with inline if/then decision points, [REQUIRED] markers, Common Failure Points table with escalation column, and dedicated Escalation section.
+7. `docs/source/Quick_Reference.md` — publish-readiness improvements applied (v1.6.3): decision branches in Steps 1, 4, 6, 7 moved to indented `→` lines with bold outcomes; owner contact updated to full name and mailto link; date bumped to 2026-02-21.
 8. `docs/source/Checklist.md` populated — 10-step procedural checklist with GitHub-flavored markdown checkboxes; format: action verb + object + success condition; decision logic preserved as inline if/then branches.
 9. `glossary.md` — PowerSchool login URL added (v1.5.2).
 10. `README.md` — "Start Here" section with role-based navigation table; folder structure and Source of Truth table include all four PDF exports (v1.6.0).
-11. `docs/exports/` — All four PDFs generated and in place: `SOP_v1.pdf`, `KB_Page.pdf`, `Quick_Reference.pdf`, `Checklist.pdf`. `KB_Page.pdf` regenerated after v1.6.2 edits.
+11. `docs/exports/` — All four PDFs generated and in place: `SOP_v1.pdf`, `KB_Page.pdf`, `Quick_Reference.pdf`, `Checklist.pdf`. `KB_Page.pdf` regenerated after v1.6.2 edits; `Quick_Reference.pdf` regenerated after v1.6.3 edits.
 
 Next steps:
 - Secretary `[TBD]` row in `KB_Page.md` Roles table — follow-up actions after notification not yet defined.
-- YAML front matter renders as a visible block in the PDF; consider a gray-matter config to suppress it from PDF output if needed.
+- YAML front matter in `KB_Page.md` renders as a visible block in the PDF; consider a gray-matter config to suppress it from PDF output if needed.
+- Print layout and color/icon styling for `Quick_Reference.md` — CSS stylesheet pass deferred.

@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.6.3] — 2026-02-21
+
+### Changed
+
+- `docs/source/Quick_Reference.md`: Publish-readiness improvements — content and decision logic unchanged.
+  - Decision branches in Steps 1, 4, 6, and 7 moved to their own indented lines starting with `→`, with outcomes in **bold**, for visual clarity.
+  - Footer owner updated from username (`jgeanuracos`) to full name and mailto link (`Jason Geanuracos — jgeanuracos@clsdraiders.org`); date bumped to 2026-02-21.
+- `docs/exports/Quick_Reference.pdf`: Regenerated from updated source using `md-to-pdf`.
+
 ## [1.6.2] — 2026-02-21
 
 ### Changed
