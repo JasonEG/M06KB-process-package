@@ -47,7 +47,7 @@ Before you start, confirm you have all of the following:
 | Role | Responsibility |
 |------|----------------|
 | **Teacher** | Verifies grades, sets weights, marks grades complete, notifies secretary |
-| **Secretary** | Receives confirmation email that grades are stored; [TBD: follow-up actions after notification] |
+| **Secretary** | Receives confirmation email that grades are stored; Tracks which teachers have submitted grade finalization confirmation emails for the grading period |
 | **Principal** | Sends reminder email opening the grading window |
 
 ---

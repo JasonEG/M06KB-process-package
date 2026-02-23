@@ -5,7 +5,7 @@
 | Term | Definition |
 |------|------------|
 | **Teacher** | The primary actor in the grading process. Responsible for verifying grades, applying correct weights, finalizing quarter/semester grades, and notifying the Secretary upon completion. |
-| **Secretary** | Receives the email confirmation that all grades have been stored in PowerSchool. Follow-up actions after notification are [TBD]. |
+| **Secretary** | Receives the email confirmation that all grades have been stored in PowerSchool. Tracks which teachers have submitted grade finalization confirmation emails for the grading period. |
 | **Principal** | Sends the reminder email to teachers indicating the grading window has opened. |
 
 ## Systems & Tools

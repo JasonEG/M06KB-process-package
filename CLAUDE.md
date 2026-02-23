@@ -96,6 +96,6 @@ M07 work in progress (next steps):
 - README.md update to include `analysis/` folder tree (not yet done).
 
 Deferred from M06:
-- Secretary `[TBD]` row in `KB_Page.md` — tracked as OP-07 in the M07 backlog.
+- Secretary role resolved (2026-02-23) — updated across SOP.md, SOP_v1.md, KB_Page.md, glossary.md, process.mmd, process.bpmn, and workflow-critique-memo.md. Secretary tracks which teachers have submitted grade finalization confirmation emails for the grading period.
 - YAML front matter in `KB_Page.md` renders visibly in PDF — gray-matter suppression deferred.
 - Print layout / CSS styling for `Quick_Reference.md` — deferred.

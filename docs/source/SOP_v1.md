@@ -39,7 +39,7 @@ Standardize the process for teachers to verify, weight, finalize, and store quar
 | Role | Responsibilities |
 |------|-----------------|
 | **Teacher** | Verify all grades are entered and accurate; Apply correct grading weights; Finalize grades; Notify the secretary upon completion |
-| **Secretary** | Receive confirmation email that grades are stored; Follow-up actions after notification (TBD) |
+| **Secretary** | Receive confirmation email that grades are stored; Track which teachers have submitted grade finalization confirmation emails for the grading period |
 | **Principal** | Send reminder email indicating grading window |
 
 ---

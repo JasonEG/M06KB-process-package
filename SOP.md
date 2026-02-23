@@ -37,7 +37,7 @@
       "role": "[ROLE: Secretary]",
       "responsibilities": [
         "Receive confirmation email that grades are stored",
-        "[TBD: Follow-up actions after notification]"
+        "Track which teachers have submitted grade finalization confirmation emails for the grading period"
       ]
     },
     {

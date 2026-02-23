@@ -69,6 +69,8 @@ All issues are grounded in SOP step numbers and existing artifacts.
 
 ## Improvement Backlog (8 items)
 
+**OP codes** (e.g., OP-01) are unique identifiers for each optimization opportunity. They are assigned by priority grouping, not by pain point order, and are used consistently across the critique memo, improvement backlog, and deep-dive analysis to trace each issue through to its recommended countermeasure.
+
 | ID | Opportunity | Category | Evidence Anchor | Owner | Effort | Priority |
 |----|-------------|----------|-----------------|-------|--------|----------|
 | OP-01 | Add class-completion session checklist as job aid | Overprocessing | SOP Steps 5–9; Step 5 note | Process Owner | S | High |

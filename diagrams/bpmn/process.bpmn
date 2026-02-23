@@ -119,7 +119,7 @@
 
     <!-- === Secretary Lane === -->
 
-    <task id="Task_ReceiveConfirmation" name="Receive grade confirmation email">
+    <task id="Task_ReceiveConfirmation" name="Receive grade confirmation email; track teacher completion for grading period">
       <incoming>Flow_T10_Receive</incoming>
       <outgoing>Flow_Receive_End</outgoing>
     </task>
