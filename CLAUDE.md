@@ -53,23 +53,49 @@ This process package was originally created for Module 05 (CLI) and copied here 
 
 ## Where We Left Off
 
-**Date:** 2026-02-21 (updated)
-**Module transition:** M05 CLI → M06 KB
+**Date:** 2026-02-22 (updated)
+**Module transition:** M06 KB → M07 Workflow Critique
 
-Current state (v1.6.3):
+### Session Summary — 2026-02-22
+
+**What we did today:**
+- Reviewed the full Module 07 assignment brief and planned the complete deliverable set.
+- Created `M07-plan.md` in the repo root documenting 6 pain points, 8 backlog items, Top 3 deep-dive targets, and step rewrite target (Step 5).
+- Created `analysis/workflow-critique-memo.md` — a 1–2 page evidence-based memo identifying 6 workflow pain points (Waiting, Overprocessing, Defect/Rework, Handoff), each anchored to a specific SOP step number and artifact. Includes a summary recommendation table (OP-01 through OP-08).
+- Created `prompt-log/week07-analysis-log.md` — new M07 prompt log (Entry 22).
+- Updated `CHANGELOG.md` (v1.7.0) and `CLAUDE.md` to reflect current state.
+
+**What still needs to be done (M07):**
+1. `analysis/improvement-backlog-v1.md` — 8-item prioritized backlog (OP-01 through OP-08) with owner, effort, metric, and priority.
+2. `analysis/top3-deep-dive.md` — 5-Whys root-cause analysis for OP-01 (manual cycling), OP-02 (weight validation), OP-03 (email handoff); each ending with root cause, 2 countermeasures, 1 success metric, and key risks.
+3. `docs/source/SOP_v1_annotated.md` — Copy of SOP_v1.md with ⚠️ pain-point callout blockquotes at relevant steps.
+4. PDF exports of the three analysis docs via `md-to-pdf` → `docs/exports/`.
+5. `README.md` update to add `analysis/` to the folder structure tree.
+6. Commit and push all M07 changes to `origin/master`.
+
+---
+
+Current state (v1.7.0):
 1. SOP, diagrams (BPMN + Mermaid), glossary, README, CHANGELOG — all consistent and validated.
 2. 8 PowerSchool screenshots in `artifacts/screenshots/`.
 3. `artifacts/examples/walkthrough-outline.md` — Narrated walkthrough outline with timestamps (v1.5.4).
-4. Prompt log current through Entry 21.
-5. `docs/source/SOP_v1.md` populated from `SOP.md` (readable Markdown format).
-6. `docs/source/KB_Page.md` — publish-readiness improvements applied (v1.6.2): YAML front matter with tags/category, plain-language Summary intro sentence, owner contact updated to full name and email, FAQ section added (5 entries), clickable screenshot links added to Steps 4, 5, 8, and 10.
-7. `docs/source/Quick_Reference.md` — publish-readiness improvements applied (v1.6.3): decision branches in Steps 1, 4, 6, 7 moved to indented `→` lines with bold outcomes; owner contact updated to full name and mailto link; date bumped to 2026-02-21.
-8. `docs/source/Checklist.md` populated — 10-step procedural checklist with GitHub-flavored markdown checkboxes; format: action verb + object + success condition; decision logic preserved as inline if/then branches.
-9. `glossary.md` — PowerSchool login URL added (v1.5.2).
-10. `README.md` — "Start Here" section with role-based navigation table; folder structure and Source of Truth table include all four PDF exports (v1.6.0).
-11. `docs/exports/` — All four PDFs generated and in place: `SOP_v1.pdf`, `KB_Page.pdf`, `Quick_Reference.pdf`, `Checklist.pdf`. `KB_Page.pdf` regenerated after v1.6.2 edits; `Quick_Reference.pdf` regenerated after v1.6.3 edits.
+4. Prompt log: Entries 1–21 in `week05-cli-log.md`; Entry 22 in new `week07-analysis-log.md`.
+5. `docs/source/SOP_v1.md` — human-readable SOP (v1.5).
+6. `docs/source/KB_Page.md` — publish-readiness improvements applied (v1.6.2).
+7. `docs/source/Quick_Reference.md` — publish-readiness improvements applied (v1.6.3).
+8. `docs/source/Checklist.md` — 10-step procedural checklist with GFM checkboxes.
+9. `docs/exports/` — All four PDFs in place: `SOP_v1.pdf`, `KB_Page.pdf`, `Quick_Reference.pdf`, `Checklist.pdf`.
+10. `M07-plan.md` — Module 07 execution plan (6 pain points, 8-item backlog, Top 3 deep-dive targets).
+11. `analysis/workflow-critique-memo.md` — Evidence-based critique memo (6 pain points, OP-01 through OP-08).
 
-Next steps:
-- Secretary `[TBD]` row in `KB_Page.md` Roles table — follow-up actions after notification not yet defined.
-- YAML front matter in `KB_Page.md` renders as a visible block in the PDF; consider a gray-matter config to suppress it from PDF output if needed.
-- Print layout and color/icon styling for `Quick_Reference.md` — CSS stylesheet pass deferred.
+M07 work in progress (next steps):
+- `analysis/improvement-backlog-v1.md` — 8-item prioritized backlog (not yet created).
+- `analysis/top3-deep-dive.md` — 5-Whys deep dive for OP-01, OP-02, OP-03 (not yet created).
+- `docs/source/SOP_v1_annotated.md` — Annotated SOP with pain-point callouts (not yet created).
+- PDF exports of analysis docs (not yet generated).
+- README.md update to include `analysis/` folder tree (not yet done).
+
+Deferred from M06:
+- Secretary `[TBD]` row in `KB_Page.md` — tracked as OP-07 in the M07 backlog.
+- YAML front matter in `KB_Page.md` renders visibly in PDF — gray-matter suppression deferred.
+- Print layout / CSS styling for `Quick_Reference.md` — deferred.

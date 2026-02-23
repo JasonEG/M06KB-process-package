@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.7.0] — 2026-02-22
+
+### Added
+
+- `M07-plan.md` — Module 07 execution plan: 6 identified pain points, 8-item improvement backlog, Top 3 deep-dive targets, step rewrite target (Step 5), and annotated SOP approach.
+- `analysis/` — New subfolder for M07 workflow analysis deliverables.
+- `analysis/workflow-critique-memo.md` — Evidence-based workflow critique memo identifying 6 pain points (Waiting, Overprocessing, Defect/Rework, Handoff), each anchored to SOP step numbers and existing artifacts. Includes summary recommendation table linking to OP-01 through OP-08.
+- `prompt-log/week07-analysis-log.md` — New prompt log for M07 (Entry 22+).
+
 ## [1.6.3] — 2026-02-21
 
 ### Changed
