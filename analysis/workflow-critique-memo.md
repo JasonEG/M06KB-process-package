@@ -1,8 +1,8 @@
 # Workflow Critique Memo
 
-**To:** IT7039 Process Improvement Review
+**To:** Grading Process Improvement Review
 **From:** Jason Geanuracos
-**Date:** 2026-02-22
+**Date:** 2026-02-23
 **Re:** Grade Finalization in PowerSchool — Workflow Pain Points and Recommendations
 **Based on:** SOP v1.5 (2026-02-16), KB Article v1.6.2, Quick Reference v1.6.3
 
@@ -10,7 +10,7 @@
 
 ## Executive Summary
 
-The Grade Finalization process (SOP v1.5) is documented, validated, and internally consistent. However, a structured diagnostic review of the SOP, KB article, Quick Reference, and supporting artifacts reveals six recurring pain points. Three of these carry meaningful defect risk — incorrect weights, unsaved changes, and unstructured handoffs — and all six represent opportunities to reduce teacher effort, improve reliability, and close process gaps. This memo documents each issue with its evidence anchor and proposes a practical countermeasure.
+The Grade Finalization process (SOP v1.5) is documented, validated, and internally consistent. However, a structured diagnostic review of the SOP, KB article, Quick Reference, and supporting artifacts reveals five recurring pain points. Three of these carry meaningful defect risk — incorrect weights, unsaved changes, and unstructured handoffs — and all six represent opportunities to reduce teacher effort, improve reliability, and close process gaps. This memo documents each issue with its evidence anchor and proposes a practical countermeasure.
 
 ---
 
@@ -64,19 +64,7 @@ Saving grade weight changes is its own SOP step (Step 6) because the system does
 
 ---
 
-### 5. No Acceptance Criteria for "Is the Grade Correct?"
-**Category:** Defect / Ambiguity
-**SOP reference:** Step 7 decision
-
-The Step 7 decision gate — "Is the final grade correct? Yes → Step 8. No → Step 4" — gives teachers no criteria for what "correct" means. There is no reference value, no minimum threshold, and no comparison to a prior record. The decision is entirely subjective. In a high-stakes context where grade errors cascade to transcripts, this is a meaningful quality gap.
-
-**Evidence:** SOP Step 7 — decision is binary with no definition of "correct." No acceptance criteria appear anywhere in the SOP, KB article, or Quick Reference.
-
-**Recommendation (OP-05):** Work with the administrator to define what "correct" means for this decision: e.g., the grade matches the teacher's gradebook, falls within the expected range for the class, or matches a previously communicated expected grade. Document the criteria and add them to Step 7.
-
----
-
-### 6. Unstructured Email Notification — No Template, No Tracking
+### 5. Unstructured Email Notification — No Template, No Tracking
 **Category:** Handoff
 **SOP reference:** Step 10; Secretary role; KB_Page Roles table
 
@@ -96,7 +84,6 @@ The process concludes when the teacher "sends an email to the Secretary confirmi
 | OP-02 | Create weight reference card with screenshot | S | High |
 | OP-03 | Create standard email template for Step 10 | S | High |
 | OP-04 | Merge Steps 5–6 into single save-explicit step | S | Medium |
-| OP-05 | Define acceptance criteria for "grade is correct" (Step 7) | M | Medium |
 | OP-06 | Investigate admin-level bulk finalization view | S | Medium |
 | OP-07 | Define secretary's follow-up workflow | M | Low |
 | OP-08 | Add grading calendar anchor to Step 1 | S | Low |
