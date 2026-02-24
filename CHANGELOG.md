@@ -1,5 +1,25 @@
 # Changelog
 
+## [1.7.1] — 2026-02-23
+
+### Changed
+
+- `analysis/workflow-critique-memo.md`: Editorial revisions based on user review.
+  - Header: date updated to 2026-02-23; "To" field updated to "Grading Process Improvement Review".
+  - Cut from 6 to 5 pain points — removed Pain Point 5 (subjective grade correctness; teacher determines correctness).
+  - Pain Point 2: corrected to 5-class load, 9-period day context, exactly 20 UI interactions.
+  - Pain Point 3: clarified 10% exam is the only required weight; 90% at teacher's discretion; removed system-side locking suggestion.
+  - Pain Point 4: corrected system behavior (PowerSchool prompts to save but does not auto-save); added explicit weight verification requirement before confirming save.
+  - Pain Point 5 (formerly 6): resolved secretary role — secretary tracks which teachers have submitted grade finalization confirmation emails for the grading period.
+  - Added OP code explanation (OP = optimization opportunity ID, assigned by priority not pain point order).
+- `M07-plan.md`: Added OP code explanation before improvement backlog table.
+- `SOP.md`, `docs/source/SOP_v1.md`, `docs/source/KB_Page.md`, `glossary.md`: Secretary role [TBD] resolved — now tracks teacher completion.
+- `diagrams/mermaid/process.mmd`, `diagrams/bpmn/process.bpmn`: Secretary [TBD] note/label updated to reflect tracking responsibility.
+
+### Added
+
+- `analysis/workflow-critique-memo.pdf` — PDF export of workflow critique memo (replaces .docx).
+
 ## [1.7.0] — 2026-02-22
 
 ### Added
