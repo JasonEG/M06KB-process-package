@@ -73,3 +73,89 @@
 - `process-package/analysis/workflow-critique-memo.pdf` (new — PDF export)
 - `process-package/M07-plan.md` (updated — OP code explanation added)
 - `process-package/SOP.md`, `docs/source/SOP_v1.md`, `docs/source/KB_Page.md`, `glossary.md`, `diagrams/mermaid/process.mmd`, `diagrams/bpmn/process.bpmn` (updated — secretary role resolved)
+
+---
+
+## Entry 24 — Improvement Backlog and Top-3 Deep Dive
+
+**Date:** 2026-02-24
+**Tool:** Claude Code (CLI)
+
+### Prompt
+
+> what is our next task per the m07-plan? [created improvement-backlog-v1.md] go ahead and then stop so we can review please / go ahead and convert that file we just created into a pdf / can we first check if we looked at the Root cause deep dive on your Top 3 / go ahead and create the top3-deep-dive.md / go ahead and convert that to pdf
+
+### What Was Done
+
+1. Read CLAUDE.md and M07-plan.md to confirm next task per execution order.
+2. Confirmed waste scan was already completed (Entry 22, Step 3) — categories embedded in critique memo and carried into backlog.
+3. Created `analysis/improvement-backlog-v1.md` — 8-item backlog (OP-01 through OP-08) with category, evidence anchor, owner, effort, priority, and success metric columns.
+4. Converted `improvement-backlog-v1.md` to PDF using local temp workaround (copy to /tmp → md-to-pdf → copy back).
+5. Confirmed `top3-deep-dive.md` had not yet been created — content existed in M07-plan.md but not as a deliverable file.
+6. Created `analysis/top3-deep-dive.md` — 5-Whys chain, root cause, two countermeasures, success metric, and key risks for OP-01, OP-02, and OP-03.
+7. Converted `top3-deep-dive.md` to PDF using local temp workaround.
+8. Saved PDF workaround to persistent memory (MEMORY.md).
+
+### Key Decisions
+
+- OP-05 (acceptance criteria for "grade is correct") retained in backlog despite being removed from the memo pain points — remains a valid improvement opportunity at Medium priority.
+- OP-02 Countermeasure B (admin-enforced weight templates) left without a separate OP code — treated as a sub-item of OP-02 scope rather than a new backlog entry.
+- Key risks section added to each deep-dive entry (not in original plan) — standard practice for a root-cause analysis deliverable.
+- PDF workaround confirmed reliable: copy .md to /tmp, run md-to-pdf locally, copy .pdf back to network drive.
+
+### Output
+
+- `process-package/analysis/improvement-backlog-v1.md` (new)
+- `process-package/analysis/improvement-backlog-v1.pdf` (new)
+- `process-package/analysis/top3-deep-dive.md` (new)
+- `process-package/analysis/top3-deep-dive.pdf` (new)
+- `process-package/CHANGELOG.md` (updated — v1.7.2)
+- `process-package/CLAUDE.md` (updated — session summary and next-session reminder)
+
+---
+
+## Entry 25 — Top-3 Deep Dive Review and Backlog Verification
+
+**Date:** 2026-02-25
+**Tool:** Claude Code (CLI)
+
+### Prompt
+
+> can you check claude.md for context? / regenerate the top3-deep-dive pdf / lets continue our review of the top 3 deep dive please / 1 is fine, assign OP-08 to countermeasure B, quarter, update the footer / yes regenerate the pdf / yes let's review the improvement backlog / reassign the calendar anchor item here and then renumber accordingly, will we need to make changes to other items in the process package? / yes please / yes regenerate all three / [retry after PDF file lock] / before we do that can we run a quick verification on the improvement backlog [against required fields list] / yes add those three changes / can we change that pdf to landscape instead of portrait / excellent, can we update all of the relevant logs and claude.md?
+
+### What Was Done
+
+1. Read CLAUDE.md for session context; regenerated `analysis/top3-deep-dive.pdf` using local temp workaround (shell had been broken in prior session).
+2. Continued review of `analysis/top3-deep-dive.md` — resolved all four open questions:
+   - OP-01: "Twenty sequential UI interactions" confirmed accurate (4 steps × 5 classes).
+   - OP-02: Countermeasure B assigned label OP-08; old OP-08 (calendar anchor) renumbered to OP-09.
+   - OP-03: Grading period terminology locked as "Quarter" (not "Quarter/Semester").
+   - Footer: Updated to v1.7.2 across all three analysis documents.
+3. Assessed full scope of OP renumbering — identified 7 files referencing OP-08 requiring updates.
+4. Updated all affected files: `improvement-backlog-v1.md`, `top3-deep-dive.md`, `workflow-critique-memo.md`, `M07-plan.md`, `CHANGELOG.md`, `CLAUDE.md`. Prompt log left as historical record.
+5. Regenerated all three analysis PDFs (`improvement-backlog-v1.pdf`, `top3-deep-dive.pdf`, `workflow-critique-memo.pdf`) sequentially using local temp workaround. Resolved file-lock error on backlog PDF (was open in viewer).
+6. Verified `improvement-backlog-v1.md` against required field checklist — identified three gaps: missing Description column, Success Metric not labeled as impact, no Status column.
+7. Added `Description` column, renamed `Success Metric` → `Impact / Success Metric` with impact type prefix per row, added `Status` column (all Backlog; OP-07 In Progress).
+8. Added YAML front matter to `improvement-backlog-v1.md` to render PDF in landscape orientation — table was cut off in portrait.
+9. Regenerated `improvement-backlog-v1.pdf` in landscape (Letter, 15mm margin).
+10. Updated CHANGELOG.md (v1.7.3 and v1.7.4), prompt log, and CLAUDE.md.
+
+### Key Decisions
+
+- OP-08 (locked weight templates) derived from top3-deep-dive OP-02 Countermeasure B and added as a full backlog item — elevated from a countermeasure sub-item to a standalone investigation task at Medium priority.
+- Calendar anchor renumbered OP-09 (not deleted) — remains a valid Low priority item.
+- Backlog columns expanded to meet course deliverable requirements: Description (what changes), Impact type label, Status.
+- Landscape PDF orientation used for wide tables — controlled via YAML front matter in the markdown source, not a separate config file.
+- Run md-to-pdf steps sequentially (not chained) to avoid background task shell reset issue on this environment.
+
+### Output
+
+- `process-package/analysis/top3-deep-dive.md` (updated — OP-09 range, OP-08 label, Quarter terminology, footer)
+- `process-package/analysis/top3-deep-dive.pdf` (regenerated)
+- `process-package/analysis/improvement-backlog-v1.md` (updated — OP-09 renumber, new OP-08 row, Description/Impact/Status columns, landscape front matter)
+- `process-package/analysis/improvement-backlog-v1.pdf` (regenerated — landscape)
+- `process-package/analysis/workflow-critique-memo.md` (updated — OP-09 renumber, Quarter terminology, footer)
+- `process-package/analysis/workflow-critique-memo.pdf` (regenerated)
+- `process-package/M07-plan.md` (updated — OP-09 renumber, 9-item count)
+- `process-package/CHANGELOG.md` (updated — v1.7.3 and v1.7.4)
+- `process-package/CLAUDE.md` (updated — session summary, current state, next steps)

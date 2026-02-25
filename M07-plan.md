@@ -17,7 +17,7 @@ Module 07 uses the existing Grade Finalization process package as a diagnostic a
 | File | Description |
 |------|-------------|
 | `analysis/workflow-critique-memo.md` | 1–2 page evidence-based pain-point summary with recommendations |
-| `analysis/improvement-backlog-v1.md` | Prioritized backlog table (8 items, ranked by impact + effort) |
+| `analysis/improvement-backlog-v1.md` | Prioritized backlog table (9 items, ranked by impact + effort) |
 | `analysis/top3-deep-dive.md` | 5-Whys + countermeasures + success metrics for Top 3 issues |
 | `docs/source/SOP_v1_annotated.md` | Copy of SOP_v1.md with ⚠️ pain-point callouts embedded |
 | `prompt-log/week07-analysis-log.md` | New prompt log (Entry 22+) |
@@ -67,7 +67,7 @@ All issues are grounded in SOP step numbers and existing artifacts.
 
 ---
 
-## Improvement Backlog (8 items)
+## Improvement Backlog (9 items)
 
 **OP codes** (e.g., OP-01) are unique identifiers for each optimization opportunity. They are assigned by priority grouping, not by pain point order, and are used consistently across the critique memo, improvement backlog, and deep-dive analysis to trace each issue through to its recommended countermeasure.
 
@@ -80,7 +80,7 @@ All issues are grounded in SOP step numbers and existing artifacts.
 | OP-05 | Define acceptance criteria for "grade is correct" (Step 7) | Defect/Ambiguity | SOP Step 7 decision | Process Owner + Admin | M | Medium |
 | OP-06 | Investigate admin-level bulk finalization view | Overprocessing | SOP Steps 5–9 repetition | Administrator | S (investigate) | Medium |
 | OP-07 | Define secretary's follow-up workflow (resolve [TBD]) | Handoff | SOP + KB_Page Roles [TBD] rows | Secretary + Admin | M | Low |
-| OP-08 | Add grading calendar anchor to Step 1 | Waiting | SOP Step 1 trigger (subjective) | Administrator | S | Low |
+| OP-09 | Add grading calendar anchor to Step 1 | Waiting | SOP Step 1 trigger (subjective) | Administrator | S | Low |
 
 ---
 

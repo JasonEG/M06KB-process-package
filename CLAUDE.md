@@ -53,56 +53,56 @@ This process package was originally created for Module 05 (CLI) and copied here 
 
 ## Where We Left Off
 
-**Date:** 2026-02-23 (updated)
+**Date:** 2026-02-25 (updated)
 **Module transition:** M06 KB → M07 Workflow Critique
 
-### Session Summary — 2026-02-23
+### ⚠️ START HERE NEXT SESSION
 
-**What we did today:**
-- Reviewed and edited `analysis/workflow-critique-memo.md` section by section with user input.
-- Cut pain points from 6 to 5 — removed Pain Point 5 (subjective grade correctness; teacher determines correctness).
-- Updated Pain Point 2: corrected to 5-class load, 9-period day context, exactly 20 UI interactions.
-- Updated Pain Point 3: clarified 10% exam is the only required weight constraint; 90% at teacher's discretion; removed system-side locking suggestion.
-- Updated Pain Point 4: corrected system behavior — PowerSchool does prompt to save but does not auto-save; added explicit weight verification requirement before confirming save.
-- Updated Pain Point 5 (formerly 6): resolved secretary [TBD] — secretary tracks which teachers have submitted grade finalization confirmation emails.
-- Resolved secretary [TBD] across 7 files: `SOP.md`, `SOP_v1.md`, `KB_Page.md`, `glossary.md`, `process.mmd`, `process.bpmn`, `workflow-critique-memo.md`.
-- Added OP code explanation (OP = optimization opportunity ID, assigned by priority not order) to `workflow-critique-memo.md` and `M07-plan.md`.
-- Updated memo header: date to 2026-02-23, To: "Grading Process Improvement Review".
-- Generated `analysis/workflow-critique-memo.pdf` via `md-to-pdf` (using local temp workaround for network drive speed — copy to temp, run md-to-pdf, copy PDF back).
-- Updated `CHANGELOG.md` (v1.7.1), `CLAUDE.md`, and `prompt-log/week07-analysis-log.md` (Entry 23).
-
-**What still needs to be done (M07):**
-1. `analysis/improvement-backlog-v1.md` — 8-item prioritized backlog (OP-01 through OP-08) with owner, effort, metric, and priority.
-2. `analysis/top3-deep-dive.md` — 5-Whys root-cause analysis for OP-01 (manual cycling), OP-02 (weight validation), OP-03 (email handoff); each ending with root cause, 2 countermeasures, 1 success metric, and key risks.
-3. `docs/source/SOP_v1_annotated.md` — Copy of SOP_v1.md with ⚠️ pain-point callout blockquotes at relevant steps.
-4. PDF exports of improvement-backlog-v1 and top3-deep-dive via `md-to-pdf` → `docs/exports/`.
-5. `README.md` update to add `analysis/` to the folder structure tree.
-6. Commit and push all remaining M07 changes to `origin/master`.
+1. Create `docs/source/SOP_v1_annotated.md` — copy of `SOP_v1.md` with `> ⚠️ **Pain Point [OP-XX]:**` blockquotes inserted after relevant steps (OP-01 through OP-05 and OP-09; procedural content unchanged).
+2. Export `SOP_v1_annotated.md` → `docs/exports/SOP_v1_annotated.pdf` using local temp workaround.
+3. Update `README.md` to add `analysis/` folder to the folder structure tree.
+4. Commit and push all M07 changes to `origin/master`.
 
 ---
 
-Current state (v1.7.1):
+### Session Summary — 2026-02-25
+
+**What we did today:**
+- Regenerated `analysis/top3-deep-dive.pdf` (shell had been broken in prior session).
+- Reviewed `analysis/top3-deep-dive.md` — resolved all open questions:
+  - OP-01: "Twenty sequential UI interactions" confirmed accurate (4 steps × 5 classes).
+  - OP-02 Countermeasure B assigned label OP-08; old OP-08 (calendar anchor) renumbered OP-09.
+  - OP-03: Grading period terminology locked as "Quarter".
+  - Footers updated to v1.7.2 across all three analysis documents.
+- Assessed and executed full OP renumbering across 7 files (CHANGELOG v1.7.3).
+- Reviewed `analysis/improvement-backlog-v1.md` against course required fields — identified and added: Description column, Impact / Success Metric (renamed with impact type prefix), Status column. Backlog is now 9 items (OP-01 through OP-09).
+- Added YAML front matter to `improvement-backlog-v1.md` for landscape PDF orientation (table was cut off in portrait).
+- Regenerated all three analysis PDFs; resolved file-lock error on backlog PDF.
+- Updated CHANGELOG (v1.7.3, v1.7.4), prompt log (Entry 25), and CLAUDE.md.
+
+---
+
+Current state (v1.7.4):
 1. SOP, diagrams (BPMN + Mermaid), glossary, README, CHANGELOG — all consistent and validated.
 2. 8 PowerSchool screenshots in `artifacts/screenshots/`.
 3. `artifacts/examples/walkthrough-outline.md` — Narrated walkthrough outline with timestamps (v1.5.4).
-4. Prompt log: Entries 1–21 in `week05-cli-log.md`; Entries 22–23 in `week07-analysis-log.md`.
+4. Prompt log: Entries 1–21 in `week05-cli-log.md`; Entries 22–25 in `week07-analysis-log.md`.
 5. `docs/source/SOP_v1.md` — human-readable SOP (v1.5).
 6. `docs/source/KB_Page.md` — publish-readiness improvements applied (v1.6.2).
 7. `docs/source/Quick_Reference.md` — publish-readiness improvements applied (v1.6.3).
 8. `docs/source/Checklist.md` — 10-step procedural checklist with GFM checkboxes.
 9. `docs/exports/` — All four PDFs in place: `SOP_v1.pdf`, `KB_Page.pdf`, `Quick_Reference.pdf`, `Checklist.pdf`.
-10. `M07-plan.md` — Module 07 execution plan (6 pain points, 8-item backlog, Top 3 deep-dive targets).
-11. `analysis/workflow-critique-memo.md` — Evidence-based critique memo (5 pain points, OP-01 through OP-08, secretary role resolved).
-12. `analysis/workflow-critique-memo.pdf` — PDF export of critique memo.
+10. `M07-plan.md` — Module 07 execution plan (6 pain points, 9-item backlog, Top 3 deep-dive targets).
+11. `analysis/workflow-critique-memo.md` + `.pdf` — Evidence-based critique memo (5 pain points, OP-01 through OP-09, secretary role resolved). ✅ Reviewed.
+12. `analysis/improvement-backlog-v1.md` + `.pdf` — 9-item prioritized improvement backlog (landscape PDF); Description, Impact, and Status columns added. ✅ Reviewed.
+13. `analysis/top3-deep-dive.md` + `.pdf` — 5-Whys deep dive for OP-01, OP-02, OP-03; all open questions resolved. ✅ Reviewed.
 
-M07 work in progress (next steps):
-- `analysis/improvement-backlog-v1.md` — 8-item prioritized backlog (not yet created).
-- `analysis/top3-deep-dive.md` — 5-Whys deep dive for OP-01, OP-02, OP-03 (not yet created).
+M07 work remaining:
 - `docs/source/SOP_v1_annotated.md` — Annotated SOP with pain-point callouts (not yet created).
-- PDF exports of remaining analysis docs (not yet generated).
+- PDF export of annotated SOP (not yet generated).
 - README.md update to include `analysis/` folder tree (not yet done).
+- Commit and push to `origin/master` (not yet done).
 
 Deferred from M06:
-- Secretary role resolved (2026-02-23) — updated across SOP.md, SOP_v1.md, KB_Page.md, glossary.md, process.mmd, process.bpmn, and workflow-critique-memo.md. Secretary tracks which teachers have submitted grade finalization confirmation emails for the grading period.
 - YAML front matter in `KB_Page.md` renders visibly in PDF — gray-matter suppression deferred.
 - Print layout / CSS styling for `Quick_Reference.md` — deferred.

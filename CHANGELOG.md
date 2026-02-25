@@ -1,5 +1,32 @@
 # Changelog
 
+## [1.7.4] — 2026-02-25
+
+### Changed
+
+- `analysis/improvement-backlog-v1.md`: Added `Description` column (what would change per item); renamed `Success Metric` → `Impact / Success Metric` with impact type prefix per entry (error reduction, time savings, handoff reliability, process completeness); added `Status` column (all items Backlog; OP-07 In Progress); added YAML front matter for landscape PDF layout (Letter, 15mm margin).
+- `analysis/improvement-backlog-v1.pdf`: Regenerated in landscape orientation to accommodate 10-column table.
+- `analysis/top3-deep-dive.pdf`: Regenerated (PDF had not been updated since last session due to shell issue).
+- `analysis/workflow-critique-memo.pdf`: Regenerated to reflect OP renumbering and terminology updates from v1.7.3.
+
+## [1.7.3] — 2026-02-25
+
+### Changed
+
+- `analysis/improvement-backlog-v1.md`: OP-08 (calendar anchor) renumbered to OP-09; new OP-08 added — "Investigate whether PowerSchool supports locked weight templates" (derived from top3-deep-dive OP-02 Countermeasure B). Backlog expanded from 8 to 9 items. Footer version updated to v1.7.2.
+- `analysis/top3-deep-dive.md`: Key table range updated to OP-01 through OP-09; OP-02 Countermeasure B assigned OP-08 label; "Quarter/Semester" → "Quarter" in OP-03 email template; footer version updated to v1.7.2.
+- `analysis/workflow-critique-memo.md`: OP-08 (calendar anchor) renumbered to OP-09 in body and summary table; "Quarter/Semester" → "Quarter" in OP-03 recommendation; footer version updated to v1.7.2.
+- `M07-plan.md`: OP-08 (calendar anchor) renumbered to OP-09; backlog item count updated to 9.
+
+## [1.7.2] — 2026-02-24
+
+### Added
+
+- `analysis/improvement-backlog-v1.md` — 9-item prioritized improvement backlog (OP-01 through OP-09) with category, evidence anchor, owner, effort, priority, and success metric.
+- `analysis/improvement-backlog-v1.pdf` — PDF export of improvement backlog.
+- `analysis/top3-deep-dive.md` — 5-Whys root-cause analysis for OP-01 (manual class cycling), OP-02 (weight validation), OP-03 (email handoff); each with root cause, two countermeasures, success metric, and key risks.
+- `analysis/top3-deep-dive.pdf` — PDF export of top-3 deep dive.
+
 ## [1.7.1] — 2026-02-23
 
 ### Changed
@@ -26,7 +53,7 @@
 
 - `M07-plan.md` — Module 07 execution plan: 6 identified pain points, 8-item improvement backlog, Top 3 deep-dive targets, step rewrite target (Step 5), and annotated SOP approach.
 - `analysis/` — New subfolder for M07 workflow analysis deliverables.
-- `analysis/workflow-critique-memo.md` — Evidence-based workflow critique memo identifying 6 pain points (Waiting, Overprocessing, Defect/Rework, Handoff), each anchored to SOP step numbers and existing artifacts. Includes summary recommendation table linking to OP-01 through OP-08.
+- `analysis/workflow-critique-memo.md` — Evidence-based workflow critique memo identifying 6 pain points (Waiting, Overprocessing, Defect/Rework, Handoff), each anchored to SOP step numbers and existing artifacts. Includes summary recommendation table linking to OP-01 through OP-09.
 - `prompt-log/week07-analysis-log.md` — New prompt log for M07 (Entry 22+).
 
 ## [1.6.3] — 2026-02-21

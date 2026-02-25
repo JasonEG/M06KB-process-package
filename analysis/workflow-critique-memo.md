@@ -26,7 +26,7 @@ The process begins when a teacher "receives an email from the principal or secre
 
 **Evidence:** SOP Step 1 note — "No system action occurs in this step." The trigger is passive and subjective for the teacher.
 
-**Recommendation (OP-08):** Add an explicit calendar anchor to Step 1 — e.g., "Finalization is due by [DATE]" — maintained by the administrator and included in the reminder email. Small effort, reduces deadline variability.
+**Recommendation (OP-09):** Add an explicit calendar anchor to Step 1 — e.g., "Finalization is due by [DATE]" — maintained by the administrator and included in the reminder email. Small effort, reduces deadline variability.
 
 ---
 
@@ -74,7 +74,7 @@ The process concludes when the teacher "sends an email to the Secretary confirmi
 
 **Evidence:** SOP Step 10 — "Send an email to the Secretary." No template. Secretary role — tracks teacher completion, but with no defined email format to support consistent tracking.
 
-**Recommendation (OP-03):** Create a standard email template specifying a required subject line (e.g., "Grade Finalization Complete — [Teacher Name] — [Quarter/Semester] [Year]") and required body fields (teacher name, grading period, date completed, number of classes). Embed as a copy-paste block in the SOP and Quick Reference. Longer term (OP-07), define the secretary's downstream process.
+**Recommendation (OP-03):** Create a standard email template specifying a required subject line (e.g., "Grade Finalization Complete — [Teacher Name] — [Quarter] [Year]") and required body fields (teacher name, grading period, date completed, number of classes). Embed as a copy-paste block in the SOP and Quick Reference. Longer term (OP-07), define the secretary's downstream process.
 
 ---
 
@@ -88,11 +88,11 @@ The process concludes when the teacher "sends an email to the Secretary confirmi
 | OP-04 | Merge Steps 5–6 into single save-explicit step | S | Medium |
 | OP-06 | Investigate admin-level bulk finalization view | S | Medium |
 | OP-07 | Define secretary's follow-up workflow | M | Low |
-| OP-08 | Add grading calendar anchor to Step 1 | S | Low |
+| OP-09 | Add grading calendar anchor to Step 1 | S | Low |
 
 > The full backlog with owners, metrics, and effort estimates is in [`improvement-backlog-v1.md`](./improvement-backlog-v1.md).
 > Root-cause analysis for OP-01, OP-02, and OP-03 is in [`top3-deep-dive.md`](./top3-deep-dive.md).
 
 ---
 
-*This memo is based on SOP v1.5 and supporting artifacts as of v1.6.3. All pain points reference specific SOP step numbers and existing artifacts. No steps were invented; all evidence anchors are cited.*
+*This memo is based on SOP v1.5 and supporting artifacts as of v1.7.2. All pain points reference specific SOP step numbers and existing artifacts. No steps were invented; all evidence anchors are cited.*
