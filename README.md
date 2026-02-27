@@ -33,6 +33,15 @@ process-package/
 ├── CHANGELOG.md               # Version history of process changes
 ├── glossary.md                # Domain-specific terminology
 ├── validation-log.md          # Cross-artifact consistency checks
+├── M07-plan.md                # Module 07 workflow critique execution plan
+│
+├── analysis/                  # M07 workflow critique deliverables
+│   ├── workflow-critique-memo.md      # Evidence-based critique memo (5 pain points)
+│   ├── workflow-critique-memo.pdf     # PDF export
+│   ├── improvement-backlog-v1.md      # 9-item prioritized improvement backlog
+│   ├── improvement-backlog-v1.pdf     # PDF export (landscape)
+│   ├── top3-deep-dive.md              # 5-Whys root-cause analysis (OP-01, OP-02, OP-03)
+│   └── top3-deep-dive.pdf             # PDF export
 │
 ├── diagrams/
 │   ├── bpmn/
@@ -56,18 +65,21 @@ process-package/
 │
 ├── docs/
 │   ├── source/
-│   │   ├── SOP_v1.md          # Human-readable SOP (derived from SOP.md)
-│   │   ├── KB_Page.md         # Knowledge-base article
-│   │   ├── Quick_Reference.md # 1-page quick reference guide
-│   │   └── Checklist.md       # Procedural checklist with checkboxes
+│   │   ├── SOP_v1.md              # Human-readable SOP (derived from SOP.md)
+│   │   ├── SOP_v1_annotated.md    # Annotated SOP with workflow pain-point callouts
+│   │   ├── KB_Page.md             # Knowledge-base article
+│   │   ├── Quick_Reference.md     # 1-page quick reference guide
+│   │   └── Checklist.md           # Procedural checklist with checkboxes
 │   └── exports/
-│       ├── SOP_v1.pdf         # PDF export
-│       ├── KB_Page.pdf        # PDF export
-│       ├── Quick_Reference.pdf # PDF export
-│       └── Checklist.pdf      # PDF export
+│       ├── SOP_v1.pdf             # PDF export
+│       ├── SOP_v1_annotated.pdf   # PDF export
+│       ├── KB_Page.pdf            # PDF export
+│       ├── Quick_Reference.pdf    # PDF export
+│       └── Checklist.pdf          # PDF export
 │
 └── prompt-log/
-    └── week05-cli-log.md      # AI prompt interaction log
+    ├── week05-cli-log.md      # AI prompt interaction log (Entries 1–21)
+    └── week07-analysis-log.md # AI prompt interaction log (Entries 22–25)
 ```
 
 ## Source of Truth vs. Generated Files
@@ -82,13 +94,19 @@ process-package/
 | `glossary.md` | Authored reference — defines terms used in the SOP. |
 | `validation-log.md` | Authored reference — records consistency checks between artifacts. |
 | `docs/source/SOP_v1.md` | Authored — human-readable SOP derived from `SOP.md`. |
+| `docs/source/SOP_v1_annotated.md` | Authored — read-only annotated copy of SOP v1.5 with workflow pain-point callouts (OP-01 through OP-09). |
 | `docs/source/KB_Page.md` | Authored — knowledge-base article derived from `SOP.md`. |
 | `docs/source/Quick_Reference.md` | Authored — 1-page quick reference derived from `SOP.md`. |
 | `docs/source/Checklist.md` | Authored — procedural checklist derived from `SOP.md`. |
 | `docs/exports/SOP_v1.pdf` | **Generated** from `docs/source/SOP_v1.md`. Do not hand-edit. |
+| `docs/exports/SOP_v1_annotated.pdf` | **Generated** from `docs/source/SOP_v1_annotated.md`. Do not hand-edit. |
 | `docs/exports/KB_Page.pdf` | **Generated** from `docs/source/KB_Page.md`. Do not hand-edit. |
 | `docs/exports/Quick_Reference.pdf` | **Generated** from `docs/source/Quick_Reference.md`. Do not hand-edit. |
 | `docs/exports/Checklist.pdf` | **Generated** from `docs/source/Checklist.md`. Do not hand-edit. |
+| `analysis/workflow-critique-memo.md` | Authored — M07 workflow critique memo (5 pain points, OP codes, recommendations). |
+| `analysis/improvement-backlog-v1.md` | Authored — 9-item improvement backlog with descriptions, owners, effort, priority, and status. |
+| `analysis/top3-deep-dive.md` | Authored — 5-Whys root-cause analysis for OP-01, OP-02, and OP-03. |
+| `analysis/*.pdf` | **Generated** from corresponding `.md` source files. Do not hand-edit. |
 
 When making process changes, always update **SOP.md first**, then update the diagram source files to match, and finally regenerate the rendered outputs.
 
