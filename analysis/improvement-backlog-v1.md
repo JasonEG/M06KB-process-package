@@ -14,6 +14,14 @@ pdf_options:
 
 ---
 
+## Key
+
+| Term | Definition |
+|------|------------|
+| **OP-##** | Optimization Opportunity — a numbered process improvement candidate identified during the workflow critique. OP-01 through OP-09 are catalogued in this backlog. |
+
+---
+
 ## Overview
 
 This backlog catalogs all optimization opportunities identified during the M07 workflow diagnostic. Each item is assigned an **OP code** — a unique, stable identifier used consistently across the critique memo, this backlog, and the top-3 deep-dive analysis. Codes are assigned by priority grouping, not by the order in which pain points were discovered.
