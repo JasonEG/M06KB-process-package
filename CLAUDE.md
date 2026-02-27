@@ -58,11 +58,10 @@ This process package was originally created for Module 05 (CLI) and copied here 
 
 ### ⚠️ START HERE NEXT SESSION
 
-All three M07 analysis documents have been reviewed and accepted. The process package is in a clean, committed state. Confirm with user what comes next — possible directions:
+**Final review before submission + M08 planning.**
 
-1. Review the grade finalization workflow itself (SOP steps) — clarity, order, ease of follow for a teacher.
-2. Review our working process with Claude Code — what's working, what could be smoother.
-3. Begin M08 planning or move to the next course module.
+1. **Final review** — do a complete pass over the M07 deliverables (memo, backlog, deep dive, annotated SOP) to confirm everything is submission-ready.
+2. **Plan for next week** — confirm M08 scope and identify first tasks.
 
 ---
 
