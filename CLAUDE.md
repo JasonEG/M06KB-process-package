@@ -53,19 +53,28 @@ This process package was originally created for Module 05 (CLI) and copied here 
 
 ## Where We Left Off
 
-**Date:** 2026-02-26 (updated)
+**Date:** 2026-02-27 (updated)
 **Module transition:** M06 KB → M07 Workflow Critique
 
 ### ⚠️ START HERE NEXT SESSION
 
-Review the overall process package for **clarity, understanding, and efficiency**. The user wants to discuss which process to review and what lens to use. Starting point from last session:
+All three M07 analysis documents have been reviewed and accepted. The process package is in a clean, committed state. Confirm with user what comes next — possible directions:
 
-> "I would like to review the process for clarity, understanding, and efficiency."
+1. Review the grade finalization workflow itself (SOP steps) — clarity, order, ease of follow for a teacher.
+2. Review our working process with Claude Code — what's working, what could be smoother.
+3. Begin M08 planning or move to the next course module.
 
-Possible directions (confirm with user at start of session):
-1. The grade finalization workflow itself (SOP steps) — are the steps clear, in the right order, easy to follow as a teacher?
-2. The M07 analysis documents (memo, backlog, deep dive) — are they clear and well-structured as course deliverables?
-3. Our working process together (how we use Claude Code to build this package) — what's working well, what could be smoother?
+---
+
+### Session Summary — 2026-02-27
+
+**What we did today:**
+- Reviewed all three M07 analysis documents section by section: `workflow-critique-memo.md`, `improvement-backlog-v1.md`, `top3-deep-dive.md`.
+- No changes to memo or deep dive — both accepted as-is.
+- Added OP-## Key table to `improvement-backlog-v1.md` (defines "Optimization Opportunity"; consistent with `top3-deep-dive.md` format).
+- Regenerated `improvement-backlog-v1.pdf` using local temp workaround.
+- Committed and pushed to `origin/master` (commit `fcbc95e`).
+- Updated prompt log (Entry 26) and CLAUDE.md.
 
 ---
 
@@ -102,7 +111,7 @@ Current state (v1.7.4 + 2026-02-26 additions):
 1. SOP, diagrams (BPMN + Mermaid), glossary, README, CHANGELOG — all consistent and validated.
 2. 8 PowerSchool screenshots in `artifacts/screenshots/`.
 3. `artifacts/examples/walkthrough-outline.md` — Narrated walkthrough outline with timestamps (v1.5.4).
-4. Prompt log: Entries 1–21 in `week05-cli-log.md`; Entries 22–25 in `week07-analysis-log.md`. Entry 26 to be added next session.
+4. Prompt log: Entries 1–21 in `week05-cli-log.md`; Entries 22–26 in `week07-analysis-log.md`.
 5. `docs/source/SOP_v1.md` — human-readable SOP (v1.5).
 6. `docs/source/SOP_v1_annotated.md` — annotated SOP with OP-01 through OP-09 callouts. ✅ Created and reviewed.
 7. `docs/source/KB_Page.md` — publish-readiness improvements applied (v1.6.2).
@@ -111,10 +120,10 @@ Current state (v1.7.4 + 2026-02-26 additions):
 10. `docs/exports/` — Five PDFs in place: `SOP_v1.pdf`, `SOP_v1_annotated.pdf`, `KB_Page.pdf`, `Quick_Reference.pdf`, `Checklist.pdf`.
 11. `M07-plan.md` — Module 07 execution plan (6 pain points, 9-item backlog, Top 3 deep-dive targets).
 12. `analysis/workflow-critique-memo.md` + `.pdf` — Evidence-based critique memo (5 pain points, OP-01 through OP-09, secretary role resolved). ✅ Reviewed.
-13. `analysis/improvement-backlog-v1.md` + `.pdf` — 9-item prioritized improvement backlog (landscape PDF); Description, Impact, and Status columns added. ✅ Reviewed.
+13. `analysis/improvement-backlog-v1.md` + `.pdf` — 9-item prioritized improvement backlog (landscape PDF); Key table added defining OP-##. ✅ Reviewed.
 14. `analysis/top3-deep-dive.md` + `.pdf` — 5-Whys deep dive for OP-01, OP-02, OP-03; all open questions resolved. ✅ Reviewed.
 15. `README.md` — updated to include `analysis/` folder tree and all new artifacts. ✅ Done.
-16. All M07 changes committed and pushed to `origin/master` (commit `f129928`). ✅ Done.
+16. All M07 changes committed and pushed to `origin/master` (commit `fcbc95e`). ✅ Done.
 
 Deferred from M06:
 - YAML front matter in `KB_Page.md` renders visibly in PDF — gray-matter suppression deferred.

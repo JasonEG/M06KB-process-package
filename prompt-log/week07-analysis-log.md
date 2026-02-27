@@ -159,3 +159,38 @@
 - `process-package/M07-plan.md` (updated — OP-09 renumber, 9-item count)
 - `process-package/CHANGELOG.md` (updated — v1.7.3 and v1.7.4)
 - `process-package/CLAUDE.md` (updated — session summary, current state, next steps)
+
+---
+
+## Entry 26 — M07 Analysis Document Review
+
+**Date:** 2026-02-27
+**Tool:** Claude Code (CLI)
+
+### Prompt
+
+> can you check claude.md for context? / let's review the M07 analysis documents / read through each document together / no this is what we agreed was best, let's move on [after memo review] / can we include an explanation for the term "OP-##" in this document? [backlog] / can we regenerate the PDF / let's move on to the deep dive / commit and push this please / update CLAUDE.md and the prompt log
+
+### What Was Done
+
+1. Read CLAUDE.md for session context; confirmed current state through commit `f129928`.
+2. Read all three M07 analysis documents in parallel: `workflow-critique-memo.md`, `improvement-backlog-v1.md`, `top3-deep-dive.md`.
+3. Reviewed `workflow-critique-memo.md` section by section — no changes made; user confirmed existing content was intentional.
+4. Reviewed `improvement-backlog-v1.md` section by section — identified missing OP-## term definition.
+5. Added Key table to `improvement-backlog-v1.md` defining "OP-##" as "Optimization Opportunity," consistent with the Key table already present in `top3-deep-dive.md`.
+6. Regenerated `improvement-backlog-v1.pdf` using local temp workaround (deleted stale temp PDF first to ensure fresh output).
+7. Reviewed `top3-deep-dive.md` section by section — no changes needed; all three 5-Whys chains confirmed sound.
+8. Committed and pushed `analysis/improvement-backlog-v1.md` and `analysis/improvement-backlog-v1.pdf` (commit `fcbc95e`).
+
+### Key Decisions
+
+- Workflow critique memo reviewed and accepted as-is — no changes made based on user confirmation.
+- OP-## Key table added to backlog for consistency with deep dive; definition language matches exactly.
+- Deep dive accepted as-is — strongest of the three documents; no issues flagged.
+
+### Output
+
+- `process-package/analysis/improvement-backlog-v1.md` (updated — Key table added)
+- `process-package/analysis/improvement-backlog-v1.pdf` (regenerated)
+- `process-package/CLAUDE.md` (updated — session summary and next-session reminder)
+- `process-package/prompt-log/week07-analysis-log.md` (updated — Entry 26 added)
