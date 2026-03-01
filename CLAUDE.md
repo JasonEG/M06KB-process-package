@@ -58,10 +58,27 @@ This process package was originally created for Module 05 (CLI) and copied here 
 
 ### ⚠️ START HERE NEXT SESSION
 
-**M07 is complete and submission-ready. Begin M08.**
+**M08 is scoped and ready to execute. Begin Step 1.**
 
-1. **Confirm M08 scope** — review the M08 assignment brief and identify deliverables.
-2. **Identify first tasks** — plan the M08 execution order.
+M08 folder structure agreed:
+- `M08-plan.md` — execution plan at the repo root (same pattern as `M07-plan.md`)
+- `measurement/` — all M08 deliverables (parallel to `analysis/`)
+  - `data/Q1-finalization-export.csv` — mock raw dataset (Power Query source)
+  - `measurement-plan.md` + `.pdf` — metric definitions, OP code mapping, baseline vs. target
+  - `baseline-dataset.xlsx` — Power Query workbook (4 sheets, calculated columns, pivots, conditional formatting)
+  - `power-query-steps.md` — Power Query step documentation (textual evidence)
+- `prompt-log/week08-measurement-log.md` — new prompt log for M08
+
+**Execute in order — run a consistency check after each item before proceeding:**
+
+1. Create `M08-plan.md` at root
+2. Create `measurement/measurement-plan.md` + export PDF
+3. Create `measurement/data/Q1-finalization-export.csv` (18-row mock dataset)
+4. Create `measurement/baseline-dataset.xlsx` (Power Query + Tables + pivots + conditional formatting)
+5. Create `measurement/power-query-steps.md` (Power Query step documentation)
+6. Update `README.md` (add `measurement/` tree + Source of Truth entries)
+7. Update `CHANGELOG.md`, `prompt-log/week08-measurement-log.md`, `CLAUDE.md`
+8. Commit and push
 
 ---
 
