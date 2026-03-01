@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.5] — 2026-03-01
+
+### Fixed
+
+- `analysis/workflow-critique-memo.md`: Corrected "all six" → "all five" in Executive Summary — the memo documents five pain points; "all six" was a drafting artifact from an earlier six-item draft that was not caught during the 2026-02-27 review.
+- `analysis/workflow-critique-memo.pdf`: Regenerated to reflect fix.
+
 ## [1.7.4] — 2026-02-25
 
 ### Changed

@@ -10,7 +10,7 @@
 
 ## Executive Summary
 
-The Grade Finalization process (SOP v1.5) is documented, validated, and internally consistent. However, a structured diagnostic review of the SOP, KB article, Quick Reference, and supporting artifacts reveals five recurring pain points. Three of these carry meaningful defect risk — incorrect weights, unsaved changes, and unstructured handoffs — and all six represent opportunities to reduce teacher effort, improve reliability, and close process gaps. This memo documents each issue with its evidence anchor and proposes a practical countermeasure.
+The Grade Finalization process (SOP v1.5) is documented, validated, and internally consistent. However, a structured diagnostic review of the SOP, KB article, Quick Reference, and supporting artifacts reveals five recurring pain points. Three of these carry meaningful defect risk — incorrect weights, unsaved changes, and unstructured handoffs — and all five represent opportunities to reduce teacher effort, improve reliability, and close process gaps. This memo documents each issue with its evidence anchor and proposes a practical countermeasure.
 
 ---
 

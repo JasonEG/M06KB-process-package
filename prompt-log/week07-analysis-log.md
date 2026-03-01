@@ -162,6 +162,41 @@
 
 ---
 
+## Entry 27 — M07 Final Review and Memo Fix
+
+**Date:** 2026-03-01
+**Tool:** Claude Code (CLI)
+
+### Prompt
+
+> let's do the final review / why did it not match, did we miss something in our review? / yes go ahead and fix it / can we update the promptlog, claude.md, and our changelog first?
+
+### What Was Done
+
+1. Read CLAUDE.md for session context; confirmed current state through commit `fcbc95e`.
+2. Read all four M07 deliverables in parallel: `workflow-critique-memo.md`, `improvement-backlog-v1.md`, `top3-deep-dive.md`, `docs/source/SOP_v1_annotated.md`.
+3. Confirmed all PDF exports present: three in `analysis/`, five in `docs/exports/`.
+4. Cross-checked OP-01 through OP-09 codes, priority levels, status values, and cross-document references — all consistent.
+5. Identified one error in `workflow-critique-memo.md` Executive Summary: "all six represent opportunities" — memo documents exactly five pain points; "six" was a drafting artifact from an earlier six-item draft not caught during the 2026-02-27 review.
+6. Fixed "all six" → "all five" in `workflow-critique-memo.md` line 13.
+7. Regenerated `workflow-critique-memo.pdf` using local temp workaround.
+8. Updated CHANGELOG.md (v1.7.5), prompt log (Entry 27), and CLAUDE.md.
+
+### Key Decisions
+
+- "All six" traced as a drafting artifact: pain points were cut from 6 to 5 during Entry 23 review (2026-02-23), but the count in the executive summary was not fully updated — one instance remained.
+- All other cross-artifact checks passed clean; no additional changes needed.
+
+### Output
+
+- `process-package/analysis/workflow-critique-memo.md` (fixed — "all six" → "all five" in Executive Summary)
+- `process-package/analysis/workflow-critique-memo.pdf` (regenerated)
+- `process-package/CHANGELOG.md` (updated — v1.7.5)
+- `process-package/CLAUDE.md` (updated — session summary and next-session reminder)
+- `process-package/prompt-log/week07-analysis-log.md` (updated — Entry 27 added)
+
+---
+
 ## Entry 26 — M07 Analysis Document Review
 
 **Date:** 2026-02-27
