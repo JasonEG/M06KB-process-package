@@ -229,3 +229,37 @@
 - `process-package/analysis/improvement-backlog-v1.pdf` (regenerated)
 - `process-package/CLAUDE.md` (updated — session summary and next-session reminder)
 - `process-package/prompt-log/week07-analysis-log.md` (updated — Entry 26 added)
+
+---
+
+## Entry 27 — M07 Final Review and Error Fix
+
+**Date:** 2026-03-01
+**Tool:** Claude Code (CLI)
+
+### Prompt
+
+> can you check claude.md for context? / let's do a final review of all M07 deliverables / fix the "all six" error and regenerate the PDF / update logs and CLAUDE.md
+
+### What Was Done
+
+1. Read CLAUDE.md for session context; confirmed current state at v1.7.4 + 2026-02-26 additions.
+2. Read all four M07 deliverables in parallel: `workflow-critique-memo.md`, `improvement-backlog-v1.md`, `top3-deep-dive.md`, `docs/source/SOP_v1_annotated.md`.
+3. Confirmed all PDF exports present: 3 in `analysis/`, 5 in `docs/exports/`.
+4. Cross-checked all OP-01 through OP-09 codes, priorities, statuses, and cross-document references — all consistent.
+5. Found error in `workflow-critique-memo.md` Executive Summary: "all six" should be "all five" — drafting artifact from earlier 6-item version.
+6. Fixed "all six" → "all five" in `workflow-critique-memo.md`.
+7. Regenerated `analysis/workflow-critique-memo.pdf`.
+8. Updated CHANGELOG (v1.7.5) and CLAUDE.md.
+
+### Key Decisions
+
+- All four M07 deliverables accepted as final after review — only the "all six" error required a fix.
+- M08 scoped and recorded in CLAUDE.md as next-session work.
+
+### Output
+
+- `process-package/analysis/workflow-critique-memo.md` (updated — "all six" → "all five")
+- `process-package/analysis/workflow-critique-memo.pdf` (regenerated)
+- `process-package/CHANGELOG.md` (updated — v1.7.5)
+- `process-package/CLAUDE.md` (updated — M08 scope documented as next session)

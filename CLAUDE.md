@@ -53,32 +53,54 @@ This process package was originally created for Module 05 (CLI) and copied here 
 
 ## Where We Left Off
 
-**Date:** 2026-03-01 (updated)
-**Module transition:** M07 Workflow Critique → M08
+**Date:** 2026-03-05 (updated)
+**Module:** M08 — Measurement & Baseline Dataset ✅ COMPLETE
 
 ### ⚠️ START HERE NEXT SESSION
 
-**M08 is scoped and ready to execute. Begin Step 1.**
+**M08 is fully complete and committed. All deliverables done. Ready for M09.**
 
-M08 folder structure agreed:
-- `M08-plan.md` — execution plan at the repo root (same pattern as `M07-plan.md`)
-- `measurement/` — all M08 deliverables (parallel to `analysis/`)
-  - `data/Q1-finalization-export.csv` — mock raw dataset (Power Query source)
-  - `measurement-plan.md` + `.pdf` — metric definitions, OP code mapping, baseline vs. target
-  - `baseline-dataset.xlsx` — Power Query workbook (4 sheets, calculated columns, pivots, conditional formatting)
-  - `power-query-steps.md` — Power Query step documentation (textual evidence)
-- `prompt-log/week08-measurement-log.md` — new prompt log for M08
+M08 deliverables (all done):
+- ✅ `M08-plan.md` — execution plan
+- ✅ `measurement/data/Q1-finalization-export.csv` — 18-row mock dataset
+- ✅ `measurement/measurement-plan.md` — metric definitions + Q1 baseline values
+- ✅ `measurement/baseline-dataset.xlsx` — 4-sheet Power Query workbook (Raw, Cleaned, Pivot, Dashboard)
+- ✅ `measurement/power-query-steps.md` — Power Query step documentation (reviewed and fixed)
+- ✅ `measurement/measurement-plan.pdf` — PDF export
+- ✅ `README.md` updated (measurement/ tree + Source of Truth entries)
+- ✅ `CHANGELOG.md` updated (v1.8.1)
+- ✅ `prompt-log/week08-measurement-log.md` updated (Entry 29)
+- ✅ Committed and pushed to `origin/master`
 
-**Execute in order — run a consistency check after each item before proceeding:**
+---
 
-1. Create `M08-plan.md` at root
-2. Create `measurement/measurement-plan.md` + export PDF
-3. Create `measurement/data/Q1-finalization-export.csv` (18-row mock dataset)
-4. Create `measurement/baseline-dataset.xlsx` (Power Query + Tables + pivots + conditional formatting)
-5. Create `measurement/power-query-steps.md` (Power Query step documentation)
-6. Update `README.md` (add `measurement/` tree + Source of Truth entries)
-7. Update `CHANGELOG.md`, `prompt-log/week08-measurement-log.md`, `CLAUDE.md`
-8. Commit and push
+### Session Summary — 2026-03-05
+
+**What we did today:**
+- Resumed M08 at Step 4. Reviewed `measurement-plan.md` and CSV — no issues found.
+- Created `measurement/baseline-dataset.xlsx` via Python/openpyxl script — 4 sheets: Raw Data, Cleaned Data (3 calculated columns), Summary Pivot (dept aggregations + bar chart), Dashboard (5 KPIs with conditional formatting).
+- Ran programmatic verification of xlsx — all values, calculated columns, and KPI statuses confirmed accurate.
+- Created `measurement/power-query-steps.md` — 7 PQ steps with M query code, column reference, metric derivation table.
+- Cross-referenced PQ steps against M08 plan and measurement plan — found and fixed 2 issues: missing blank-handling note, misleading WeightErrorFlag "Used by" attribution.
+- Exported `measurement/measurement-plan.pdf` (md-to-pdf ran directly on network drive — no temp workaround needed).
+- Updated README.md, CHANGELOG.md (v1.8.1), prompt log (Entry 29), and CLAUDE.md.
+- Committed and pushed to `origin/master`.
+
+---
+
+### Session Summary — 2026-03-03
+
+**What we did today:**
+- Read CLAUDE.md and M07-plan.md for context; confirmed M07 fully closed at v1.7.5.
+- Created `M08-plan.md` — metrics, dataset spec, workbook layout, execution order.
+- Reviewed M08-plan and fixed three issues: DaysFromDeadline duplication, "Baseline Target" label ambiguity, OP-06/OP-08 silence.
+- Revised execution order: CSV before measurement plan (so baseline values come from real data).
+- Created `measurement/data/Q1-finalization-export.csv` (18 rows, Q1 deadline 10/31/2025).
+- Created `measurement/measurement-plan.md` with Q1 baseline values computed from CSV.
+- Backfilled Entry 27 in `week07-analysis-log.md` (had been referenced in CLAUDE.md but never written).
+- Created `prompt-log/week08-measurement-log.md` (Entry 28).
+- Updated `CHANGELOG.md` (v1.8.0) and `CLAUDE.md`.
+- Session paused — PDF export, xlsx, power-query-steps.md, README, and commit deferred to next session.
 
 ---
 

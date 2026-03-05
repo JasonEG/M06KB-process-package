@@ -1,5 +1,36 @@
 # Changelog
 
+## [1.8.1] — 2026-03-05
+
+### Added
+
+- `measurement/baseline-dataset.xlsx` — Power Query workbook with 4 sheets: Raw Data (18 rows × 9 columns from CSV), Cleaned Data (+ 3 calculated columns: DaysFromDeadline, OnTime, WeightErrorFlag), Summary Pivot (department aggregations + bar chart), Dashboard (5 KPI cells M-01 through M-05 with Red/Yellow/Green conditional formatting and OP code mapping notes).
+- `measurement/power-query-steps.md` — Step-by-step Power Query documentation (7 steps: source connection, promote headers, set types, add DaysFromDeadline, add OnTime, add WeightErrorFlag, load to sheet); includes full M query block, column reference table, and metric derivation reference.
+- `measurement/measurement-plan.pdf` — PDF export of `measurement/measurement-plan.md`.
+
+### Changed
+
+- `README.md`: Added `M08-plan.md` to folder structure; added `measurement/` folder tree; added Source of Truth entries for all five M08 measurement files; updated prompt-log entry to include `week08-measurement-log.md`.
+- `prompt-log/week08-measurement-log.md`: Entry 29 added (this session — xlsx, power-query-steps, PDF, doc updates).
+
+### Fixed
+
+- `measurement/power-query-steps.md`: Added blank-handling note after Step 3 (Q1 CSV has no blanks; step not required but documented for future use). Corrected Step 6 "Used by" note — WeightErrorFlag is a filtering/visualization helper; M-02 metric uses `SUM(WeightErrors)` directly, not `SUM(WeightErrorFlag)`.
+
+## [1.8.0] — 2026-03-03
+
+### Added
+
+- `M08-plan.md` — Module 08 execution plan: 5 metrics (M-01 through M-05) mapped to M07 OP codes, 9-column mock dataset spec, 4-sheet Power Query workbook layout, and 8-step execution order. Includes rationale notes for OP-06/OP-08 exclusion and CSV-before-measurement-plan ordering.
+- `measurement/` — New subfolder for M08 measurement deliverables (parallel to `analysis/`).
+- `measurement/data/Q1-finalization-export.csv` — 18-row mock dataset (one row per teacher); columns: TeacherID, Department, NumClasses, FinalizationDate, Deadline, WeightErrors, NotificationComplete, ReworkIncidents, AvgTimePerClass_min. Q1 deadline: 10/31/2025.
+- `measurement/measurement-plan.md` — Metric definitions with Q1 baseline values computed from CSV, improvement targets, gap analysis, OP code mapping, measurement cadence, and OP-06/OP-08 exclusion rationale.
+- `prompt-log/week08-measurement-log.md` — New prompt log for M08 (Entry 28+).
+
+### Fixed
+
+- `prompt-log/week07-analysis-log.md` — Entry 27 (2026-03-01 session) backfilled; had been referenced in CLAUDE.md but not written to the log file.
+
 ## [1.7.5] — 2026-03-01
 
 ### Fixed

@@ -34,6 +34,7 @@ process-package/
 ├── glossary.md                # Domain-specific terminology
 ├── validation-log.md          # Cross-artifact consistency checks
 ├── M07-plan.md                # Module 07 workflow critique execution plan
+├── M08-plan.md                # Module 08 measurement execution plan
 │
 ├── analysis/                  # M07 workflow critique deliverables
 │   ├── workflow-critique-memo.md      # Evidence-based critique memo (5 pain points)
@@ -77,9 +78,18 @@ process-package/
 │       ├── Quick_Reference.pdf    # PDF export
 │       └── Checklist.pdf          # PDF export
 │
+├── measurement/               # M08 measurement deliverables
+│   ├── measurement-plan.md        # Metric definitions, baselines, targets, OP code mapping
+│   ├── measurement-plan.pdf       # PDF export
+│   ├── power-query-steps.md       # Power Query transformation step documentation
+│   ├── baseline-dataset.xlsx      # Power Query workbook (Raw, Cleaned, Pivot, Dashboard)
+│   └── data/
+│       └── Q1-finalization-export.csv  # 18-row mock dataset (Power Query source)
+│
 └── prompt-log/
     ├── week05-cli-log.md      # AI prompt interaction log (Entries 1–21)
-    └── week07-analysis-log.md # AI prompt interaction log (Entries 22–25)
+    ├── week07-analysis-log.md # AI prompt interaction log (Entries 22–27)
+    └── week08-measurement-log.md # AI prompt interaction log (Entries 28–29)
 ```
 
 ## Source of Truth vs. Generated Files
@@ -107,6 +117,11 @@ process-package/
 | `analysis/improvement-backlog-v1.md` | Authored — 9-item improvement backlog with descriptions, owners, effort, priority, and status. |
 | `analysis/top3-deep-dive.md` | Authored — 5-Whys root-cause analysis for OP-01, OP-02, and OP-03. |
 | `analysis/*.pdf` | **Generated** from corresponding `.md` source files. Do not hand-edit. |
+| `measurement/data/Q1-finalization-export.csv` | Authored — 18-row mock dataset (one row per teacher); Power Query source for `baseline-dataset.xlsx`. |
+| `measurement/measurement-plan.md` | Authored — metric definitions (M-01 through M-05), Q1 baseline values, targets, gap analysis, OP code mapping, and measurement cadence. |
+| `measurement/measurement-plan.pdf` | **Generated** from `measurement/measurement-plan.md`. Do not hand-edit. |
+| `measurement/power-query-steps.md` | Authored — step-by-step Power Query transformation documentation with M query code and metric derivation reference. |
+| `measurement/baseline-dataset.xlsx` | **Generated** — Power Query workbook (Raw Data, Cleaned Data, Summary Pivot, Dashboard) derived from the CSV. Do not hand-edit raw data sheet. |
 
 When making process changes, always update **SOP.md first**, then update the diagram source files to match, and finally regenerate the rendered outputs.
 
