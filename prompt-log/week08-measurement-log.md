@@ -135,6 +135,41 @@
 
 - `process-package/measurement/power-query-steps.pdf` (new — PDF export)
 - `process-package/A08/` (new — submission package, 7 files)
+
+---
+
+## Entry 31 — Measurement Plan Additions, Proofreading, and PDF Refresh
+
+**Date:** 2026-03-06
+**Tool:** Claude Code (CLI)
+
+### Prompt
+
+> Can we add the data collection method to the measurement-plan / yes please proof read the document for clarity and to ensure it will convey the story of our data to the reader / yes please regenerate the pdf, update the folder, and commit
+
+### What Was Done
+
+1. Added `Data Collection Method` section to `measurement-plan.md` — primary source table, per-metric collection notes, and privacy/redaction plan.
+2. Added `Baseline Interpretation` section — user-authored narrative paragraphs for M-01 through M-05, lightly edited for formatting and inserted into the document.
+3. Proofread full document — identified and fixed: typo "unfinalzied" → "unfinalized" (M-01), M-04 Slowest Teachers ordering corrected to descending, T003 added to M-04 interpretation, bridge sentence added in M-04 pointing to M-05 pattern, closing action sentence added to M-05.
+4. Regenerated `measurement/measurement-plan.pdf` via md-to-pdf.
+5. Updated `A08/measurement_plan.md` and `A08/measurement_plan.pdf` with refreshed files.
+6. Updated `CHANGELOG.md` (v1.8.3) and this prompt log (Entry 31).
+7. Committed and pushed to `origin/master`.
+
+### Key Decisions
+
+- Baseline interpretation paragraphs preserve the user's voice and framing; edits were limited to typo/ordering fixes and brief connective sentences.
+- Data collection method explicitly separates *when* data is collected (cadence) from *how* it is collected (method) — the cadence table was already present; the new section adds the missing how/privacy layer.
+
+### Output
+
+- `process-package/measurement/measurement-plan.md` (updated — data collection method + baseline interpretation + proofread fixes)
+- `process-package/measurement/measurement-plan.pdf` (regenerated)
+- `process-package/A08/measurement_plan.md` (updated)
+- `process-package/A08/measurement_plan.pdf` (updated)
+- `process-package/CHANGELOG.md` (updated — v1.8.3)
+- `process-package/prompt-log/week08-measurement-log.md` (updated — Entry 31 added)
 - `process-package/CHANGELOG.md` (updated — v1.8.2)
 - `process-package/README.md` (updated — power-query-steps.pdf + A08/ added)
 - `process-package/prompt-log/week08-measurement-log.md` (updated — Entry 30 added)

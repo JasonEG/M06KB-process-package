@@ -73,7 +73,7 @@ M08 deliverables (all done):
 - ✅ `A08/` — submission package (clean-named copies of all M08 deliverables)
 - ✅ `README.md` updated (measurement/ tree + A08/ + Source of Truth entries)
 - ✅ `CHANGELOG.md` updated (v1.8.2)
-- ✅ `prompt-log/week08-measurement-log.md` updated (Entry 30)
+- ✅ `prompt-log/week08-measurement-log.md` updated (Entry 31)
 - ✅ Committed and pushed to `origin/master`
 
 ---

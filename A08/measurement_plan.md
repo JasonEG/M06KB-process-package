@@ -28,6 +28,34 @@ All data is mock/illustrative, modeled on realistic grade finalization patterns.
 
 ---
 
+## Data Collection Method
+
+| Field | Value |
+|-------|-------|
+| **Primary source** | PowerSchool grade finalization admin report — exported by the building principal or designee within one week of each grading-period deadline |
+| **Export format** | CSV (one row per teacher) |
+| **Collection trigger** | Each grading period deadline (Q1–Q4) |
+| **Responsible party** | Process Owner (building-level admin) |
+
+### Per-Metric Collection Notes
+
+| Metric | How Data Is Collected |
+|--------|----------------------|
+| M-01 Finalization completion rate | `FinalizationDate` and `Deadline` columns from admin export; on-time status derived in Power Query |
+| M-02 Weight configuration error rate | `WeightErrors` column logged by admin during or after the finalization window (review of grade weight setup screens) |
+| M-03 Notification compliance rate | `NotificationComplete` column — admin confirms whether each teacher's finalization email contained all required fields (subject line, class list, signature) |
+| M-04 Avg time-to-finalize per class | `AvgTimePerClass_min` — self-reported by teachers via end-of-period survey, or extracted from PowerSchool session logs if available |
+| M-05 Rework incident rate | `ReworkIncidents` — count of re-opened or resubmitted classes logged by admin during the finalization window |
+
+### Privacy and Redaction Plan
+
+- **No student data is collected or stored.** All metrics are teacher-level aggregates.
+- **Teacher names are replaced with anonymous IDs** (T001–T018) before any data is stored, shared, or analyzed. The ID-to-name mapping is held only by the Process Owner and is not included in this dataset.
+- **The CSV and workbook are stored in the process package repository**, which is access-controlled and not publicly published.
+- If this process is adopted at scale, the ID mapping should be stored separately from the dataset and destroyed after the improvement cycle concludes.
+
+---
+
 ## Metric Definitions
 
 ### M-01 — Finalization Completion Rate
@@ -86,7 +114,7 @@ All data is mock/illustrative, modeled on realistic grade finalization patterns.
 | **Q1 Baseline** | 8.4 min |
 | **Improvement Target** | ≤ 8.0 min |
 | **Gap** | +0.4 min/class above target |
-| **Slowest teachers** | T007 (12.5 min), T003 (11.2 min), T017 (11.8 min) |
+| **Slowest teachers** | T007 (12.5 min), T017 (11.8 min), T003 (11.2 min) |
 
 ---
 
@@ -116,6 +144,30 @@ All data is mock/illustrative, modeled on realistic grade finalization patterns.
 | M-05 | Rework incident rate | 0.39 incidents/teacher | ≤ 0.20 | +0.19 | No |
 
 All five metrics fall short of their improvement targets. M-04 has the smallest gap (0.4 min); M-03 has the largest (23.3 pp). This baseline confirms the M07 critique findings and provides a measurable starting point for countermeasure evaluation.
+
+---
+
+## Baseline Interpretation
+
+### M-01 — Finalization Completion Rate
+
+Fifteen out of eighteen teachers hit the deadline, which tells me most people are meeting expectations. The three who were late — T003, T007, and T012 — were only a few days past the deadline, which could be explained by illness or some other grading irregularity rather than a systemic failure. That said, the gap still exists and is worth addressing. A missing progress tracker likely contributes: without one, a teacher may not realize they have an unfinalized class remaining and simply forget it. Some teachers may also be unsure the window is even open, though that is less likely given that quarter end dates are on the district calendar and most staff are aware of them. The connection to OP-01 (no completion tracker) and OP-09 (ambiguous start trigger) is real, even if the late submissions in this sample were not severe.
+
+### M-02 — Weight Configuration Error Rate
+
+Five teachers had weight configuration errors, which is somewhat expected. Grade weighting is not intuitive, especially for teachers who are not comfortable with how percentages work or who are unfamiliar with how PowerSchool structures category weights. You would think high school teachers would handle this easily, but the system setup makes it more complicated than it appears, this is a problem that comes up every grading period. The baseline of 0.28 errors per teacher is nearly three times the target of 0.10, which confirms that the lack of a weight validation reference (OP-02) is a real gap. Including a validation reference sheet or, ideally, an in-system visual reminder showing teachers what their weight setup should look like could meaningfully reduce these errors.
+
+### M-03 — Notification Compliance Rate
+
+At 66.7%, the notification compliance rate is the weakest result in this baseline — only two-thirds of teachers sent a complete notification, leaving six non-compliant. This is the metric with the largest gap from target (−23.3 percentage points) and arguably the one that needs to be addressed first. Email seems like a simple task, but without a standard template, teachers are left to figure out what to include, when to send it, and where to send it. It is also likely that some teachers notified the secretary informally (stopping by the office or sending a text) which would not be captured as compliant even if the intent was there. A standardized email template tied to a clear trigger (OP-03) would remove the ambiguity and give both teachers and the secretary a consistent, trackable record.
+
+### M-04 — Average Time-to-Finalize per Class
+
+An average of 8.4 minutes per class is close to the target but the real-world impact adds up fast. A teacher with five classes is spending 40–50 minutes just finalizing grades during an already compressed end-of-quarter window — time that could otherwise go toward grading, planning, or supporting students. The 0.4-minute gap from target may look small, but reducing it would be well-received by staff. Some of the higher individual times (T007 at 12.5 minutes, T017 at 11.8 minutes, T003 at 11.2 minutes) may reflect factors like more grades to enter, a less efficient input device such as a laptop trackpad, or repetitive navigation caused by the lack of a progress tracker (OP-01). Without knowing which classes are already done, teachers may be cycling through completed classes unnecessarily, wasting time in the process. It is also worth noting that these same three teachers appear across multiple problem metrics, a pattern explored further in M-05.
+
+### M-05 — Rework Incident Rate
+
+The rework incident rate of 0.39 per teacher is nearly double the target of 0.20, with seven incidents recorded across six teachers — including T007 with two incidents. Rework at this scale suggests that some teachers are either not saving before exiting (OP-04) or are finalizing classes without confirming the correct grade configuration first (OP-05). A pattern worth calling out is that T003, T007, and T017 appear across multiple metrics in this baseline, not just rework, but also late finalization, weight errors, and slow completion times. These individuals are likely candidates for targeted peer coaching, a one-on-one walkthrough of the process with a colleague or administrator they trust, or simply a first-time structured orientation. It is possible they were never formally trained on the finalization workflow, which would explain the recurring errors across multiple dimensions. Addressing their needs directly rather than waiting for a school-wide rollout is likely the highest-leverage starting point for improvement.
 
 ---
 

@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.8.3] — 2026-03-06
+
+### Added
+
+- `measurement/measurement-plan.md`: Added `Data Collection Method` section (primary source, per-metric collection notes, privacy and redaction plan).
+- `measurement/measurement-plan.md`: Added `Baseline Interpretation` section — one narrative paragraph per metric (M-01 through M-05) explaining what each baseline number means, where variance comes from, and how it connects to M07 improvement opportunities.
+
+### Fixed
+
+- `measurement/measurement-plan.md`: Corrected typo "unfinalzied" → "unfinalized" in M-01 interpretation.
+- `measurement/measurement-plan.md`: Sorted M-04 Slowest Teachers in descending order (T007, T017, T003).
+- `measurement/measurement-plan.pdf`: Regenerated to reflect all additions and fixes.
+- `A08/measurement_plan.md` and `A08/measurement_plan.pdf`: Updated to match latest source.
+
 ## [1.8.2] — 2026-03-06
 
 ### Added
