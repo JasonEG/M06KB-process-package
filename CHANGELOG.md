@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.2] — 2026-03-06
+
+### Added
+
+- `measurement/power-query-steps.pdf` — PDF export of `measurement/power-query-steps.md`.
+- `A08/` — Submission package folder containing clean-named copies of all M08 deliverables: `measurement_plan.pdf`, `measurement_plan.md`, `baseline_dataset.xlsx`, `power_query_steps.pdf`, `power_query_steps.md`, `prompt_log.md`, and `data/Q1-finalization-export.csv`.
+
 ## [1.8.1] — 2026-03-05
 
 ### Added

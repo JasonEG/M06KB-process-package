@@ -82,9 +82,20 @@ process-package/
 │   ├── measurement-plan.md        # Metric definitions, baselines, targets, OP code mapping
 │   ├── measurement-plan.pdf       # PDF export
 │   ├── power-query-steps.md       # Power Query transformation step documentation
+│   ├── power-query-steps.pdf      # PDF export
 │   ├── baseline-dataset.xlsx      # Power Query workbook (Raw, Cleaned, Pivot, Dashboard)
 │   └── data/
 │       └── Q1-finalization-export.csv  # 18-row mock dataset (Power Query source)
+│
+├── A08/                       # M08 submission package (clean-named copies)
+│   ├── measurement_plan.pdf
+│   ├── measurement_plan.md
+│   ├── baseline_dataset.xlsx
+│   ├── power_query_steps.pdf
+│   ├── power_query_steps.md
+│   ├── prompt_log.md
+│   └── data/
+│       └── Q1-finalization-export.csv
 │
 └── prompt-log/
     ├── week05-cli-log.md      # AI prompt interaction log (Entries 1–21)
@@ -121,7 +132,9 @@ process-package/
 | `measurement/measurement-plan.md` | Authored — metric definitions (M-01 through M-05), Q1 baseline values, targets, gap analysis, OP code mapping, and measurement cadence. |
 | `measurement/measurement-plan.pdf` | **Generated** from `measurement/measurement-plan.md`. Do not hand-edit. |
 | `measurement/power-query-steps.md` | Authored — step-by-step Power Query transformation documentation with M query code and metric derivation reference. |
+| `measurement/power-query-steps.pdf` | **Generated** from `measurement/power-query-steps.md`. Do not hand-edit. |
 | `measurement/baseline-dataset.xlsx` | **Generated** — Power Query workbook (Raw Data, Cleaned Data, Summary Pivot, Dashboard) derived from the CSV. Do not hand-edit raw data sheet. |
+| `A08/` | Submission package — clean-named copies of all M08 deliverables for upload. Do not edit files here; update originals in `measurement/` and re-copy. |
 
 When making process changes, always update **SOP.md first**, then update the diagram source files to match, and finally regenerate the rendered outputs.
 

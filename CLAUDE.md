@@ -60,6 +60,8 @@ This process package was originally created for Module 05 (CLI) and copied here 
 
 **M08 is fully complete and committed. All deliverables done. Ready for M09.**
 
+⚠️ **User preference:** At the start of the next session, review the most recent completed step/deliverable before moving on to new work.
+
 M08 deliverables (all done):
 - ✅ `M08-plan.md` — execution plan
 - ✅ `measurement/data/Q1-finalization-export.csv` — 18-row mock dataset
@@ -67,10 +69,25 @@ M08 deliverables (all done):
 - ✅ `measurement/baseline-dataset.xlsx` — 4-sheet Power Query workbook (Raw, Cleaned, Pivot, Dashboard)
 - ✅ `measurement/power-query-steps.md` — Power Query step documentation (reviewed and fixed)
 - ✅ `measurement/measurement-plan.pdf` — PDF export
-- ✅ `README.md` updated (measurement/ tree + Source of Truth entries)
-- ✅ `CHANGELOG.md` updated (v1.8.1)
-- ✅ `prompt-log/week08-measurement-log.md` updated (Entry 29)
+- ✅ `measurement/power-query-steps.pdf` — PDF export
+- ✅ `A08/` — submission package (clean-named copies of all M08 deliverables)
+- ✅ `README.md` updated (measurement/ tree + A08/ + Source of Truth entries)
+- ✅ `CHANGELOG.md` updated (v1.8.2)
+- ✅ `prompt-log/week08-measurement-log.md` updated (Entry 30)
 - ✅ Committed and pushed to `origin/master`
+
+---
+
+### Session Summary — 2026-03-06
+
+**What we did today:**
+- Reviewed `prompt-log/week08-measurement-log.md` — confirmed Entries 28 and 29 accurate.
+- Verified `measurement/power-query-steps.md` against M08-plan.md — all 7 steps, column reference, and metric derivation table confirmed complete. No gaps.
+- Ran submission checklist verification — identified two gaps: missing `power-query-steps.pdf` and no `A08/` submission folder.
+- Generated `measurement/power-query-steps.pdf` via md-to-pdf.
+- Created `A08/` submission package with clean-named copies of all M08 deliverables.
+- Updated CHANGELOG (v1.8.2), README (power-query-steps.pdf + A08/ in tree and Source of Truth), prompt log (Entry 30), and CLAUDE.md.
+- Committed and pushed to `origin/master`.
 
 ---
 
