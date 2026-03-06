@@ -53,7 +53,7 @@ This process package was originally created for Module 05 (CLI) and copied here 
 
 ## Where We Left Off
 
-**Date:** 2026-03-05 (updated)
+**Date:** 2026-03-06 (updated)
 **Module:** M08 — Measurement & Baseline Dataset ✅ COMPLETE
 
 ### ⚠️ START HERE NEXT SESSION
@@ -72,7 +72,8 @@ M08 deliverables (all done):
 - ✅ `measurement/power-query-steps.pdf` — PDF export
 - ✅ `A08/` — submission package (clean-named copies of all M08 deliverables)
 - ✅ `README.md` updated (measurement/ tree + A08/ + Source of Truth entries)
-- ✅ `CHANGELOG.md` updated (v1.8.2)
+- ✅ `measurement/measurement-plan.md` — data collection method + baseline interpretation added, proofread
+- ✅ `CHANGELOG.md` updated (v1.8.3)
 - ✅ `prompt-log/week08-measurement-log.md` updated (Entry 31)
 - ✅ Committed and pushed to `origin/master`
 
@@ -83,11 +84,15 @@ M08 deliverables (all done):
 **What we did today:**
 - Reviewed `prompt-log/week08-measurement-log.md` — confirmed Entries 28 and 29 accurate.
 - Verified `measurement/power-query-steps.md` against M08-plan.md — all 7 steps, column reference, and metric derivation table confirmed complete. No gaps.
-- Ran submission checklist verification — identified two gaps: missing `power-query-steps.pdf` and no `A08/` submission folder.
+- Ran submission checklist verification against 5 criteria — identified two gaps: missing `power-query-steps.pdf` and no `A08/` submission folder.
 - Generated `measurement/power-query-steps.pdf` via md-to-pdf.
-- Created `A08/` submission package with clean-named copies of all M08 deliverables.
-- Updated CHANGELOG (v1.8.2), README (power-query-steps.pdf + A08/ in tree and Source of Truth), prompt log (Entry 30), and CLAUDE.md.
-- Committed and pushed to `origin/master`.
+- Created `A08/` submission package (7 files, clean-named copies of all M08 deliverables).
+- Updated CHANGELOG (v1.8.2), README (power-query-steps.pdf + A08/ in tree and Source of Truth), prompt log (Entry 30), and CLAUDE.md. Committed and pushed.
+- Added `Data Collection Method` section to `measurement-plan.md` — primary source table, per-metric collection notes, privacy/redaction plan.
+- User wrote baseline interpretation paragraphs for M-01 through M-05; inserted into `measurement-plan.md` as new `Baseline Interpretation` section.
+- Proofread full document — fixed typo ("unfinalzied"), corrected M-04 Slowest Teachers sort order, added T003 to M-04 interpretation, added bridge sentence in M-04, added closing action sentence in M-05.
+- Regenerated `measurement/measurement-plan.pdf`; updated `A08/` copies.
+- Updated CHANGELOG (v1.8.3), prompt log (Entry 31), and CLAUDE.md. Committed and pushed.
 
 ---
 
