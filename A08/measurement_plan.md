@@ -147,6 +147,24 @@ All five metrics fall short of their improvement targets. M-04 has the smallest 
 
 ---
 
+## Success Criteria
+
+A pilot or improvement initiative for this process will be considered successful if, by the end of the first post-intervention grading period (Q2 — Winter 2026), the following conditions are met:
+
+| Metric | Minimum Acceptable Improvement | Full Success Threshold |
+|--------|-------------------------------|------------------------|
+| M-01 Finalization completion rate | ≥ 90% on time (up from 83.3%) | ≥ 95% on time |
+| M-02 Weight configuration error rate | ≤ 0.20 errors/teacher (reduction of ≥ 30%) | ≤ 0.10 errors/teacher |
+| M-03 Notification compliance rate | ≥ 80% compliant (up from 66.7%) | ≥ 90% compliant |
+| M-04 Avg time-to-finalize per class | ≤ 8.2 min (any measurable reduction) | ≤ 8.0 min |
+| M-05 Rework incident rate | ≤ 0.30 incidents/teacher (reduction of ≥ 20%) | ≤ 0.20 incidents/teacher |
+
+**Minimum acceptable improvement** represents a meaningful directional signal — enough to confirm the countermeasure is working and worth continuing. **Full success** represents the long-term improvement target.
+
+A pilot will be considered **unsuccessful** if any metric regresses (moves further from target) compared to the Q1 baseline, or if participant feedback indicates the countermeasure created new friction without offsetting benefit.
+
+---
+
 ## Baseline Interpretation
 
 ### M-01 — Finalization Completion Rate
@@ -193,6 +211,45 @@ Both items remain open in `analysis/improvement-backlog-v1.md` with Status: Back
 | Compare to targets | Each grading period | Process Owner |
 | Update baseline dataset | Each grading period | Process Owner |
 | Review and revise targets | Annually | Process Owner + Admin |
+
+---
+
+## Quick Pilot Design — Email Template Pilot (Q2)
+
+**OP Code addressed:** OP-03 (unstructured email notification)
+**Primary metric:** M-03 — Notification compliance rate (Q1 baseline: 66.7%)
+
+### Pilot Scope and Duration
+
+| Field | Details |
+|-------|---------|
+| **Participants** | All 18 teachers (school-wide) |
+| **Duration** | Q2 finalization window — approximately 1 week surrounding the Q2 deadline |
+| **Intervention** | Distribute a standard notification email template to all teachers before Q2 opens. Admin sends a reminder 3 days before the deadline prompting teachers to use the template when notifying the office. |
+
+The template will define the required fields: subject line format, class list, and signature. Teachers copy and send — no training session required.
+
+### Success Metrics and Measurement Approach
+
+| Metric | Q1 Baseline | Minimum Success (Q2) | Full Success (Q2) |
+|--------|------------|----------------------|-------------------|
+| M-03 Notification compliance rate | 66.7% | ≥ 80% | ≥ 90% |
+
+After the Q2 deadline, the Process Owner reviews received notifications and scores each as compliant or non-compliant using the same criteria as Q1. The Q2 rate is compared directly to the Q1 baseline. No additional tooling is required.
+
+Secondary signal: track whether any of the six Q1 non-compliant teachers (T003, T006, T010, T012, T015, T017) submitted compliant notifications in Q2.
+
+### Risk Mitigation
+
+| Risk | Likelihood | Mitigation |
+|------|-----------|------------|
+| Teachers ignore the template | Medium | Admin sends a personal follow-up to Q1 non-compliant teachers 1 day before the deadline |
+| Template creates confusion (wrong fields) | Low | Admin reviews the template draft before distribution; one revision cycle allowed |
+| Informal notification (text/in-person) continues | Medium | Admin logs informal notifications separately but does not count them as compliant — consistent with Q1 scoring |
+
+**Rollback plan:** If M-03 does not improve or worsens in Q2, the template is retired and the approach escalates to a mandatory pre-deadline checkin meeting. No system changes are involved, so rollback requires no technical steps.
+
+**Monitor:** Process Owner reviews compliance within 3 business days of the Q2 deadline and documents findings in the baseline dataset.
 
 ---
 
