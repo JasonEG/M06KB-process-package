@@ -66,8 +66,15 @@ This process package was originally created for Module 05 (CLI) and copied here 
 - **Deliverable:** One 5-minute video essay (no outline, speaker notes, or prompt log submission required)
 - **Due:** Sunday, March 15, 2026 by 11:59 PM ET
 - **Source requirement:** One substantive source published September 2025 or later
-- **Next action:** Step 1 — source selection (skim 3–5 recent pieces, pick the strongest one)
 - **Prompt log:** `prompt-log/week09-log.md` — Entry 32 done; internal only, not submitted
+
+### Next Action — START HERE
+**Step 1: Source selection.** Submission requirements reviewed and confirmed aligned with M09-plan.md essay structure. Three paths to choose from:
+1. User brings a source they already have in mind
+2. Search together for 3–5 candidates on a chosen topic
+3. Pick an argument angle first, then find the best source to support it
+
+No source chosen yet. Pick one of the three paths above to begin.
 
 M08 deliverables (all done):
 - ✅ `M08-plan.md` — execution plan
