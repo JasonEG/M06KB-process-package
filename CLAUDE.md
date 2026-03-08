@@ -53,14 +53,21 @@ This process package was originally created for Module 05 (CLI) and copied here 
 
 ## Where We Left Off
 
-**Date:** 2026-03-06 (updated)
-**Module:** M08 — Measurement & Baseline Dataset ✅ COMPLETE
+**Date:** 2026-03-08
+**Module:** M09 — SOPs in the AI Era (IN PROGRESS)
 
 ### ⚠️ START HERE NEXT SESSION
 
-**M08 is fully complete and committed. All deliverables done. Ready for M09.**
+**M09 is set up. Next step: source selection (Step 1 of M09-plan.md).**
 
 ⚠️ **User preference:** At the start of the next session, review the most recent completed step/deliverable before moving on to new work.
+
+### M09 Key Facts
+- **Deliverable:** One 5-minute video essay (no outline, speaker notes, or prompt log submission required)
+- **Due:** Sunday, March 15, 2026 by 11:59 PM ET
+- **Source requirement:** One substantive source published September 2025 or later
+- **Next action:** Step 1 — source selection (skim 3–5 recent pieces, pick the strongest one)
+- **Prompt log:** `prompt-log/week09-log.md` — Entry 32 done; internal only, not submitted
 
 M08 deliverables (all done):
 - ✅ `M08-plan.md` — execution plan
@@ -73,9 +80,10 @@ M08 deliverables (all done):
 - ✅ `A08/` — submission package (clean-named copies of all M08 deliverables)
 - ✅ `README.md` updated (measurement/ tree + A08/ + Source of Truth entries)
 - ✅ `measurement/measurement-plan.md` — data collection method + baseline interpretation added, proofread
+- ✅ `measurement/measurement-plan.md` — Success Criteria + Quick Pilot Design sections added (2026-03-08)
 - ✅ `CHANGELOG.md` updated (v1.8.3)
 - ✅ `prompt-log/week08-measurement-log.md` updated (Entry 31)
-- ✅ Committed and pushed to `origin/master`
+- ✅ Committed and pushed to `origin/master` (latest: d2094f9)
 
 ---
 
