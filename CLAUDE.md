@@ -74,7 +74,7 @@ This process package was originally created for Module 05 (CLI) and copied here 
 2. Search together for 3–5 candidates on a chosen topic
 3. Pick an argument angle first, then find the best source to support it
 
-No source chosen yet. Pick one of the three paths above to begin.
+No source chosen yet. At the start of next session, present all three path options with full explanations and let the user choose before doing anything else.
 
 M08 deliverables (all done):
 - ✅ `M08-plan.md` — execution plan
