@@ -53,28 +53,47 @@ This process package was originally created for Module 05 (CLI) and copied here 
 
 ## Where We Left Off
 
-**Date:** 2026-03-08
+**Date:** 2026-03-13
 **Module:** M09 — SOPs in the AI Era (IN PROGRESS)
 
 ### ⚠️ START HERE NEXT SESSION
 
-**M09 is set up. Next step: source selection (Step 1 of M09-plan.md).**
+**Steps 1, 2, and 3 complete. Script drafted and saved. Next: review/revise script, then move to recording prep (Step 4).**
 
 ⚠️ **User preference:** At the start of the next session, review the most recent completed step/deliverable before moving on to new work.
+
+### ✅ Session progress — 2026-03-13
+- Recapped Angle B choice and claims from `M09-sources/angle-B-claims.md`
+- Scanned both NIST PDFs (100-1 and 600-1) via pdfplumber for passages relevant to Angle B
+- Identified 4 key NIST passages: confabulation definition (600-1 p.8), confident-nature risk (600-1 p.10), automation bias (600-1 p.13), GOVERN 1.2 procedures (600-1 p.18)
+- Completed Step 3: drafted full ~780-word essay script integrating Bhatnagar + NIST
+- Script saved to `M09-sources/essay-script.md`
+- Updated prompt log (Entry 33) and CLAUDE.md; committed and pushed
+
+### ✅ Session progress — 2026-03-12
+- Installed pdfplumber (Python) — pdftoppm/Poppler install was incomplete (source only, no binary)
+- Read all 19 pages of `HALLUCINATION-DRIVEN EXPLOITS.pdf` via pdfplumber
+- Compared angles B and C in depth; **chose Angle B**
+- Completed Step 2 (Claim Building): thesis, 3 supporting points, practical takeaway, essay outline saved to `M09-sources/angle-B-claims.md`
+
+### ✅ pdftoppm (Poppler) installed — 2026-03-12
+- Installed via `choco install poppler -y` (required admin PowerShell)
+- PATH update takes effect after restarting the terminal
+- **Verify at session start with:** `pdftoppm -v`
 
 ### M09 Key Facts
 - **Deliverable:** One 5-minute video essay (no outline, speaker notes, or prompt log submission required)
 - **Due:** Sunday, March 15, 2026 by 11:59 PM ET
 - **Source requirement:** One substantive source published September 2025 or later
-- **Prompt log:** `prompt-log/week09-log.md` — Entry 32 done; internal only, not submitted
+- **Prompt log:** `prompt-log/week09-log.md` — Entry 33 done; internal only, not submitted
+
+### Sources (all in `M09-sources/`)
+- **Primary:** `HALLUCINATION-DRIVEN EXPLOITS.pdf` — Bhatnagar (2025); fully read
+- **Supporting:** `NIST.AI.100-1.pdf` and `NIST.AI.600-1.pdf` — scanned for Angle B passages
 
 ### Next Action — START HERE
-**Step 1: Source selection.** Submission requirements reviewed and confirmed aligned with M09-plan.md essay structure. Three paths to choose from:
-1. User brings a source they already have in mind
-2. Search together for 3–5 candidates on a chosen topic
-3. Pick an argument angle first, then find the best source to support it
-
-No source chosen yet. At the start of next session, present all three path options with full explanations and let the user choose before doing anything else.
+1. Read `M09-sources/essay-script.md` and give user a quick recap of the script structure
+2. **Step 4: Review/revise script**, then move to recording prep
 
 M08 deliverables (all done):
 - ✅ `M08-plan.md` — execution plan
