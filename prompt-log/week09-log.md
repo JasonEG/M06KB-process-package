@@ -6,6 +6,31 @@
 
 ---
 
+## Entry 34 — 2026-03-15 — Script Revision (Step 4)
+
+**Prompt summary:** User requested script review against video format guidelines, then joint revision to add source cues and loosen language.
+
+**Actions taken:**
+- Checked script against all 5 video format guidelines — identified two gaps: no visual source cues, and language too formal for spoken delivery
+- Added 5 `[SHOW: ...]` cues to `essay-script.md` keyed to specific PDF pages (Bhatnagar title, NIST 600-1 p.8, Bhatnagar implicit authority passage, NIST 600-1 p.13, close anchor)
+- Added recording note at top of script (two-screen setup)
+- Revised 7 lines to loosen language for natural spoken delivery:
+  - "categorically more dangerous" → "more dangerous — in a specific way"
+  - "one worth sitting with" → "one line from his paper stuck with me"
+  - "the pattern has trained them not to be skeptical" → "they've just learned to trust it"
+  - Removed redundant "That's exactly right."
+  - "That gap is what I want to name directly" → "That's the gap I want to focus on"
+  - "procedure design that accounts for..." → "designing procedures around how people actually behave"
+  - "Confident AI errors are different from uncertain ones — they bypass..." → "Confident errors bypass..."
+  - Fixed transition: "not because they're careless, but" → "not because they're careless —"
+
+**Key decisions:**
+- Format: narrated screen recording with PDFs on recorded screen, script on separate unrecorded screen
+- Source requirement met via live PDF display throughout recording
+- Script ready to record
+
+---
+
 ## Entry 32 — 2026-03-08 — M09 Setup
 
 **Prompt summary:** User submitted A08 and requested M09 setup. Pasted full M09 assignment brief.
