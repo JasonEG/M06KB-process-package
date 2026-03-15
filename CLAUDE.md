@@ -53,14 +53,23 @@ This process package was originally created for Module 05 (CLI) and copied here 
 
 ## Where We Left Off
 
-**Date:** 2026-03-13
+**Date:** 2026-03-15
 **Module:** M09 — SOPs in the AI Era (IN PROGRESS)
 
 ### ⚠️ START HERE NEXT SESSION
 
-**Steps 1, 2, and 3 complete. Script drafted and saved. Next: review/revise script, then move to recording prep (Step 4).**
+**Steps 1–4 complete. Script revised and ready. User is recording the video. Next: submit to Canvas before 11:59 PM ET tonight.**
 
 ⚠️ **User preference:** At the start of the next session, review the most recent completed step/deliverable before moving on to new work.
+
+### ✅ Session progress — 2026-03-15
+- Recapped essay script structure from `M09-sources/essay-script.md`
+- Checked script against all 5 video format guidelines — found two gaps: no source cues, language too formal
+- Added 5 `[SHOW: ...]` cues keyed to Bhatnagar PDF and NIST AI 600-1 pages
+- Added recording note (two-screen setup) to script header
+- Revised 7 lines for natural spoken delivery
+- Updated prompt log (Entry 34); committed and pushed (`4716a9a`)
+- User plan: install Windows updates → restart → record video → submit to Canvas
 
 ### ✅ Session progress — 2026-03-13
 - Recapped Angle B choice and claims from `M09-sources/angle-B-claims.md`
