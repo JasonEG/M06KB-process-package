@@ -53,14 +53,39 @@ This process package was originally created for Module 05 (CLI) and copied here 
 
 ## Where We Left Off
 
-**Date:** 2026-03-15
-**Module:** M09 — SOPs in the AI Era (IN PROGRESS)
+**Date:** 2026-03-22
+**Module:** M10 — Governance Package (Canvas: Module 11) (IN PROGRESS)
 
 ### ⚠️ START HERE NEXT SESSION
 
-**Steps 1–4 complete. Script revised and ready. User is recording the video. Next: submit to Canvas before 11:59 PM ET tonight.**
+**M09 submitted. M10 plan created. Next: execute Step 1 (artifact audit) and begin building the governance/ folder deliverables.**
+
+**Due:** Sunday, March 29, 2026 by 11:59 PM ET
 
 ⚠️ **User preference:** At the start of the next session, review the most recent completed step/deliverable before moving on to new work.
+
+### ✅ Session progress — 2026-03-22
+- User confirmed M09 submitted
+- Pasted M10 module content and assignment brief
+- Created `M10-plan.md` — 7-step execution plan (governance plan, redaction plan, SOP header update, change log table, QA checklist, A10 package)
+- Created `prompt-log/week10-governance-log.md` (Entry 35)
+- Updated CLAUDE.md
+
+### M10 Key Facts
+- **Deliverable:** Governance Package — 5 artifacts + A10 submission folder
+- **Due:** Sunday, March 29, 2026 by 11:59 PM ET
+- **New folder:** `governance/` — will hold governance-plan.md, redaction-data-handling-plan.md, change-log-table.md, qa-checklist.md
+- **Prompt log:** `prompt-log/week10-governance-log.md` — Entry 35 done
+
+### Next Action — START HERE
+1. Recap M10-plan.md (Step 1: artifact audit)
+2. Execute Step 1 — scan all artifacts for governance gaps and sensitive data
+3. Then proceed through Steps 2–7
+
+### ✅ M09 — Complete
+- Script revised (Step 4 done 2026-03-15)
+- User recorded and submitted video to Canvas
+- No A09/ folder needed (video submission only)
 
 ### ✅ Session progress — 2026-03-15
 - Recapped essay script structure from `M09-sources/essay-script.md`
