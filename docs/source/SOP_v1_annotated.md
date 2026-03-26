@@ -1,8 +1,12 @@
 # Standard Operating Procedure — Finalizing Grades in PowerSchool
 # (Annotated — Workflow Pain Points)
 
-**Version:** 1.5 (Annotated)
-**Last Updated:** 2026-02-26
+**Version:** 1.6 (Annotated)
+**Published:** 2026-02-16
+**Last Updated:** 2026-03-26
+**DRI:** Jason Geanuracos, Process Documentation Lead
+**Next Review Date:** 2027-02-16 (or upon PowerSchool UI change / grading policy update)
+**Change Summary:** v1.6 adds governance header, redaction verification, and QA checklist reference. See CHANGELOG for full history.
 **Annotation Author:** Jason Geanuracos
 **Based on:** SOP v1.5; Workflow Critique Memo (2026-02-23); Improvement Backlog v1.0; Top-3 Deep Dive (2026-02-25)
 

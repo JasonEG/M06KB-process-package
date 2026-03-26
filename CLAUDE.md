@@ -53,34 +53,32 @@ This process package was originally created for Module 05 (CLI) and copied here 
 
 ## Where We Left Off
 
-**Date:** 2026-03-22
-**Module:** M10 — Governance Package (Canvas: Module 11) (IN PROGRESS)
+**Date:** 2026-03-26
+**Module:** M10 — Governance Package (Canvas: Module 11) ✅ COMPLETE
 
-### ⚠️ START HERE NEXT SESSION
+### ✅ M10 — Complete
+- All 7 steps done; A10/ submission package assembled; committed and pushed (v1.9.0)
+- **Due:** Sunday, March 29, 2026 by 11:59 PM ET — submit `A10/` contents to Canvas
 
-**M09 submitted. M10 plan created. Next: execute Step 1 (artifact audit) and begin building the governance/ folder deliverables.**
+### ⚠️ Open Redaction Items (before any external distribution of screenshots)
+1. `artifacts/screenshots/Email Sent screen.png` — redact real name, email, recipient name, profile photo
+2. `artifacts/screenshots/Gradebook screen.png` — visually confirm no readable student names; redact if present
+- Note: These screenshots are NOT included in A10/ — redaction is only required if screenshots are shared externally
 
-**Due:** Sunday, March 29, 2026 by 11:59 PM ET
+### ✅ Session progress — 2026-03-26
+- Recapped `governance/redaction-data-handling-plan.md` — confirmed all 6 assignment requirements covered
+- **Step 4** — Added governance block to SOP_v1.md (v1.5 → v1.6), SOP_v1_annotated.md, process.bpmn, and process.mmd; verified all 4 criteria (version/date, DRI, next review date, change summary) across all 4 files
+- **Step 5** — Created `governance/change-log-table.md` — 26-row table (v1.0.0 → v1.9.0); added Type column after verification
+- **Step 6** — Created `governance/qa-checklist.md` — 7 sections, 46 checks, Review Record table
+- **Step 7** — Generated 4 governance PDFs + regenerated SOP_v1.pdf and SOP_v1_annotated.pdf; built A10/ (7 files); updated README, CHANGELOG (v1.9.0), and CLAUDE.md; committed and pushed
 
-⚠️ **User preference:** At the start of the next session, review the most recent completed step/deliverable before moving on to new work.
-
-### ✅ Session progress — 2026-03-22
-- User confirmed M09 submitted
-- Pasted M10 module content and assignment brief
-- Created `M10-plan.md` — 7-step execution plan (governance plan, redaction plan, SOP header update, change log table, QA checklist, A10 package)
-- Created `prompt-log/week10-governance-log.md` (Entry 35)
-- Updated CLAUDE.md
-
-### M10 Key Facts
-- **Deliverable:** Governance Package — 5 artifacts + A10 submission folder
-- **Due:** Sunday, March 29, 2026 by 11:59 PM ET
-- **New folder:** `governance/` — will hold governance-plan.md, redaction-data-handling-plan.md, change-log-table.md, qa-checklist.md
-- **Prompt log:** `prompt-log/week10-governance-log.md` — Entry 35 done
-
-### Next Action — START HERE
-1. Recap M10-plan.md (Step 1: artifact audit)
-2. Execute Step 1 — scan all artifacts for governance gaps and sensitive data
-3. Then proceed through Steps 2–7
+### M10 Governance Folder — Final State
+- `governance/audit-notes.md` ✅
+- `governance/governance-plan.md` ✅ + `.pdf` ✅
+- `governance/redaction-data-handling-plan.md` ✅ + `.pdf` ✅
+- `governance/change-log-table.md` ✅ + `.pdf` ✅
+- `governance/qa-checklist.md` ✅ + `.pdf` ✅
+- `A10/` ✅ — 7 files ready for Canvas submission
 
 ### ✅ M09 — Complete
 - Script revised (Step 4 done 2026-03-15)

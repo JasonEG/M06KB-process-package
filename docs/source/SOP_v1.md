@@ -1,7 +1,10 @@
 # Standard Operating Procedure — Finalizing Grades in PowerSchool
 
-**Version:** 1.5
-**Last Updated:** 2026-02-16
+**Version:** 1.6
+**Published:** 2026-02-16
+**DRI:** Jason Geanuracos, Process Documentation Lead
+**Next Review Date:** 2027-02-16 (or upon PowerSchool UI change / grading policy update)
+**Change Summary:** v1.6 adds governance header, redaction verification, and QA checklist reference. See CHANGELOG for full history.
 
 ---
 

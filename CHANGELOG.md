@@ -1,5 +1,30 @@
 # Changelog
 
+## [1.9.0] — 2026-03-26
+
+### Added
+
+- `M10-plan.md` — Module 10 governance execution plan (7 steps, submission checklist, pre-made key decisions).
+- `governance/` — New subfolder for M10 governance deliverables.
+- `governance/audit-notes.md` — Step 1 artifact audit findings: PII risk classifications for all 10 Markdown files and 8 screenshots.
+- `governance/governance-plan.md` — DRI, RACI, semi-annual review cadence, 7-step change control workflow, 3-tier escalation table, and sunset/refresh date (2027-02-16).
+- `governance/redaction-data-handling-plan.md` — Data classification tiers, redaction token rules, storage & access table, manual audit logging section, AI tool handling rules, and 18-artifact redaction evidence table.
+- `governance/change-log-table.md` — Governance-facing version summary table (v1.0.0 → v1.9.0); columns: Version, Date, Author, Summary, Reason, Type.
+- `governance/qa-checklist.md` — Reusable QA review template (7 sections, 46 checks): SOP Structure, Clarity & Completeness, Diagram Alignment, Redaction & Sensitivity, Link & Reference Validation, Version & Governance Metadata, Approval Sign-Off.
+- `governance/*.pdf` — PDF exports for all four governance Markdown files.
+- `A10/` — Submission package: governance_plan.pdf, redaction_data_handling_plan.pdf, change_log_table.pdf, qa_checklist.pdf, SOP_v1.pdf, SOP_v1_annotated.pdf, prompt_log.md.
+- `prompt-log/week10-governance-log.md` — Prompt log for M10 (Entries 35–37).
+
+### Changed
+
+- `docs/source/SOP_v1.md` — Version bumped v1.5 → v1.6; governance block added (DRI, published date, next review date, change summary).
+- `docs/source/SOP_v1_annotated.md` — Version bumped v1.5 → v1.6 (Annotated); governance block added.
+- `diagrams/bpmn/process.bpmn` — Governance comment block added (DRI, version, published date, next review date, change summary).
+- `diagrams/mermaid/process.mmd` — Governance comment lines added (DRI, version, published date, next review date, change summary).
+- `docs/exports/SOP_v1.pdf` — Regenerated to reflect v1.6 governance header.
+- `docs/exports/SOP_v1_annotated.pdf` — Regenerated to reflect v1.6 governance header.
+- `README.md` — Added `M10-plan.md`, `governance/` folder tree, `A10/` folder tree; updated prompt-log tree (week09 and week10 entries); added Source of Truth entries for all governance artifacts.
+
 ## [1.8.3] — 2026-03-06
 
 ### Added

@@ -35,6 +35,7 @@ process-package/
 ├── validation-log.md          # Cross-artifact consistency checks
 ├── M07-plan.md                # Module 07 workflow critique execution plan
 ├── M08-plan.md                # Module 08 measurement execution plan
+├── M10-plan.md                # Module 10 governance execution plan
 │
 ├── analysis/                  # M07 workflow critique deliverables
 │   ├── workflow-critique-memo.md      # Evidence-based critique memo (5 pain points)
@@ -87,6 +88,17 @@ process-package/
 │   └── data/
 │       └── Q1-finalization-export.csv  # 18-row mock dataset (Power Query source)
 │
+├── governance/                # M10 governance deliverables
+│   ├── audit-notes.md             # Step 1 artifact audit findings
+│   ├── governance-plan.md         # DRI, RACI, review cadence, change control, escalation
+│   ├── governance-plan.pdf        # PDF export
+│   ├── redaction-data-handling-plan.md  # Classification, redaction rules, storage, audit log
+│   ├── redaction-data-handling-plan.pdf # PDF export
+│   ├── change-log-table.md        # Governance-facing version summary table (v1.0.0–v1.9.0)
+│   ├── change-log-table.pdf       # PDF export
+│   ├── qa-checklist.md            # Reusable QA template (7 sections, 46 checks)
+│   └── qa-checklist.pdf           # PDF export
+│
 ├── A08/                       # M08 submission package (clean-named copies)
 │   ├── measurement_plan.pdf
 │   ├── measurement_plan.md
@@ -97,10 +109,21 @@ process-package/
 │   └── data/
 │       └── Q1-finalization-export.csv
 │
+└── A10/                       # M10 submission package (clean-named copies)
+    ├── governance_plan.pdf
+    ├── redaction_data_handling_plan.pdf
+    ├── change_log_table.pdf
+    ├── qa_checklist.pdf
+    ├── SOP_v1.pdf
+    ├── SOP_v1_annotated.pdf
+    └── prompt_log.md
+│
 └── prompt-log/
-    ├── week05-cli-log.md      # AI prompt interaction log (Entries 1–21)
-    ├── week07-analysis-log.md # AI prompt interaction log (Entries 22–27)
-    └── week08-measurement-log.md # AI prompt interaction log (Entries 28–29)
+    ├── week05-cli-log.md          # AI prompt interaction log (Entries 1–21)
+    ├── week07-analysis-log.md     # AI prompt interaction log (Entries 22–27)
+    ├── week08-measurement-log.md  # AI prompt interaction log (Entries 28–31)
+    ├── week09-log.md              # AI prompt interaction log (Entries 32–34)
+    └── week10-governance-log.md   # AI prompt interaction log (Entries 35–37)
 ```
 
 ## Source of Truth vs. Generated Files
@@ -135,6 +158,12 @@ process-package/
 | `measurement/power-query-steps.pdf` | **Generated** from `measurement/power-query-steps.md`. Do not hand-edit. |
 | `measurement/baseline-dataset.xlsx` | **Generated** — Power Query workbook (Raw Data, Cleaned Data, Summary Pivot, Dashboard) derived from the CSV. Do not hand-edit raw data sheet. |
 | `A08/` | Submission package — clean-named copies of all M08 deliverables for upload. Do not edit files here; update originals in `measurement/` and re-copy. |
+| `governance/governance-plan.md` | Authored — DRI, RACI, review cadence, change control, escalation, and sunset date for the process package. |
+| `governance/redaction-data-handling-plan.md` | Authored — data classification tiers, redaction token rules, storage & access table, audit logging, and full 18-artifact redaction evidence table. |
+| `governance/change-log-table.md` | Authored — governance-facing version summary table (v1.0.0 → v1.9.0); columns: Version, Date, Author, Summary, Reason, Type. |
+| `governance/qa-checklist.md` | Authored — reusable QA review template (7 sections, 46 checks) covering SOP structure, clarity, diagram alignment, redaction, links, metadata, and approval sign-off. |
+| `governance/*.pdf` | **Generated** from corresponding `.md` source files. Do not hand-edit. |
+| `A10/` | Submission package — clean-named copies of all M10 deliverables for upload. Do not edit files here; update originals in `governance/` and `docs/` and re-copy. |
 
 When making process changes, always update **SOP.md first**, then update the diagram source files to match, and finally regenerate the rendered outputs.
 

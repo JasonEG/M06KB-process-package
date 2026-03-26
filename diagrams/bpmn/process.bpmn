@@ -9,6 +9,15 @@
              exporter="Claude Code"
              exporterVersion="1.0">
 
+  <!--
+    Governance Metadata
+    DRI: Jason Geanuracos, Process Documentation Lead
+    Version: 1.6
+    Published: 2026-02-16
+    Next Review Date: 2027-02-16 (or upon PowerSchool UI change / grading policy update)
+    Change Summary: v1.6 adds governance header. Diagram logic unchanged. See CHANGELOG for full history.
+  -->
+
   <collaboration id="Collaboration_1">
     <participant id="Participant_Pool" name="Grade Finalization Process" processRef="Process_GradeFinalization" />
   </collaboration>
