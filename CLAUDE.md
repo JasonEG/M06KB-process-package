@@ -53,6 +53,24 @@ This process package was originally created for Module 05 (CLI) and copied here 
 
 ## Where We Left Off
 
+**Date:** 2026-03-27
+**Module:** Week 11 Discussion — SaaS vs. On-Prem Tradeoffs (in progress)
+
+### ✅ Session progress — 2026-03-27
+- Drafted Week 11 Canvas discussion post on SaaS vs. on-prem tradeoffs
+- Clarified architecture through discussion: PowerSchool is hosted by Meta Solutions (`ps-co.metasolutions.net`) = SaaS by constraint; SOP documentation lives on network drive + private GitHub = on-prem by deliberate governance decision → **hybrid architecture**
+- Key argument: on-prem documentation layer is the compensating control for not owning the SaaS layer
+- Three governance risks: vendor data custody (PII in Meta Solutions), SOP drift (vendor UI changes), documentation access gaps (no automated logging on network drive)
+- Saved draft to `discussions/week11-saas-vs-onprem.md` (v2, ~245 words); peer responses placeholder included
+- Updated CHANGELOG (v1.9.1), created `prompt-log/week11-discussion-log.md` (Entry 38); committed and pushed
+
+### Next Actions
+1. Post `discussions/week11-saas-vs-onprem.md` initial post to Canvas
+2. Read classmates' posts → draft 2 peer responses (75–150 words each) → add to `discussions/week11-saas-vs-onprem.md`
+3. Submit A10/ to Canvas — **due Sunday, March 29, 2026 by 11:59 PM ET**
+
+---
+
 **Date:** 2026-03-26
 **Module:** M10 — Governance Package (Canvas: Module 11) ✅ COMPLETE
 

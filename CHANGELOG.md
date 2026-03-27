@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.9.1] — 2026-03-27
+
+### Added
+
+- `discussions/` — New subfolder for Canvas discussion post drafts.
+- `discussions/week11-saas-vs-onprem.md` — Draft discussion post for Week 11 (SaaS vs. on-prem tradeoffs); hybrid architecture framing (PowerSchool/Meta Solutions = SaaS, SOP documentation = on-prem); includes peer response placeholder and revision notes.
+- `prompt-log/week11-discussion-log.md` — Prompt log for Week 11 discussion work (Entry 38).
+
 ## [1.9.0] — 2026-03-26
 
 ### Added
