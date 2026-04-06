@@ -75,6 +75,7 @@ This process package was originally created for Module 05 (CLI) and copied here 
 - Updated `CHANGELOG.md` (v2.0.0)
 
 ### Next Actions — START HERE
+0. **Ask user to pull Module 13 instructions from Canvas** — needed to confirm deliverable requirements before building
 1. Build `capstone/SOP.md` — convert Abbey's 9-phase outline to SOP format
 2. Build BPMN diagram — phases as tasks, decision points as gateways
 3. Build governance documentation
