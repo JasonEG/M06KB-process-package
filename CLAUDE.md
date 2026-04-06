@@ -53,8 +53,32 @@ This process package was originally created for Module 05 (CLI) and copied here 
 
 ## Where We Left Off
 
-**Date:** 2026-03-27
-**Module:** Week 11 Discussion — SaaS vs. On-Prem Tradeoffs (in progress)
+**Date:** 2026-04-05
+**Module:** Week 12 — Capstone (in progress)
+
+### ✅ Week 11 — COMPLETE
+- A10/ submitted to Canvas ✅
+- Week 11 discussion post (v3, conversational tone, NIST AI RMF GOVERN 1.2 citation) submitted ✅
+- Peer responses written and submitted by user ✅
+
+### Week 12 — Capstone Setup ✅
+- **Track decision:** Track A (Consultant) ✅ confirmed 2026-04-05
+- **Partner:** Abbey Cohen (confirmed 2026-03-31 via Teams)
+- **Subject process:** In-Home Dog Boarding Intake and Care
+
+### ✅ Session progress — 2026-04-05 (Session 2)
+- Deleted `capstone/project-brief.md` (no longer needed)
+- Received and analyzed Abbey's process outline: `capstone/Sample Process Outline DOG BOARDING.pdf`
+- Outline confirmed usable: 9 phases, trigger/end state, decision points, exception handling, role and inputs all defined
+- One gap noted: Phase 3 (Meet & Greet) is "if applicable" — needs decision branch in BPMN
+- Created `prompt-log/week12-capstone-log.md` (Entry 39)
+- Updated `CHANGELOG.md` (v2.0.0)
+
+### Next Actions — START HERE
+1. Build `capstone/SOP.md` — convert Abbey's 9-phase outline to SOP format
+2. Build BPMN diagram — phases as tasks, decision points as gateways
+3. Build governance documentation
+4. Submit track selection form + initial project plan to Canvas
 
 ### ✅ Session progress — 2026-03-27
 - Drafted Week 11 Canvas discussion post on SaaS vs. on-prem tradeoffs
@@ -65,9 +89,7 @@ This process package was originally created for Module 05 (CLI) and copied here 
 - Updated CHANGELOG (v1.9.1), created `prompt-log/week11-discussion-log.md` (Entry 38); committed and pushed
 
 ### Next Actions
-1. Post `discussions/week11-saas-vs-onprem.md` initial post to Canvas
-2. Read classmates' posts → draft 2 peer responses (75–150 words each) → add to `discussions/week11-saas-vs-onprem.md`
-3. Submit A10/ to Canvas — **due Sunday, March 29, 2026 by 11:59 PM ET**
+1. Read classmates' posts → draft 2 peer responses (75–150 words each) → add to `discussions/week11-saas-vs-onprem.md`
 
 ---
 

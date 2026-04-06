@@ -1,5 +1,20 @@
 # Changelog
 
+## [2.0.0] — 2026-04-05
+
+### Added
+
+- `capstone/` — New subfolder for Week 12 capstone deliverables (Track A: Consultant).
+- `capstone/Sample Process Outline DOG BOARDING.pdf` — Abbey Cohen's dog boarding intake and care process outline; source document for all capstone deliverables.
+- `capstone/sample-process-outline.md` — Format reference sent to Abbey (Prusa MK3S+ filament change process).
+- `prompt-log/week12-capstone-log.md` — Prompt log for capstone work (Entry 39).
+
+### Removed
+
+- `capstone/project-brief.md` — Removed; superseded by Abbey's actual process outline.
+
+---
+
 ## [1.9.1] — 2026-03-27
 
 ### Added
