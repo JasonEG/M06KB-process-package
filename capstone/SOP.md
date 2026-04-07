@@ -166,15 +166,15 @@ Repeat the following each day for the duration of the boarding stay:
 4. Send an update (photo and/or message) to the owner.
 
 > **Decision:** Does the dog refuse food?
-> - Wait and retry at the next scheduled feeding time.
-> - If refusal persists beyond one full feeding cycle, notify the owner and follow their guidance.
+> - Retry at the next scheduled feeding time. If the dog eats at the retry → continue daily loop.
 
-> **Decision:** Are there behavioral issues during the stay?
-> - Adjust the environment as needed (separate spaces, reduced stimulation).
-> - Inform the owner at the next check-in or sooner if significant.
+> **Decision:** Are there behavioral issues?
+> - Adjust the environment (separate space, reduced stimulation). If resolved → continue daily loop.
 
 > **Decision:** Are there signs of illness or injury?
-> - Escalate to the owner immediately. Seek veterinary care if directed. See Step 7.
+> - Proceed to Step 7 immediately.
+
+> **Trigger for Step 7:** If food refusal persists beyond one retry, a behavioral issue cannot be resolved through environment adjustment, or any illness or injury is observed — proceed to Step 7.
 
 ---
 
@@ -182,15 +182,15 @@ Repeat the following each day for the duration of the boarding stay:
 
 **Actor:** Dog Sitter
 
-Triggered by decision points in Step 6. Respond according to severity:
+Triggered when an issue in Step 6 cannot be closed within the normal daily care routine. Respond according to severity:
 
-| Severity | Response |
-|----------|----------|
-| **Minor** (mild behavior change, one missed meal) | Monitor; communicate update to owner at next scheduled check-in |
-| **Moderate** (persistent food refusal, recurring behavioral issue) | Adjust care approach; notify owner promptly; follow owner's guidance |
-| **Emergency** (injury, acute illness, escape risk) | Contact owner immediately; seek veterinary care with owner authorization; use emergency contact if owner is unreachable |
+| Severity | Condition | Response |
+|----------|-----------|----------|
+| **Minor** | Single incident resolved after first retry or small environment adjustment | Communicate update to owner at next scheduled check-in; return to Step 6 |
+| **Moderate** | Issue persists after initial resolution attempt (food still refused after retry, behavioral issue recurring) | Notify owner promptly; adjust care approach per owner's instructions; return to Step 6 |
+| **Emergency** | Illness, injury, escape risk, or any situation posing immediate risk to the dog's welfare | Contact owner immediately; seek veterinary care with owner authorization; use emergency contact if owner is unreachable |
 
-Return to Step 6 when the situation is resolved.
+Return to Step 6 when a Minor or Moderate issue is resolved. An Emergency situation may suspend the normal daily care loop until the dog is stable or returned to the owner.
 
 ---
 
