@@ -56,4 +56,13 @@
 - **Tasks:** PDF analysis, gap identification, drafting discovery notes, drafting SOP v1.0
 - **Quality check:** All content traced to Abbey's outline; Gap G-01 (meet and greet gateway) and G-03 (Phase 7 as subprocess) are consultant judgment calls documented explicitly in discovery notes
 
-**Outcome:** M13 Week 1 deliverables complete. SOP v1.0 draft ready for Abbey's review. BPMN diagram is next.
+**Additional work — Step 6/7 escalation clarification:**
+- Discussed Step 6 → Step 7 trigger ambiguity — three options presented (A: clear handoff trigger, B: Step 7 as triage hub, C: collapse into Step 6)
+- User selected Option A
+- Updated `capstone/SOP.md` Steps 6 and 7: Step 6 now handles only inline daily-loop resolutions; explicit trigger line added; Step 7 reframed as escalation path with Minor/Moderate/Emergency severity tiers
+- SOP bumped to v1.1; governance header updated
+
+**Files modified (additional):**
+- `capstone/SOP.md` — v1.0 → v1.1 (Step 6/7 Option A escalation model)
+
+**Outcome:** M13 Week 1 build complete. SOP v1.1 ready for Abbey's review. BPMN diagram is next.

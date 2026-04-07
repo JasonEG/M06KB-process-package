@@ -53,33 +53,30 @@ This process package was originally created for Module 05 (CLI) and copied here 
 
 ## Where We Left Off
 
-**Date:** 2026-04-05
-**Module:** Week 12 — Capstone (in progress)
+**Date:** 2026-04-07
+**Module:** Week 13 — Capstone (in progress)
 
-### ✅ Week 11 — COMPLETE
-- A10/ submitted to Canvas ✅
-- Week 11 discussion post (v3, conversational tone, NIST AI RMF GOVERN 1.2 citation) submitted ✅
-- Peer responses written and submitted by user ✅
+### ✅ Week 12 — COMPLETE
+- Track A (Consultant) confirmed ✅
+- Partner Abbey Cohen confirmed ✅
+- Canvas submission: partner name, project description, Track A selection ✅
+- Abbey's process outline received and analyzed: `capstone/Sample Process Outline DOG BOARDING.pdf` ✅
 
-### Week 12 — Capstone Setup ✅
-- **Track decision:** Track A (Consultant) ✅ confirmed 2026-04-05
-- **Partner:** Abbey Cohen (confirmed 2026-03-31 via Teams)
-- **Subject process:** In-Home Dog Boarding Intake and Care
-
-### ✅ Session progress — 2026-04-05 (Session 2)
-- Deleted `capstone/project-brief.md` (no longer needed)
-- Received and analyzed Abbey's process outline: `capstone/Sample Process Outline DOG BOARDING.pdf`
-- Outline confirmed usable: 9 phases, trigger/end state, decision points, exception handling, role and inputs all defined
-- One gap noted: Phase 3 (Meet & Greet) is "if applicable" — needs decision branch in BPMN
-- Created `prompt-log/week12-capstone-log.md` (Entry 39)
-- Updated `CHANGELOG.md` (v2.0.0)
+### ✅ Session progress — 2026-04-07 (Week 13, Session 1)
+- Read Module 13 instructions — Track A deliverables: discovery notes + draft SOP + rough BPMN
+- Renamed `prompt-log/week12-capstone-log.md` → `prompt-log/capstone-log.md` (covers Weeks 12–15)
+- Created `capstone/discovery-notes.md` — phase analysis, gap table (G-01–G-05), open questions for Abbey, BPMN notes, AI usage log
+- Created `capstone/SOP.md` (v1.0 → v1.1) — 9 steps, governance header (DRI: Abbey Cohen), decision callouts at Steps 1/3/6, exceptions table
+- Clarified Step 6 → Step 7 escalation model (Option A): Step 6 = inline daily-loop resolution only; explicit trigger line added; Step 7 = true escalation with Minor/Moderate/Emergency tiers
+- Phase 3 gateway decision locked: new client → meet and greet required; repeat client → skip to Step 4
+- Updated CHANGELOG (v2.1.0); committed and pushed
 
 ### Next Actions — START HERE
-0. **Ask user to pull Module 13 instructions from Canvas** — needed to confirm deliverable requirements before building
-1. Build `capstone/SOP.md` — convert Abbey's 9-phase outline to SOP format
-2. Build BPMN diagram — phases as tasks, decision points as gateways
-3. Build governance documentation
-4. Submit track selection form + initial project plan to Canvas
+1. **Send SOP v1.1 to Abbey for review** — ask her to confirm Phase 3 gateway rule and flag anything inaccurate
+2. **Build `capstone/process.bpmn`** — two swimlanes (Dog Sitter, Dog Owner); XOR gateways at Steps 1/3/6; Step 6 daily care loop; Step 7 as subprocess; two end events (normal + decline)
+3. After Abbey's feedback → revise SOP to v1.2
+4. Build `capstone/governance.md`
+5. Assemble `A-capstone/` submission package
 
 ### ✅ Session progress — 2026-03-27
 - Drafted Week 11 Canvas discussion post on SaaS vs. on-prem tradeoffs

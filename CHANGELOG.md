@@ -1,5 +1,19 @@
 # Changelog
 
+## [2.1.0] — 2026-04-07
+
+### Added
+
+- `capstone/discovery-notes.md` — Phase-by-phase analysis of Abbey's process outline; gap/decision table (G-01 through G-05); open questions for partner review; BPMN diagram notes; AI usage log.
+- `capstone/SOP.md` (v1.1) — Full 9-step SOP for In-Home Dog Boarding Intake and Care; governance header (DRI: Abbey Cohen); decision callouts at Steps 1, 3, and 6; escalation trigger and severity tiers in Step 7; exceptions table (6 entries).
+
+### Changed
+
+- `prompt-log/week12-capstone-log.md` → `prompt-log/capstone-log.md` — Renamed to cover the full capstone arc (Weeks 12–15). Entry 40 added for 2026-04-07 session.
+- `capstone/SOP.md` Step 6/7 — Clarified escalation model (Option A): Step 6 handles inline daily-loop resolutions only; explicit trigger line for Step 7 added; Step 7 reframed as true escalation path.
+
+---
+
 ## [2.0.0] — 2026-04-05
 
 ### Added

@@ -1,10 +1,10 @@
 # Standard Operating Procedure — In-Home Dog Boarding Intake and Care
 
-**Version:** 1.0
+**Version:** 1.1
 **Published:** 2026-04-07
 **DRI:** Abbey Cohen, Dog Sitter / Process Owner
 **Next Review Date:** 2027-04-07 (or upon significant change to booking platform, care policies, or service scope)
-**Change Summary:** Initial SOP draft (v1.0) based on Abbey Cohen's process outline. Documented by Jason Geanuracos (IT7039 Capstone, Track A).
+**Change Summary:** v1.1 — Clarified Step 6/7 escalation model (Option A): Step 6 handles inline daily-loop resolutions only; explicit trigger line added for Step 7; Step 7 reframed as true escalation path with Minor/Moderate/Emergency tiers. v1.0 — Initial draft based on Abbey Cohen's process outline.
 
 ---
 
