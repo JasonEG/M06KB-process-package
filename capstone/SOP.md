@@ -116,7 +116,7 @@ Clarify any missing or unclear details with the owner before confirming the book
 
 > **Decision:** Is a meet and greet required?
 > - **New client or owner preference:** Proceed with Steps 3a–3b.
-> - **Established repeat client, no concerns:** Skip to Step 4.
+> - **Established repeat client, no concerns** *(determination at dog sitter's discretion):* Skip to Step 4.
 
 **Step 3a — Schedule and Conduct Meet and Greet**
 

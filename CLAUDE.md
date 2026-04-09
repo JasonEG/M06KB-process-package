@@ -53,7 +53,7 @@ This process package was originally created for Module 05 (CLI) and copied here 
 
 ## Where We Left Off
 
-**Date:** 2026-04-07
+**Date:** 2026-04-09
 **Module:** Week 13 — Capstone (in progress)
 
 ### ✅ Week 12 — COMPLETE
@@ -71,12 +71,29 @@ This process package was originally created for Module 05 (CLI) and copied here 
 - Phase 3 gateway decision locked: new client → meet and greet required; repeat client → skip to Step 4
 - Updated CHANGELOG (v2.1.0); committed and pushed
 
+### ✅ Session progress — 2026-04-09 (Week 13, Session 2)
+- Verified SOP v1.1 format and content against capstone requirements — all 7 sections present, all 9 phases covered, all gateways confirmed ✅
+- Applied G-02 fix: Step 3 decision callout updated — "Established repeat client" now explicitly noted as at dog sitter's discretion
+- Created `capstone/process.bpmn` — BPMN 2.0; two swimlanes (Dog Sitter, Dog Owner); XOR gateways at Steps 1/3/6; Step 6 daily care loop; Step 7 escalation subprocess; two decline end events; one normal end event
+- Generated `capstone/process.pdf` via bpmn-to-image
+- Revised BPMN DI layout: tasks 160×90, gateways 54×54, pool 2800×600, all connector waypoints rerouted
+- Connector line cleanup partially complete — user will identify remaining problem lines next session
+- Updated CHANGELOG (v2.2.0) and prompt log (Entry 41)
+
 ### Next Actions — START HERE
-1. **Send SOP v1.1 to Abbey for review** — ask her to confirm Phase 3 gateway rule and flag anything inaccurate
-2. **Build `capstone/process.bpmn`** — two swimlanes (Dog Sitter, Dog Owner); XOR gateways at Steps 1/3/6; Step 6 daily care loop; Step 7 as subprocess; two end events (normal + decline)
+1. **Fix remaining BPMN connector lines** — user has identified specific lines that need cleanup; review `capstone/process.pdf` and apply fixes, then regenerate PDF
+2. **Send SOP v1.1 + `capstone/process.pdf` to Abbey for review** — ask her to confirm Phase 3 gateway rule (new client = meet & greet required; repeat = skip to Step 4) and flag anything inaccurate
 3. After Abbey's feedback → revise SOP to v1.2
 4. Build `capstone/governance.md`
 5. Assemble `A-capstone/` submission package
+
+### Capstone File State (as of 2026-04-09)
+- `capstone/discovery-notes.md` ✅ — phase analysis, gaps G-01–G-05, open questions for Abbey
+- `capstone/SOP.md` (v1.1) ✅ — verified, G-02 fix applied, ready for Abbey review
+- `capstone/process.bpmn` ✅ — BPMN 2.0 draft, connector cleanup pending
+- `capstone/process.pdf` ✅ — PDF export, connector cleanup pending
+- `capstone/governance.md` ❌ — not started
+- `A-capstone/` ❌ — not started
 
 ### ✅ Session progress — 2026-03-27
 - Drafted Week 11 Canvas discussion post on SaaS vs. on-prem tradeoffs

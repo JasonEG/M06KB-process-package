@@ -66,3 +66,34 @@
 - `capstone/SOP.md` — v1.0 → v1.1 (Step 6/7 Option A escalation model)
 
 **Outcome:** M13 Week 1 build complete. SOP v1.1 ready for Abbey's review. BPMN diagram is next.
+
+---
+
+## Entry 41 — 2026-04-09 — SOP Verification, G-02 Fix, BPMN Draft, PDF Export
+
+**Prompt summary:** Session focused on pre-send QA of SOP v1.1 and building the BPMN diagram as a visual aid for Abbey's review. Verified SOP format and content against capstone requirements, applied one gap fix, built the full BPMN 2.0 file, and exported a PDF. Second BPMN layout pass completed to address box sizing and connector spacing; connector line cleanup deferred to next session.
+
+**Actions taken:**
+- Read `capstone/SOP.md` (v1.1), `capstone/README.md`, `capstone/discovery-notes.md`, and `docs/source/SOP_v1.md` (template reference)
+- Ran full format verification: all 7 required SOP sections present; all 9 phases covered; gateways at Steps 1/3/6 confirmed; Step 7 escalation model confirmed; exceptions table confirmed
+- Applied G-02 fix: Step 3 decision callout updated — "Established repeat client" now explicitly noted as at dog sitter's discretion
+- Confirmed `bpmn-to-image` (v0.10.0) available globally
+- Created `capstone/process.bpmn` — BPMN 2.0 XML with two swimlanes, all gateways, daily care loop, Step 7 escalation, two decline end events, one normal end event
+- Generated `capstone/process.pdf` via bpmn-to-image (first pass: 100×80 tasks)
+- Revised BPMN DI section: tasks increased to 160×90, gateways to 54×54, pool widened to 2800×600, all connector waypoints rerouted; regenerated PDF
+- Connector line cleanup identified as needed; specific lines to be addressed next session
+
+**Files created this session:**
+- `capstone/process.bpmn` — Full BPMN 2.0 diagram
+- `capstone/process.pdf` — PDF export of BPMN diagram
+
+**Files modified this session:**
+- `capstone/SOP.md` — G-02 discretion note added to Step 3 (still v1.1)
+- `CHANGELOG.md` — v2.2.0 entry added
+
+**AI tool usage:**
+- **Tool:** Claude Code (claude-sonnet-4-6)
+- **Tasks:** SOP format verification, G-02 gap fix, BPMN XML authoring, DI layout design, PDF export
+- **Quality check:** SOP verified section-by-section against template and capstone requirements; BPMN process XML matches SOP logic exactly
+
+**Outcome:** SOP v1.1 verified and ready. BPMN draft complete with PDF. Connector line cleanup is the only remaining layout task before sending to Abbey.

@@ -1,5 +1,18 @@
 # Changelog
 
+## [2.2.0] — 2026-04-09
+
+### Added
+
+- `capstone/process.bpmn` — BPMN 2.0 diagram for In-Home Dog Boarding Intake and Care; two swimlanes (Dog Sitter, Dog Owner); XOR gateways at Steps 1, 3, and 6; Step 6 daily care loop with standardLoopCharacteristics; Step 7 escalation subprocess; two decline end events and one normal end event.
+- `capstone/process.pdf` — PDF export of BPMN diagram via bpmn-to-image; 2800×600 pool with 160×90 task boxes and 54×54 gateways.
+
+### Changed
+
+- `capstone/SOP.md` (v1.1) — Step 3 decision callout updated: "Established repeat client" determination now explicitly noted as at dog sitter's discretion (G-02 resolution).
+
+---
+
 ## [2.1.0] — 2026-04-07
 
 ### Added
