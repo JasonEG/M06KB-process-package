@@ -53,7 +53,7 @@ This process package was originally created for Module 05 (CLI) and copied here 
 
 ## Where We Left Off
 
-**Date:** 2026-04-09
+**Date:** 2026-04-10
 **Module:** Week 13 — Capstone (in progress)
 
 ### ✅ Week 12 — COMPLETE
@@ -77,22 +77,26 @@ This process package was originally created for Module 05 (CLI) and copied here 
 - Created `capstone/process.bpmn` — BPMN 2.0; two swimlanes (Dog Sitter, Dog Owner); XOR gateways at Steps 1/3/6; Step 6 daily care loop; Step 7 escalation subprocess; two decline end events; one normal end event
 - Generated `capstone/process.pdf` via bpmn-to-image
 - Revised BPMN DI layout: tasks 160×90, gateways 54×54, pool 2800×600, all connector waypoints rerouted
-- Connector line cleanup partially complete — user will identify remaining problem lines next session
 - Updated CHANGELOG (v2.2.0) and prompt log (Entry 41)
 
-### Next Actions — START HERE
-1. **Fix remaining BPMN connector lines** — user has identified specific lines that need cleanup; review `capstone/process.pdf` and apply fixes, then regenerate PDF
-2. **Send SOP v1.1 + `capstone/process.pdf` to Abbey for review** — ask her to confirm Phase 3 gateway rule (new client = meet & greet required; repeat = skip to Step 4) and flag anything inaccurate
-3. After Abbey's feedback → revise SOP to v1.2
-4. Build `capstone/governance.md`
-5. Assemble `A-capstone/` submission package
+### ✅ Session progress — 2026-04-10 (Week 13, Session 3)
+- Fixed BPMN connector label visibility — added explicit `BPMNLabel` bounds so labels render off the connector lines; user completed remaining fixes manually in bpmn.io
+- Regenerated `capstone/process.pdf` — visually confirmed clean
+- Sent `capstone/SOP.md` (v1.1) + `capstone/process.pdf` to Abbey Cohen via Microsoft Teams for partner review
+- Updated CHANGELOG (v2.3.0) and prompt log (Entry 42)
 
-### Capstone File State (as of 2026-04-09)
+### Next Actions — START HERE
+1. **Awaiting Abbey's feedback** — she has SOP v1.1 + process.pdf; will confirm Phase 3 gateway rule and flag inaccuracies
+2. **Build `capstone/governance.md`** — can proceed now, does not depend on Abbey's response
+3. After Abbey's feedback → revise SOP to v1.2
+4. Assemble `A-capstone/` submission package
+
+### Capstone File State (as of 2026-04-10)
 - `capstone/discovery-notes.md` ✅ — phase analysis, gaps G-01–G-05, open questions for Abbey
-- `capstone/SOP.md` (v1.1) ✅ — verified, G-02 fix applied, ready for Abbey review
-- `capstone/process.bpmn` ✅ — BPMN 2.0 draft, connector cleanup pending
-- `capstone/process.pdf` ✅ — PDF export, connector cleanup pending
-- `capstone/governance.md` ❌ — not started
+- `capstone/SOP.md` (v1.1) ✅ — verified, G-02 fix applied, sent to Abbey for review
+- `capstone/process.bpmn` ✅ — BPMN 2.0, connector labels clean
+- `capstone/process.pdf` ✅ — PDF export, visually confirmed, sent to Abbey
+- `capstone/governance.md` ❌ — not started (next task)
 - `A-capstone/` ❌ — not started
 
 ### ✅ Session progress — 2026-03-27

@@ -97,3 +97,29 @@
 - **Quality check:** SOP verified section-by-section against template and capstone requirements; BPMN process XML matches SOP logic exactly
 
 **Outcome:** SOP v1.1 verified and ready. BPMN draft complete with PDF. Connector line cleanup is the only remaining layout task before sending to Abbey.
+
+---
+
+## Entry 42 — 2026-04-10 — BPMN Connector Cleanup, PDF Regeneration, Abbey Review Sent
+
+**Prompt summary:** Session focused on resolving BPMN connector label visibility issues and sending the review package to Abbey. User identified that connector line labels were stacked and obscured by the connector lines themselves. Added explicit `BPMNLabel` bounds to position labels off the lines; user then made additional manual edits in bpmn.io to complete the cleanup. Final PDF regenerated and confirmed clean. SOP v1.1 + process.pdf sent to Abbey via Teams for review.
+
+**Actions taken:**
+- Identified root cause of label visibility issue: no explicit `BPMNLabel` bounds, causing labels to render on top of connector lines
+- Added `<bpmndi:BPMNLabel>` bounds to `Flow_G1_Yes` (label above horizontal line) and `Flow_G1_No` (label right of vertical line) as the fix pattern
+- User completed remaining connector label fixes manually in bpmn.io and saved corrected `process.bpmn`
+- Regenerated `capstone/process.pdf` twice (once after Claude edits, once after user's manual corrections)
+- Confirmed PDF visually clean
+- User sent `capstone/SOP.md` (v1.1) + `capstone/process.pdf` to Abbey Cohen via Microsoft Teams for partner review
+
+**Files modified this session:**
+- `capstone/process.bpmn` — Connector label positions fixed (BPMNLabel bounds added; user manual edits applied)
+- `capstone/process.pdf` — Regenerated from corrected BPMN
+- `CHANGELOG.md` — v2.3.0 entry added
+
+**AI tool usage:**
+- **Tool:** Claude Code (claude-sonnet-4-6)
+- **Tasks:** BPMN label fix pattern, PDF regeneration
+- **Quality check:** PDF visually confirmed by user before sending
+
+**Outcome:** BPMN connector cleanup complete. Review package sent to Abbey. Awaiting her feedback before SOP v1.2. Next work: build `capstone/governance.md` while waiting for Abbey's response.

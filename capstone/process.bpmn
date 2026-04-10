@@ -1,29 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
-             xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
-             xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC"
-             xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI"
-             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-             id="Definitions_1"
-             targetNamespace="http://bpmn.io/schema/bpmn"
-             exporter="Claude Code"
-             exporterVersion="1.0">
-
-  <!--
-    Governance Metadata
-    DRI: Abbey Cohen, Dog Sitter / Process Owner
-    Version: 1.1
-    Published: 2026-04-07
-    Next Review Date: 2027-04-07 (or upon significant change to booking platform, care policies, or service scope)
-    Change Summary: v1.1 — Clarified Step 6/7 escalation model. v1.0 — Initial draft based on Abbey Cohen's process outline.
-  -->
-
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Definitions_1" targetNamespace="http://bpmn.io/schema/bpmn" exporter="bpmn-js (https://demo.bpmn.io)" exporterVersion="18.13.2">
   <collaboration id="Collaboration_1">
     <participant id="Participant_Pool" name="In-Home Dog Boarding Intake and Care" processRef="Process_DogBoarding" />
   </collaboration>
-
   <process id="Process_DogBoarding" name="In-Home Dog Boarding Intake and Care" isExecutable="false">
-
     <laneSet id="LaneSet_1">
       <lane id="Lane_DogSitter" name="Dog Sitter">
         <flowNodeRef>StartEvent_1</flowNodeRef>
@@ -48,389 +28,298 @@
         <flowNodeRef>Task_8</flowNodeRef>
       </lane>
     </laneSet>
-
-    <!-- === Dog Sitter Lane === -->
-
     <startEvent id="StartEvent_1" name="Client submits boarding request or inquiry">
       <outgoing>Flow_Start_T1</outgoing>
     </startEvent>
-
     <task id="Task_1" name="Step 1 — Screen inquiry: review dates, breed, size, availability, and fit">
       <incoming>Flow_Start_T1</incoming>
       <outgoing>Flow_T1_G1</outgoing>
     </task>
-
     <exclusiveGateway id="Gateway_1" name="Booking acceptable? (availability confirmed and good fit)">
       <incoming>Flow_T1_G1</incoming>
       <outgoing>Flow_G1_Yes</outgoing>
       <outgoing>Flow_G1_No</outgoing>
     </exclusiveGateway>
-
     <endEvent id="EndEvent_Decline1" name="Booking declined — notify client">
       <incoming>Flow_G1_No</incoming>
     </endEvent>
-
     <task id="Task_2" name="Step 2 — Gather client information: feeding, medications, behavior, emergency contact">
       <incoming>Flow_G1_Yes</incoming>
       <outgoing>Flow_T2_G2</outgoing>
     </task>
-
     <exclusiveGateway id="Gateway_2" name="Meet and greet required? (new client or owner preference)">
       <incoming>Flow_T2_G2</incoming>
       <outgoing>Flow_G2_NewClient</outgoing>
       <outgoing>Flow_G2_RepeatClient</outgoing>
     </exclusiveGateway>
-
     <exclusiveGateway id="Gateway_3b" name="Step 3b — Concerns about behavior or compatibility?">
       <incoming>Flow_3a_G3b</incoming>
       <outgoing>Flow_G3b_No</outgoing>
       <outgoing>Flow_G3b_Yes</outgoing>
     </exclusiveGateway>
-
     <endEvent id="EndEvent_Decline2" name="Booking declined — incompatibility at meet and greet">
       <incoming>Flow_G3b_Yes</incoming>
     </endEvent>
-
     <task id="Task_4" name="Step 4 — Confirm booking; prepare designated dog area and supplies">
       <incoming>Flow_G3b_No</incoming>
       <incoming>Flow_G2_RepeatClient</incoming>
       <outgoing>Flow_T4_T5</outgoing>
     </task>
-
     <task id="Task_6" name="Step 6 — Daily care: feed, walk, monitor, send owner update">
-      <standardLoopCharacteristics />
       <incoming>Flow_T5_T6</incoming>
       <incoming>Flow_T7_T6</incoming>
       <incoming>Flow_StayComplete_No</incoming>
       <outgoing>Flow_T6_G6</outgoing>
+      <standardLoopCharacteristics />
     </task>
-
-    <exclusiveGateway id="Gateway_6" name="Issue requires escalation? (food refusal persists, behavior unresolved, or illness/injury observed)">
+    <exclusiveGateway id="Gateway_6" name="Issue requires escalation? (food refusal, behavior unresolved, or illness/injury observed)">
       <incoming>Flow_T6_G6</incoming>
       <outgoing>Flow_G6_Yes</outgoing>
       <outgoing>Flow_G6_No</outgoing>
     </exclusiveGateway>
-
     <task id="Task_7" name="Step 7 — Handle issues and exceptions (Minor / Moderate / Emergency tiers)">
       <incoming>Flow_G6_Yes</incoming>
       <outgoing>Flow_T7_T6</outgoing>
     </task>
-
     <exclusiveGateway id="Gateway_StayComplete" name="Stay complete? (final pickup day reached)">
       <incoming>Flow_G6_No</incoming>
       <outgoing>Flow_StayComplete_No</outgoing>
       <outgoing>Flow_StayComplete_Yes</outgoing>
     </exclusiveGateway>
-
     <task id="Task_9" name="Step 9 — Send post-stay follow-up within 24 hours of pickup">
       <incoming>Flow_T8_T9</incoming>
       <outgoing>Flow_T9_End</outgoing>
     </task>
-
     <endEvent id="EndEvent_Normal" name="Post-stay follow-up sent — process complete">
       <incoming>Flow_T9_End</incoming>
     </endEvent>
-
-    <!-- === Dog Owner Lane === -->
-
     <task id="Task_3a" name="Step 3a — Meet and greet: dog owner and dog visit the home">
       <incoming>Flow_G2_NewClient</incoming>
       <outgoing>Flow_3a_G3b</outgoing>
     </task>
-
     <task id="Task_5" name="Step 5 — Drop off dog, supplies, food, and medications; review care instructions">
       <incoming>Flow_T4_T5</incoming>
       <outgoing>Flow_T5_T6</outgoing>
     </task>
-
     <task id="Task_8" name="Step 8 — Pick up dog; receive verbal stay summary from dog sitter">
       <incoming>Flow_StayComplete_Yes</incoming>
       <outgoing>Flow_T8_T9</outgoing>
     </task>
-
-    <!-- === Sequence Flows === -->
-
-    <sequenceFlow id="Flow_Start_T1"        sourceRef="StartEvent_1"         targetRef="Task_1" />
-    <sequenceFlow id="Flow_T1_G1"           sourceRef="Task_1"                targetRef="Gateway_1" />
-    <sequenceFlow id="Flow_G1_Yes"          name="Yes — proceed"              sourceRef="Gateway_1"          targetRef="Task_2" />
-    <sequenceFlow id="Flow_G1_No"           name="No — decline"               sourceRef="Gateway_1"          targetRef="EndEvent_Decline1" />
-    <sequenceFlow id="Flow_T2_G2"           sourceRef="Task_2"                targetRef="Gateway_2" />
-    <sequenceFlow id="Flow_G2_NewClient"    name="New client / owner preference — meet and greet required"  sourceRef="Gateway_2" targetRef="Task_3a" />
-    <sequenceFlow id="Flow_G2_RepeatClient" name="Established repeat client — skip to Step 4"              sourceRef="Gateway_2" targetRef="Task_4" />
-    <sequenceFlow id="Flow_3a_G3b"          sourceRef="Task_3a"               targetRef="Gateway_3b" />
-    <sequenceFlow id="Flow_G3b_No"          name="No concerns — proceed"      sourceRef="Gateway_3b"         targetRef="Task_4" />
-    <sequenceFlow id="Flow_G3b_Yes"         name="Yes — concerns, decline"    sourceRef="Gateway_3b"         targetRef="EndEvent_Decline2" />
-    <sequenceFlow id="Flow_T4_T5"           sourceRef="Task_4"                targetRef="Task_5" />
-    <sequenceFlow id="Flow_T5_T6"           sourceRef="Task_5"                targetRef="Task_6" />
-    <sequenceFlow id="Flow_T6_G6"           sourceRef="Task_6"                targetRef="Gateway_6" />
-    <sequenceFlow id="Flow_G6_Yes"          name="Yes — escalate"             sourceRef="Gateway_6"          targetRef="Task_7" />
-    <sequenceFlow id="Flow_G6_No"           name="No issue"                   sourceRef="Gateway_6"          targetRef="Gateway_StayComplete" />
-    <sequenceFlow id="Flow_T7_T6"           name="Issue resolved — return to daily care" sourceRef="Task_7" targetRef="Task_6" />
-    <sequenceFlow id="Flow_StayComplete_No" name="No — continue daily care"   sourceRef="Gateway_StayComplete" targetRef="Task_6" />
-    <sequenceFlow id="Flow_StayComplete_Yes" name="Yes — proceed to pickup"   sourceRef="Gateway_StayComplete" targetRef="Task_8" />
-    <sequenceFlow id="Flow_T8_T9"           sourceRef="Task_8"                targetRef="Task_9" />
-    <sequenceFlow id="Flow_T9_End"          sourceRef="Task_9"                targetRef="EndEvent_Normal" />
-
+    <sequenceFlow id="Flow_Start_T1" sourceRef="StartEvent_1" targetRef="Task_1" />
+    <sequenceFlow id="Flow_T1_G1" sourceRef="Task_1" targetRef="Gateway_1" />
+    <sequenceFlow id="Flow_G1_Yes" name="Yes — proceed" sourceRef="Gateway_1" targetRef="Task_2" />
+    <sequenceFlow id="Flow_G1_No" name="No — decline" sourceRef="Gateway_1" targetRef="EndEvent_Decline1" />
+    <sequenceFlow id="Flow_T2_G2" sourceRef="Task_2" targetRef="Gateway_2" />
+    <sequenceFlow id="Flow_G2_NewClient" name="New client / owner preference — meet and greet required" sourceRef="Gateway_2" targetRef="Task_3a" />
+    <sequenceFlow id="Flow_G2_RepeatClient" name="Established repeat client — skip to Step 4" sourceRef="Gateway_2" targetRef="Task_4" />
+    <sequenceFlow id="Flow_3a_G3b" sourceRef="Task_3a" targetRef="Gateway_3b" />
+    <sequenceFlow id="Flow_G3b_No" name="No concerns — proceed" sourceRef="Gateway_3b" targetRef="Task_4" />
+    <sequenceFlow id="Flow_G3b_Yes" name="Yes — concerns, decline" sourceRef="Gateway_3b" targetRef="EndEvent_Decline2" />
+    <sequenceFlow id="Flow_T4_T5" sourceRef="Task_4" targetRef="Task_5" />
+    <sequenceFlow id="Flow_T5_T6" sourceRef="Task_5" targetRef="Task_6" />
+    <sequenceFlow id="Flow_T6_G6" sourceRef="Task_6" targetRef="Gateway_6" />
+    <sequenceFlow id="Flow_G6_Yes" name="Yes — escalate" sourceRef="Gateway_6" targetRef="Task_7" />
+    <sequenceFlow id="Flow_G6_No" name="No issue" sourceRef="Gateway_6" targetRef="Gateway_StayComplete" />
+    <sequenceFlow id="Flow_T7_T6" name="Issue resolved — return to daily care" sourceRef="Task_7" targetRef="Task_6" />
+    <sequenceFlow id="Flow_StayComplete_No" name="No — continue daily care" sourceRef="Gateway_StayComplete" targetRef="Task_6" />
+    <sequenceFlow id="Flow_StayComplete_Yes" name="Yes — proceed to pickup" sourceRef="Gateway_StayComplete" targetRef="Task_8" />
+    <sequenceFlow id="Flow_T8_T9" sourceRef="Task_8" targetRef="Task_9" />
+    <sequenceFlow id="Flow_T9_End" sourceRef="Task_9" targetRef="EndEvent_Normal" />
   </process>
-
-  <!-- ============================================================ -->
-  <!--   DIAGRAM INTERCHANGE                                        -->
-  <!--   Task boxes: 160w x 90h                                    -->
-  <!--   Gateways:   54w x 54h                                     -->
-  <!--   Dog Sitter lane center y = 260                            -->
-  <!--   Dog Owner lane center y = 570                             -->
-  <!-- ============================================================ -->
-
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_1">
-
-      <!-- Pool: 2800w x 600h -->
       <bpmndi:BPMNShape id="Participant_Pool_di" bpmnElement="Participant_Pool" isHorizontal="true">
         <omgdc:Bounds x="120" y="60" width="2800" height="600" />
       </bpmndi:BPMNShape>
-
-      <!-- Lane: Dog Sitter — top 420px -->
-      <bpmndi:BPMNShape id="Lane_DogSitter_di" bpmnElement="Lane_DogSitter" isHorizontal="true">
-        <omgdc:Bounds x="150" y="60" width="2770" height="420" />
-      </bpmndi:BPMNShape>
-
-      <!-- Lane: Dog Owner — bottom 180px -->
       <bpmndi:BPMNShape id="Lane_DogOwner_di" bpmnElement="Lane_DogOwner" isHorizontal="true">
         <omgdc:Bounds x="150" y="480" width="2770" height="180" />
       </bpmndi:BPMNShape>
-
-      <!-- ===== Dog Sitter Lane Elements ===== -->
-      <!-- All tasks: y=215, h=90  |  All gateways: y=233, h=54  |  Events: y=242, h=36 -->
-
-      <!-- Start Event -->
+      <bpmndi:BPMNShape id="Lane_DogSitter_di" bpmnElement="Lane_DogSitter" isHorizontal="true">
+        <omgdc:Bounds x="150" y="60" width="2770" height="420" />
+      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="StartEvent_1_di" bpmnElement="StartEvent_1">
         <omgdc:Bounds x="210" y="242" width="36" height="36" />
       </bpmndi:BPMNShape>
-
-      <!-- Task 1: Screen Inquiry -->
       <bpmndi:BPMNShape id="Task_1_di" bpmnElement="Task_1">
         <omgdc:Bounds x="300" y="215" width="160" height="90" />
       </bpmndi:BPMNShape>
-
-      <!-- Gateway 1: Booking acceptable? -->
       <bpmndi:BPMNShape id="Gateway_1_di" bpmnElement="Gateway_1" isMarkerVisible="true">
         <omgdc:Bounds x="530" y="233" width="54" height="54" />
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds x="483" y="287" width="73" height="66" />
+        </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
-
-      <!-- End Event: Decline 1 (Step 1 rejection) -->
       <bpmndi:BPMNShape id="EndEvent_Decline1_di" bpmnElement="EndEvent_Decline1">
         <omgdc:Bounds x="539" y="372" width="36" height="36" />
       </bpmndi:BPMNShape>
-
-      <!-- Task 2: Gather Client Information -->
       <bpmndi:BPMNShape id="Task_2_di" bpmnElement="Task_2">
         <omgdc:Bounds x="650" y="215" width="160" height="90" />
       </bpmndi:BPMNShape>
-
-      <!-- Gateway 2: Meet and Greet required? -->
       <bpmndi:BPMNShape id="Gateway_2_di" bpmnElement="Gateway_2" isMarkerVisible="true">
         <omgdc:Bounds x="880" y="233" width="54" height="54" />
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds x="931" y="273" width="78" height="53" />
+        </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
-
-      <!-- Gateway 3b: Compatibility concerns? -->
       <bpmndi:BPMNShape id="Gateway_3b_di" bpmnElement="Gateway_3b" isMarkerVisible="true">
         <omgdc:Bounds x="1150" y="233" width="54" height="54" />
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds x="1093" y="183" width="81" height="53" />
+        </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
-
-      <!-- End Event: Decline 2 (Step 3b rejection) -->
       <bpmndi:BPMNShape id="EndEvent_Decline2_di" bpmnElement="EndEvent_Decline2">
         <omgdc:Bounds x="1159" y="372" width="36" height="36" />
       </bpmndi:BPMNShape>
-
-      <!-- Task 4: Confirm Booking and Prepare -->
       <bpmndi:BPMNShape id="Task_4_di" bpmnElement="Task_4">
         <omgdc:Bounds x="1280" y="215" width="160" height="90" />
       </bpmndi:BPMNShape>
-
-      <!-- Task 6: Daily Care (loop) -->
       <bpmndi:BPMNShape id="Task_6_di" bpmnElement="Task_6">
         <omgdc:Bounds x="1750" y="215" width="160" height="90" />
       </bpmndi:BPMNShape>
-
-      <!-- Gateway 6: Issue requires escalation? -->
       <bpmndi:BPMNShape id="Gateway_6_di" bpmnElement="Gateway_6" isMarkerVisible="true">
         <omgdc:Bounds x="1990" y="233" width="54" height="54" />
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds x="1974" y="153" width="87" height="80" />
+        </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
-
-      <!-- Task 7: Handle Issues and Exceptions (below Gateway 6) -->
       <bpmndi:BPMNShape id="Task_7_di" bpmnElement="Task_7">
         <omgdc:Bounds x="1970" y="358" width="160" height="90" />
       </bpmndi:BPMNShape>
-
-      <!-- Gateway: Stay Complete? -->
       <bpmndi:BPMNShape id="Gateway_StayComplete_di" bpmnElement="Gateway_StayComplete" isMarkerVisible="true">
         <omgdc:Bounds x="2120" y="233" width="54" height="54" />
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds x="2178" y="250" width="83" height="40" />
+        </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
-
-      <!-- Task 9: Post-Stay Follow-Up -->
       <bpmndi:BPMNShape id="Task_9_di" bpmnElement="Task_9">
         <omgdc:Bounds x="2430" y="215" width="160" height="90" />
       </bpmndi:BPMNShape>
-
-      <!-- End Event: Normal completion -->
       <bpmndi:BPMNShape id="EndEvent_Normal_di" bpmnElement="EndEvent_Normal">
         <omgdc:Bounds x="2660" y="242" width="36" height="36" />
       </bpmndi:BPMNShape>
-
-      <!-- ===== Dog Owner Lane Elements ===== -->
-      <!-- All tasks: y=525, h=90  |  center y=570 -->
-
-      <!-- Task 3a: Meet and Greet -->
       <bpmndi:BPMNShape id="Task_3a_di" bpmnElement="Task_3a">
         <omgdc:Bounds x="950" y="525" width="160" height="90" />
       </bpmndi:BPMNShape>
-
-      <!-- Task 5: Drop-Off -->
       <bpmndi:BPMNShape id="Task_5_di" bpmnElement="Task_5">
         <omgdc:Bounds x="1510" y="525" width="160" height="90" />
       </bpmndi:BPMNShape>
-
-      <!-- Task 8: Pickup -->
       <bpmndi:BPMNShape id="Task_8_di" bpmnElement="Task_8">
         <omgdc:Bounds x="2200" y="525" width="160" height="90" />
       </bpmndi:BPMNShape>
-
-      <!-- ===== Sequence Flow Edges ===== -->
-
-      <!-- Start → Task 1 -->
       <bpmndi:BPMNEdge id="Flow_Start_T1_di" bpmnElement="Flow_Start_T1">
         <omgdi:waypoint x="246" y="260" />
         <omgdi:waypoint x="300" y="260" />
       </bpmndi:BPMNEdge>
-
-      <!-- Task 1 → Gateway 1 -->
       <bpmndi:BPMNEdge id="Flow_T1_G1_di" bpmnElement="Flow_T1_G1">
         <omgdi:waypoint x="460" y="260" />
         <omgdi:waypoint x="530" y="260" />
       </bpmndi:BPMNEdge>
-
-      <!-- Gateway 1 → Yes → Task 2 -->
       <bpmndi:BPMNEdge id="Flow_G1_Yes_di" bpmnElement="Flow_G1_Yes">
         <omgdi:waypoint x="584" y="260" />
         <omgdi:waypoint x="650" y="260" />
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds x="590" y="242" width="55" height="14" />
+        </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
-
-      <!-- Gateway 1 → No → EndEvent Decline 1 (down) -->
       <bpmndi:BPMNEdge id="Flow_G1_No_di" bpmnElement="Flow_G1_No">
         <omgdi:waypoint x="557" y="287" />
         <omgdi:waypoint x="557" y="372" />
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds x="566" y="313" width="67" height="14" />
+        </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
-
-      <!-- Task 2 → Gateway 2 -->
       <bpmndi:BPMNEdge id="Flow_T2_G2_di" bpmnElement="Flow_T2_G2">
         <omgdi:waypoint x="810" y="260" />
         <omgdi:waypoint x="880" y="260" />
       </bpmndi:BPMNEdge>
-
-      <!-- Gateway 2 → New Client → Task 3a (down to Dog Owner lane) -->
       <bpmndi:BPMNEdge id="Flow_G2_NewClient_di" bpmnElement="Flow_G2_NewClient">
         <omgdi:waypoint x="907" y="287" />
         <omgdi:waypoint x="907" y="570" />
         <omgdi:waypoint x="950" y="570" />
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds x="915" y="413" width="89" height="53" />
+        </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
-
-      <!-- Gateway 2 → Repeat Client → Task 4 (arc above, skipping meet and greet) -->
       <bpmndi:BPMNEdge id="Flow_G2_RepeatClient_di" bpmnElement="Flow_G2_RepeatClient">
         <omgdi:waypoint x="907" y="233" />
         <omgdi:waypoint x="907" y="150" />
         <omgdi:waypoint x="1360" y="150" />
         <omgdi:waypoint x="1360" y="215" />
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds x="1095" y="100" width="78" height="40" />
+        </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
-
-      <!-- Task 3a → Gateway 3b (up from Dog Owner lane to Dog Sitter, enter from west) -->
       <bpmndi:BPMNEdge id="Flow_3a_G3b_di" bpmnElement="Flow_3a_G3b">
         <omgdi:waypoint x="1110" y="570" />
         <omgdi:waypoint x="1110" y="260" />
         <omgdi:waypoint x="1150" y="260" />
       </bpmndi:BPMNEdge>
-
-      <!-- Gateway 3b → No concerns → Task 4 -->
       <bpmndi:BPMNEdge id="Flow_G3b_No_di" bpmnElement="Flow_G3b_No">
         <omgdi:waypoint x="1204" y="260" />
         <omgdi:waypoint x="1280" y="260" />
       </bpmndi:BPMNEdge>
-
-      <!-- Gateway 3b → Yes concerns → EndEvent Decline 2 (down) -->
       <bpmndi:BPMNEdge id="Flow_G3b_Yes_di" bpmnElement="Flow_G3b_Yes">
         <omgdi:waypoint x="1177" y="287" />
         <omgdi:waypoint x="1177" y="372" />
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds x="1187" y="326" width="86" height="27" />
+        </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
-
-      <!-- Task 4 → Task 5 (down to Dog Owner lane) -->
       <bpmndi:BPMNEdge id="Flow_T4_T5_di" bpmnElement="Flow_T4_T5">
         <omgdi:waypoint x="1440" y="260" />
         <omgdi:waypoint x="1590" y="260" />
         <omgdi:waypoint x="1590" y="525" />
       </bpmndi:BPMNEdge>
-
-      <!-- Task 5 → Task 6 (up from Dog Owner lane to Dog Sitter, enter from west) -->
       <bpmndi:BPMNEdge id="Flow_T5_T6_di" bpmnElement="Flow_T5_T6">
         <omgdi:waypoint x="1670" y="570" />
         <omgdi:waypoint x="1720" y="570" />
         <omgdi:waypoint x="1720" y="260" />
         <omgdi:waypoint x="1750" y="260" />
       </bpmndi:BPMNEdge>
-
-      <!-- Task 6 → Gateway 6 -->
       <bpmndi:BPMNEdge id="Flow_T6_G6_di" bpmnElement="Flow_T6_G6">
         <omgdi:waypoint x="1910" y="260" />
         <omgdi:waypoint x="1990" y="260" />
       </bpmndi:BPMNEdge>
-
-      <!-- Gateway 6 → Yes → Task 7 (down) -->
       <bpmndi:BPMNEdge id="Flow_G6_Yes_di" bpmnElement="Flow_G6_Yes">
         <omgdi:waypoint x="2017" y="287" />
         <omgdi:waypoint x="2017" y="358" />
       </bpmndi:BPMNEdge>
-
-      <!-- Gateway 6 → No issue → Gateway StayComplete -->
       <bpmndi:BPMNEdge id="Flow_G6_No_di" bpmnElement="Flow_G6_No">
         <omgdi:waypoint x="2044" y="260" />
         <omgdi:waypoint x="2120" y="260" />
       </bpmndi:BPMNEdge>
-
-      <!-- Task 7 → Task 6 (loop back left and up from below) -->
       <bpmndi:BPMNEdge id="Flow_T7_T6_di" bpmnElement="Flow_T7_T6">
         <omgdi:waypoint x="1970" y="420" />
         <omgdi:waypoint x="1830" y="420" />
         <omgdi:waypoint x="1830" y="305" />
       </bpmndi:BPMNEdge>
-
-      <!-- Gateway StayComplete → No → Task 6 (arc above, loop back) -->
       <bpmndi:BPMNEdge id="Flow_StayComplete_No_di" bpmnElement="Flow_StayComplete_No">
         <omgdi:waypoint x="2147" y="233" />
         <omgdi:waypoint x="2147" y="150" />
         <omgdi:waypoint x="1830" y="150" />
         <omgdi:waypoint x="1830" y="215" />
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds x="2152" y="156" width="76" height="27" />
+        </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
-
-      <!-- Gateway StayComplete → Yes → Task 8 (down to Dog Owner lane) -->
       <bpmndi:BPMNEdge id="Flow_StayComplete_Yes_di" bpmnElement="Flow_StayComplete_Yes">
         <omgdi:waypoint x="2147" y="287" />
         <omgdi:waypoint x="2147" y="570" />
         <omgdi:waypoint x="2200" y="570" />
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds x="2156" y="406" width="88" height="27" />
+        </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
-
-      <!-- Task 8 → Task 9 (up from Dog Owner lane to Dog Sitter, enter from west) -->
       <bpmndi:BPMNEdge id="Flow_T8_T9_di" bpmnElement="Flow_T8_T9">
         <omgdi:waypoint x="2360" y="570" />
         <omgdi:waypoint x="2410" y="570" />
         <omgdi:waypoint x="2410" y="260" />
         <omgdi:waypoint x="2430" y="260" />
       </bpmndi:BPMNEdge>
-
-      <!-- Task 9 → End Event Normal -->
       <bpmndi:BPMNEdge id="Flow_T9_End_di" bpmnElement="Flow_T9_End">
         <omgdi:waypoint x="2590" y="260" />
         <omgdi:waypoint x="2660" y="260" />
       </bpmndi:BPMNEdge>
-
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
-
 </definitions>

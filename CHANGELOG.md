@@ -1,5 +1,14 @@
 # Changelog
 
+## [2.3.0] — 2026-04-10
+
+### Changed
+
+- `capstone/process.bpmn` — Connector label visibility fixed: added explicit `BPMNLabel` bounds to all sequence flow edges so labels render off the connector lines rather than on top of them. Manual cleanup completed in bpmn.io by user.
+- `capstone/process.pdf` — Regenerated from corrected BPMN; connector labels now fully readable.
+
+---
+
 ## [2.2.0] — 2026-04-09
 
 ### Added
