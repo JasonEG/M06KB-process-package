@@ -123,3 +123,37 @@
 - **Quality check:** PDF visually confirmed by user before sending
 
 **Outcome:** BPMN connector cleanup complete. Review package sent to Abbey. Awaiting her feedback before SOP v1.2. Next work: build `capstone/governance.md` while waiting for Abbey's response.
+
+---
+
+## Entry 43 — 2026-04-12 — Capstone Checkpoint Package
+
+**Prompt summary:** Session focused on building the full Capstone Checkpoint submission package. Started by auditing all checkpoint requirements against existing artifacts. Drafted all missing checkpoint documents in order, assembled the A-capstone/ submission folder, and updated logs.
+
+**Actions taken:**
+- Audited Track A checkpoint requirements against existing capstone files — identified 5 missing documents
+- Created `capstone/checkpoint-project-snapshot.md` — process overview, partner summary, scope changes since Week 12
+- Created `capstone/checkpoint-partner-reaction.md` — honest review status (no response from Abbey), rationale, consultant self-assessment of usability gaps (G-02, Step 6/7 boundary, BPMN notation)
+- Created `capstone/checkpoint-remaining-work-plan.md` — Week 14/15 task table with owners and risk/contingency
+- Created `capstone/checkpoint-memo.md` — all four required checkpoint questions answered
+- Created `capstone/checkpoint-ai-usage-note.md` — session-by-session AI usage with human judgment accounting
+- User converted project snapshot, partner reaction, checkpoint memo, and AI usage note to Word and edited to personal voice
+- Created `A-capstone/` folder with 8 numbered submission files
+
+**Files created this session:**
+- `capstone/checkpoint-project-snapshot.md`
+- `capstone/checkpoint-partner-reaction.md`
+- `capstone/checkpoint-remaining-work-plan.md`
+- `capstone/checkpoint-memo.md`
+- `capstone/checkpoint-ai-usage-note.md`
+- `A-capstone/` — 8 files (01–08, numbered for instructor navigation)
+
+**Files modified this session:**
+- `CHANGELOG.md` — v2.4.0 entry added
+
+**AI tool usage:**
+- **Tool:** Claude Code (claude-sonnet-4-6)
+- **Tasks:** Requirement audit, drafting all 5 checkpoint documents, assembling submission folder
+- **Quality check:** All documents grounded in existing project artifacts (discovery notes, SOP, BPMN, prompt log); user reviewed and edited each Word doc before inclusion in submission package
+
+**Outcome:** Capstone Checkpoint package complete and ready for Canvas submission. Next session: build `capstone/governance.md` (does not depend on Abbey's feedback).

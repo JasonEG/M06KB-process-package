@@ -1,5 +1,18 @@
 # Changelog
 
+## [2.4.0] — 2026-04-12
+
+### Added
+
+- `capstone/checkpoint-project-snapshot.md` — Checkpoint project snapshot: process overview, partner summary, scope changes since Week 12.
+- `capstone/checkpoint-partner-reaction.md` — Partner reaction / usability note: review status, rationale for no-change reading, consultant self-assessment of usability gaps.
+- `capstone/checkpoint-remaining-work-plan.md` — Remaining work plan: Week 14 and Week 15 tasks with owners, dependencies, and risk/contingency table.
+- `capstone/checkpoint-memo.md` — Checkpoint memo: all four required questions answered (partnership, risk, confidence, usability).
+- `capstone/checkpoint-ai-usage-note.md` — AI usage note: session-by-session accounting of Claude Code usage and human judgment decisions.
+- `A-capstone/` — Submission package: 8 numbered files covering all Track A checkpoint requirements.
+
+---
+
 ## [2.3.0] — 2026-04-10
 
 ### Changed

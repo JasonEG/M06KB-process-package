@@ -53,8 +53,38 @@ This process package was originally created for Module 05 (CLI) and copied here 
 
 ## Where We Left Off
 
-**Date:** 2026-04-10
-**Module:** Week 13 — Capstone (in progress)
+**Date:** 2026-04-12
+**Module:** Week 13 — Capstone Checkpoint (complete)
+
+### ✅ Session progress — 2026-04-12 (Week 13, Session 4)
+- Audited all Capstone Checkpoint requirements against existing artifacts
+- Created `capstone/checkpoint-project-snapshot.md` — process overview, partner, scope
+- Created `capstone/checkpoint-partner-reaction.md` — honest review status (no Abbey response), usability self-assessment
+- Created `capstone/checkpoint-remaining-work-plan.md` — Week 14/15 task table with risks
+- Created `capstone/checkpoint-memo.md` — all four required checkpoint questions answered
+- Created `capstone/checkpoint-ai-usage-note.md` — session-by-session AI usage note
+- User converted snapshot, partner reaction, memo, and AI usage note to Word; edited to personal voice
+- Assembled `A-capstone/` — 8 numbered files, ready for Canvas submission
+- Updated CHANGELOG (v2.4.0) and prompt log (Entry 43)
+
+### Next Actions — START HERE
+1. **Submit `A-capstone/` to Canvas** — Capstone Checkpoint due this week
+2. **Build `capstone/governance.md`** — does not depend on Abbey's feedback; next major deliverable
+3. **Await Abbey's feedback** — if received, revise SOP to v1.2
+4. **Week 15** — Final cross-artifact review, full AI appendix, assemble final submission package
+
+### Capstone File State (as of 2026-04-12)
+- `capstone/discovery-notes.md` ✅
+- `capstone/SOP.md` (v1.1) ✅ — sent to Abbey for review; no response yet
+- `capstone/process.bpmn` ✅ — connector labels clean
+- `capstone/process.pdf` ✅ — sent to Abbey for review
+- `capstone/checkpoint-project-snapshot.md` ✅
+- `capstone/checkpoint-partner-reaction.md` ✅
+- `capstone/checkpoint-remaining-work-plan.md` ✅
+- `capstone/checkpoint-memo.md` ✅
+- `capstone/checkpoint-ai-usage-note.md` ✅
+- `A-capstone/` ✅ — 8 files, ready for Canvas submission
+- `capstone/governance.md` ❌ — not started (next task)
 
 ### ✅ Week 12 — COMPLETE
 - Track A (Consultant) confirmed ✅
