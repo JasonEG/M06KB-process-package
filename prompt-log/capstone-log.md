@@ -157,3 +157,54 @@
 - **Quality check:** All documents grounded in existing project artifacts (discovery notes, SOP, BPMN, prompt log); user reviewed and edited each Word doc before inclusion in submission package
 
 **Outcome:** Capstone Checkpoint package complete and ready for Canvas submission. Next session: build `capstone/governance.md` (does not depend on Abbey's feedback).
+
+---
+
+## Entry 45 — 2026-04-15 — Governance Plan Review and PDF Export
+
+**Prompt summary:** Session focused on reviewing and finalizing `capstone/governance.md`. Revised tone to informal/conversational, removed all em dashes, changed review cadence from annual to quarterly, and exported the final PDF.
+
+**Actions taken:**
+- Read `capstone/governance.md` draft; assessed tone, content gaps, and style issues
+- Rewrote document in informal/conversational tone throughout all 7 sections
+- Removed all em dashes (user preference); replaced with commas, colons, or reworded sentences
+- Changed review cadence from annual to quarterly: Q2 2026 (July), Q3 2026 (October), Q4 2026 (January), Q1 2027 (April)
+- Updated "Next Review Date" header and Section 7 sunset table to reflect quarterly schedule
+- Changed RACI "not involved" symbol to "n/a"
+- Exported `capstone/governance.pdf` via md-to-pdf
+
+**Files modified this session:**
+- `capstone/governance.md` — Tone revision, em dash removal, quarterly cadence
+- `CHANGELOG.md` — v2.5.0 entry added
+
+**Files created this session:**
+- `capstone/governance.pdf` — Final PDF export
+
+**AI tool usage:**
+- **Tool:** Claude Code (claude-sonnet-4-6)
+- **Tasks:** Tone rewrite, style cleanup, cadence update, PDF export
+- **Quality check:** User reviewed each change iteratively before acceptance
+
+**Outcome:** `capstone/governance.md` finalized and `capstone/governance.pdf` exported. Governance artifacts are ready for inclusion in the final submission package.
+
+---
+
+## Entry 44 — 2026-04-12 — Governance Plan Draft
+
+**Prompt summary:** Created `capstone/governance.md` — adapted from M10 governance plan structure. User needs to review and edit before it is final.
+
+**Actions taken:**
+- Created `capstone/governance.md` — 7-section governance plan for In-Home Dog Boarding Process Package
+- DRI set to Abbey Cohen (process owner); Jason Geanuracos listed as documentation consultant (initial version only)
+- Annual review cadence (vs. semi-annual in M10 — appropriate for solo personal services)
+- Simplified RACI, escalation, and change control for solo-operated business
+
+**Files created this session:**
+- `capstone/governance.md` — Draft governance plan (needs user review and edits)
+
+**Outcome:** Draft complete. User to review and edit at next session before PDF export.
+
+**Next session — START HERE:**
+1. Review and edit `capstone/governance.md` to reflect personal voice and any content corrections
+2. Export `capstone/governance.pdf` via md-to-pdf
+3. Add governance artifacts to final submission package

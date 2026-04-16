@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.5.0] — 2026-04-15
+
+### Added
+
+- `capstone/governance.pdf` — PDF export of governance plan.
+
+### Changed
+
+- `capstone/governance.md` — Tone revised to informal/conversational; review cadence changed from annual to quarterly (Q2 2026 through Q1 2027); em dashes removed throughout; "Not involved" column in RACI changed from symbol to "n/a".
+
+---
+
 ## [2.4.0] — 2026-04-12
 
 ### Added
