@@ -71,12 +71,9 @@ This process package was originally created for Module 05 (CLI) and copied here 
 - Updated CHANGELOG (v2.6.0) and prompt log (Entry 46)
 
 ### Next Actions — START HERE
-1. **Record video essay** — 10 min max; outline/script ready to build
-   - Partner interactions (Abbey's process outline, Teams review, "It looks great!" confirmation)
-   - Process capture method (written outline → discovery notes → gap analysis)
-   - AI usage (specific, honest — where it helped, where you corrected it)
-   - Walkthrough of capstone-package.pdf
-2. **Submit to Canvas** — `A15/01 SOP Package Geanuracos.pdf` + video essay upload
+1. **Review video outline** — `capstone/video-outline.md` — draft complete, review and approve before recording. 6 sections, ~9:15 target. Consider converting thin sections to a spoken script.
+2. **Record video essay** — 10 min max; screen recording + voiceover recommended; pull up `capstone-package.pdf` for the walkthrough section
+3. **Submit to Canvas** — `A15/01 SOP Package Geanuracos.pdf` + video essay upload
 
 ### Capstone File State (as of 2026-04-19)
 - `capstone/discovery-notes.md` ✅ — open questions closed/marked out of scope
