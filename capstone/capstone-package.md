@@ -1,26 +1,50 @@
-# Standard Operating Procedure — In-Home Dog Boarding Intake and Care
+# In-Home Dog Boarding Intake and Care
+## Process Package — Capstone Submission
+
+**Consultant:** Jason Geanuracos
+**Partner / Process Owner:** Abbey Cohen
+**SOP Version:** 1.1
+**Published:** 2026-04-07
+**Partner Review:** Abbey Cohen confirmed v1.1 on 2026-04-12 — no concerns or modifications requested.
+**Submitted:** 2026-04-19
+
+---
+
+## Contents
+
+1. Written SOP
+2. Process Diagram (BPMN)
+3. Stakeholder Identification
+4. Governance Notes
+5. Improvement Recommendations
+
+---
+
+# Part I — Written SOP
+
+## Standard Operating Procedure — In-Home Dog Boarding Intake and Care
 
 **Version:** 1.1
 **Published:** 2026-04-07
 **DRI:** Abbey Cohen, Dog Sitter / Process Owner
 **Next Review Date:** 2026-07-12 (quarterly per governance plan; or upon significant change to booking platform, care policies, or service scope)
-**Change Summary:** v1.1 — Clarified Step 6/7 escalation model (Option A): Step 6 handles inline daily-loop resolutions only; explicit trigger line added for Step 7; Step 7 reframed as true escalation path with Minor/Moderate/Emergency tiers. Partner review complete: Abbey Cohen confirmed v1.1 on 2026-04-12 — no concerns or modifications requested. v1.0 — Initial draft based on Abbey Cohen's process outline.
+**Change Summary:** v1.1 — Clarified Step 6/7 escalation model: Step 6 handles inline daily-loop resolutions only; explicit trigger line added for Step 7; Step 7 reframed as true escalation path with Minor/Moderate/Emergency tiers. Partner review complete: Abbey Cohen confirmed v1.1 on 2026-04-12 — no concerns or modifications requested. v1.0 — Initial draft based on Abbey Cohen's process outline.
 
 ---
 
-## 1. Purpose
+### 1. Purpose
 
 Standardize the intake, daily care, and completion process for in-home dog boarding services, ensuring consistent client communication, safe animal care, and reliable follow-through from initial inquiry to post-stay follow-up.
 
 ---
 
-## 2. Scope
+### 2. Scope
 
 **Start Trigger:** A client submits a boarding request or inquiry via app, text, or direct message.
 
 **End State:** The dog is safely returned to the owner, the boarding stay is complete, and a post-stay follow-up message has been sent.
 
-### In Scope
+#### In Scope
 
 - Client inquiry screening and compatibility evaluation
 - Information gathering and booking confirmation
@@ -31,7 +55,7 @@ Standardize the intake, daily care, and completion process for in-home dog board
 - Issue escalation and exception handling
 - Pickup, stay summary, and post-stay follow-up
 
-### Out of Scope
+#### Out of Scope
 
 - Marketing or client acquisition
 - Financial transactions, payment processing, or deposits
@@ -41,7 +65,7 @@ Standardize the intake, daily care, and completion process for in-home dog board
 
 ---
 
-## 3. Roles & Responsibilities
+### 3. Roles & Responsibilities
 
 | Role | Responsibilities |
 |------|-----------------|
@@ -50,7 +74,7 @@ Standardize the intake, daily care, and completion process for in-home dog board
 
 ---
 
-## 4. Prerequisites
+### 4. Prerequisites
 
 - **Communication channel:** Booking app, text, or direct message accessible to dog sitter
 - **Home environment:** Designated dog area prepared with necessary supplies before drop-off
@@ -62,7 +86,7 @@ Standardize the intake, daily care, and completion process for in-home dog board
 
 ---
 
-## 5. Inputs & Outputs
+### 5. Inputs & Outputs
 
 **Inputs:**
 
@@ -79,9 +103,9 @@ Standardize the intake, daily care, and completion process for in-home dog board
 
 ---
 
-## 6. Procedure
+### 6. Procedure
 
-### Step 1 — Receive and Screen Inquiry
+#### Step 1 — Receive and Screen Inquiry
 
 **Actor:** Dog Sitter
 
@@ -93,7 +117,7 @@ Receive the booking request or inquiry from the client. Review the requested dat
 
 ---
 
-### Step 2 — Gather Client Information
+#### Step 2 — Gather Client Information
 
 **Actor:** Dog Sitter
 
@@ -110,7 +134,7 @@ Clarify any missing or unclear details with the owner before confirming the book
 
 ---
 
-### Step 3 — Meet and Greet
+#### Step 3 — Meet and Greet
 
 **Actor:** Dog Sitter, Dog Owner
 
@@ -130,7 +154,7 @@ Coordinate a time for the owner and dog to visit. Observe the dog's behavior and
 
 ---
 
-### Step 4 — Confirm Booking and Prepare Environment
+#### Step 4 — Confirm Booking and Prepare Environment
 
 **Actor:** Dog Sitter
 
@@ -142,7 +166,7 @@ Confirm the final booking dates and care instructions with the owner. Before the
 
 ---
 
-### Step 5 — Receive Dog at Drop-Off
+#### Step 5 — Receive Dog at Drop-Off
 
 **Actor:** Dog Sitter, Dog Owner
 
@@ -154,7 +178,7 @@ Receive the dog, supplies, food, and medications from the owner at drop-off. Rev
 
 ---
 
-### Step 6 — Provide Daily Care
+#### Step 6 — Provide Daily Care
 
 **Actor:** Dog Sitter
 
@@ -178,7 +202,7 @@ Repeat the following each day for the duration of the boarding stay:
 
 ---
 
-### Step 7 — Handle Issues and Exceptions
+#### Step 7 — Handle Issues and Exceptions
 
 **Actor:** Dog Sitter
 
@@ -194,7 +218,7 @@ Return to Step 6 when a Minor or Moderate issue is resolved. An Emergency situat
 
 ---
 
-### Step 8 — Complete Pickup
+#### Step 8 — Complete Pickup
 
 **Actor:** Dog Sitter, Dog Owner
 
@@ -206,7 +230,7 @@ Return the dog and all belongings to the owner at pickup. Provide a verbal summa
 
 ---
 
-### Step 9 — Send Post-Stay Follow-Up
+#### Step 9 — Send Post-Stay Follow-Up
 
 **Actor:** Dog Sitter
 
@@ -220,7 +244,7 @@ Within 24 hours of pickup, send a follow-up message to the client:
 
 ---
 
-## 7. Exceptions
+### 7. Exceptions
 
 | Trigger | Resolution | Escalation |
 |---------|-----------|------------|
@@ -233,9 +257,117 @@ Within 24 hours of pickup, send a follow-up message to the client:
 
 ---
 
-## 8. Improvement Recommendations
+<style>
+@page landscape-diagram {
+  size: A4 landscape;
+  margin: 1.5cm;
+}
+.diagram-page {
+  page: landscape-diagram;
+}
+</style>
 
-### Recommendation 1 — Standardized Client Intake Form (Priority: High)
+<div class="diagram-page" style="page-break-before: always; page-break-after: always;">
+
+<h1>Part II — Process Diagram</h1>
+
+<p>The diagram below is a BPMN 2.0 representation of the nine-step boarding process. Two swimlanes separate the Dog Sitter (top) and Dog Owner (bottom). XOR gateways appear at Steps 1, 3, and 6. The Step 6 daily care loop runs for the duration of the stay; Step 7 is triggered when an issue cannot be resolved within that loop.</p>
+
+<img src="process.png" style="width: 100%; height: auto; display: block; margin: 1em 0;" />
+
+<p><strong>Key:</strong></p>
+<ul>
+  <li><strong>Diamond (X):</strong> XOR gateway — exclusive decision point, one path taken</li>
+  <li><strong>Rounded rectangle:</strong> Task</li>
+  <li><strong>Thick border circle:</strong> End event</li>
+  <li><strong>Swimlane (top):</strong> Dog Sitter — primary actor throughout</li>
+  <li><strong>Swimlane (bottom):</strong> Dog Owner — active at Steps 3a, 5, and 8</li>
+</ul>
+
+</div>
+
+---
+
+# Part III — Stakeholder Identification
+
+## Primary Stakeholders
+
+| Stakeholder | Role | Process Involvement |
+|-------------|------|---------------------|
+| **Abbey Cohen** | Dog Sitter / Process Owner / DRI | Owns and executes all steps. Sole decision-maker for inquiry screening (Step 1), booking confirmation (Steps 2–4), daily care (Step 6), and exception handling (Step 7). |
+| **Dog Owner (Client)** | Service recipient | Active participant at Steps 3a (meet and greet), 5 (drop-off), and 8 (pickup). Provides all care instructions and emergency contacts. Must respond to communications during the stay. |
+
+## Key Handoff Points
+
+| Handoff | From | To | What transfers |
+|---------|------|----|----------------|
+| Step 3a — Meet and greet | Dog Sitter (schedules) | Dog Owner (arrives) | Dog and owner visit the home; compatibility evaluated |
+| Step 5 — Drop-off | Dog Owner | Dog Sitter | Physical custody of dog, supplies, food, medications, and verbal care instructions |
+| Step 7 — Emergency escalation | Dog Sitter (detects issue) | Dog Owner (notified) | Decision authority for veterinary care transfers to owner; emergency contact activated if owner unreachable |
+| Step 8 — Pickup | Dog Sitter | Dog Owner | Physical custody of dog and belongings returned; verbal stay summary provided |
+
+## Process Ownership
+
+Abbey Cohen is the sole process owner and Directly Responsible Individual (DRI) for this SOP. As a one-person operation, she is both the practitioner and the document owner. All decisions about process changes, review scheduling, and stakeholder communication are hers.
+
+---
+
+# Part IV — Governance Notes
+
+## Directly Responsible Individual
+
+| Field | Value |
+|-------|-------|
+| **Name** | Abbey Cohen |
+| **Role** | Dog Sitter / Process Owner |
+| **Responsibilities** | Keep the SOP accurate; review on schedule and whenever something significant changes; approve all updates; maintain version history |
+
+## Review Cadence
+
+**Routine:** Quarterly
+
+| Review Window | Target Date |
+|---------------|-------------|
+| Q2 2026 review | July 2026 |
+| Q3 2026 review | October 2026 |
+| Q4 2026 review | January 2027 |
+| Q1 2027 review | April 2027 |
+
+**Trigger-based (out-of-cycle) reviews** should happen immediately if:
+
+- A new booking platform is adopted (e.g., switching to Rover or Wag)
+- Care policies change (breed restrictions, max dog count, emergency vet authorization)
+- An incident reveals a gap the current SOP did not cover
+- Client feedback repeatedly points to the same confusion or missing step
+- The service expands in scope (dog walking, daycare, other animals)
+
+## Change Control
+
+When something needs to change:
+
+1. **Identify** — notice what needs updating (scheduled review, incident, or client feedback)
+2. **Evaluate** — determine scope: SOP only, diagram only, or both
+3. **Update** — make edits and increment the version:
+   - **Patch** (x.x.1): typo fix, minor clarification, no procedural change
+   - **Minor** (x.1.0): updated step, new decision rule, clarified scope
+   - **Major** (x.0.0): significant change to process structure, roles, or scope
+4. **Record** — add a short note to the SOP governance header: version, date, what changed
+5. **Regenerate** — if the BPMN diagram changed, export a new PDF before replacing the old one
+
+## Escalation
+
+| Situation | Response |
+|-----------|----------|
+| A step is unclear or missing a decision rule | Update SOP, increment version, note the change |
+| An incident reveals a gap | Handle client follow-up first; update SOP before next booking |
+| A client disputes a care decision covered by the SOP | Resolve directly; update SOP if the dispute points to real ambiguity |
+| A process change affects client expectations | Notify active clients before the change takes effect; update SOP to match |
+
+---
+
+# Part V — Improvement Recommendations
+
+## Recommendation 1 — Standardized Client Intake Form (Priority: High)
 
 **Current state:** Step 2 relies on ad-hoc collection of client information via conversation, text, or app message. The current exception rule ("do not confirm booking if information is incomplete") exists precisely because this approach is error-prone — items get missed, follow-up messages are needed, and the sitter must manually verify completeness before confirming.
 
@@ -251,7 +383,7 @@ Within 24 hours of pickup, send a follow-up message to the client:
 
 ---
 
-### Recommendation 2 — Pre-Stay Emergency Veterinary Authorization (Priority: Medium)
+## Recommendation 2 — Pre-Stay Emergency Veterinary Authorization (Priority: Medium)
 
 **Current state:** Step 7 (Emergency tier) requires the sitter to contact the owner and obtain authorization before seeking veterinary care. If the owner is unreachable, the process falls back to the emergency contact — but neither the SOP nor the drop-off conversation establishes a clear authorization threshold in advance.
 

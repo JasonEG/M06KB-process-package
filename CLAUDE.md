@@ -53,8 +53,48 @@ This process package was originally created for Module 05 (CLI) and copied here 
 
 ## Where We Left Off
 
-**Date:** 2026-04-12
-**Module:** Week 13 — Capstone Checkpoint (complete)
+**Date:** 2026-04-19
+**Module:** Week 15 — Final Capstone Assembly (in progress)
+
+### ✅ Session progress — 2026-04-19 (Week 15, Session 1)
+- Confirmed `capstone/governance.pdf` already exported (done 2026-04-15)
+- Ran full cross-artifact review: SOP, BPMN, governance plan, discovery notes — all consistent
+- Fixed one inconsistency: SOP Next Review Date corrected to 2026-07-12 (quarterly per governance plan)
+- Recorded Abbey Cohen's partner confirmation (2026-04-12, "It looks great!" — no changes requested): updated checkpoint-partner-reaction.md, discovery-notes.md, SOP governance header
+- Added Section 8 (Improvement Recommendations) to SOP: Recommendation 1 — Standardized Client Intake Form (High); Recommendation 2 — Pre-Stay Emergency Veterinary Authorization (Medium)
+- Regenerated capstone/SOP.pdf
+- Ran Module 15 requirements verification — all 5 package requirements now satisfied
+- Exported capstone/process.png (PNG from BPMN for embedding)
+- Created capstone/capstone-package.md — single master document (5 parts: SOP, BPMN diagram on landscape page, Stakeholder Identification, Governance Notes, Improvement Recommendations)
+- Exported capstone/capstone-package.pdf — landscape BPMN page confirmed
+- Created A15/ folder; copied capstone-package.pdf as `01 SOP Package Geanuracos.pdf`
+- Updated CHANGELOG (v2.6.0) and prompt log (Entry 46)
+
+### Next Actions — START HERE
+1. **Record video essay** — 10 min max; outline/script ready to build
+   - Partner interactions (Abbey's process outline, Teams review, "It looks great!" confirmation)
+   - Process capture method (written outline → discovery notes → gap analysis)
+   - AI usage (specific, honest — where it helped, where you corrected it)
+   - Walkthrough of capstone-package.pdf
+2. **Submit to Canvas** — `A15/01 SOP Package Geanuracos.pdf` + video essay upload
+
+### Capstone File State (as of 2026-04-19)
+- `capstone/discovery-notes.md` ✅ — open questions closed/marked out of scope
+- `capstone/SOP.md` (v1.1) ✅ — partner confirmed, improvement recommendations added
+- `capstone/SOP.pdf` ✅ — regenerated
+- `capstone/process.bpmn` ✅ — connector labels clean
+- `capstone/process.pdf` ✅
+- `capstone/process.png` ✅ — new (for embedding)
+- `capstone/governance.md` ✅
+- `capstone/governance.pdf` ✅
+- `capstone/checkpoint-partner-reaction.md` ✅ — Abbey's confirmation recorded
+- `capstone/capstone-package.md` ✅ — consolidated master document
+- `capstone/capstone-package.pdf` ✅ — final submission PDF
+- `A15/01 SOP Package Geanuracos.pdf` ✅ — ready for Canvas
+- Video essay ❌ — not yet recorded
+
+### ✅ Session progress — 2026-04-12 (Week 13, Session 4)
+- Audited all Capstone Checkpoint requirements against existing artifacts
 
 ### ✅ Session progress — 2026-04-12 (Week 13, Session 4)
 - Audited all Capstone Checkpoint requirements against existing artifacts
@@ -68,10 +108,11 @@ This process package was originally created for Module 05 (CLI) and copied here 
 - Updated CHANGELOG (v2.4.0) and prompt log (Entry 43)
 
 ### Next Actions — START HERE
-1. **Submit `A-capstone/` to Canvas** — Capstone Checkpoint due this week
-2. **Build `capstone/governance.md`** — does not depend on Abbey's feedback; next major deliverable
-3. **Await Abbey's feedback** — if received, revise SOP to v1.2
-4. **Week 15** — Final cross-artifact review, full AI appendix, assemble final submission package
+1. **Send Abbey a Teams message (morning of 2026-04-16)** — attach `capstone/governance.pdf`; follow up on SOP v1.1 + process.pdf (sent 2026-04-10, no response yet). Draft message ready to review at session start.
+2. **Await Abbey's feedback** — if received, revise SOP to v1.2 and note partner validation in AI appendix
+3. **Final cross-artifact review** — verify consistency across SOP, BPMN, governance plan, and discovery notes
+4. **Full AI appendix** — session-by-session accounting of Claude usage (Entries 39-45)
+5. **Assemble final submission package** — update A-capstone/ with all final deliverables
 
 ### Capstone File State (as of 2026-04-12)
 - `capstone/discovery-notes.md` ✅
@@ -83,8 +124,9 @@ This process package was originally created for Module 05 (CLI) and copied here 
 - `capstone/checkpoint-remaining-work-plan.md` ✅
 - `capstone/checkpoint-memo.md` ✅
 - `capstone/checkpoint-ai-usage-note.md` ✅
-- `A-capstone/` ✅ — 8 files, ready for Canvas submission
-- `capstone/governance.md` ❌ — not started (next task)
+- `A-capstone/` ✅ — submitted to Canvas
+- `capstone/governance.md` ⚠️ — draft created, needs user review and edits
+- `capstone/governance.pdf` ❌ — not exported yet
 
 ### ✅ Week 12 — COMPLETE
 - Track A (Consultant) confirmed ✅

@@ -57,10 +57,12 @@ Abbey submitted a structured process outline covering the full lifecycle of a do
 
 ## Open Questions for Abbey
 
-1. Is the meet and greet decision rule (new vs. repeat client) accurate, or does she use a different trigger?
-2. What booking platform or channel does she primarily use (app, text, Rover, etc.)?
-3. Is there a maximum number of dogs she boards at one time?
-4. Is a preferred emergency vet predetermined, or does the owner provide it at drop-off?
+| # | Question | Status |
+|---|----------|--------|
+| 1 | Is the meet and greet decision rule (new vs. repeat client) accurate, or does she use a different trigger? | **Resolved** — Abbey reviewed SOP v1.1 on 2026-04-12 and confirmed no concerns; decision rule accepted as modeled |
+| 2 | What booking platform or channel does she primarily use (app, text, Rover, etc.)? | **Out of scope** — not addressed in v1.0; platform documented as "app, text, or direct message" per Abbey's outline |
+| 3 | Is there a maximum number of dogs she boards at one time? | **Out of scope** — not addressed in v1.0 |
+| 4 | Is a preferred emergency vet predetermined, or does the owner provide it at drop-off? | **Resolved** — SOP Step 5 captures preferred vet at drop-off; Abbey confirmed no concerns |
 
 ---
 

@@ -12,11 +12,13 @@ The current SOP draft (v1.1) and BPMN process diagram (PDF) were sent to Abbey C
 
 > "Let me know if you have any changes to suggest and I would be more than happy to look over your SOP/BPMN."
 
-As of 2026-04-12, Abbey has not requested any changes or flagged any inaccuracies.
+On 2026-04-12, Abbey responded: **"It looks great!"** She raised no concerns and requested no modifications.
 
-The absence of requested changes is consistent with the nature of the draft. The SOP was built directly from Abbey's own written process outline, submitted 2026-04-05. No new phases, roles, or decision rules were invented — the consultant's primary contributions were formalizing the language, resolving two structural ambiguities (G-01 and G-03 from the discovery notes), and explicitly labeling two items as out of scope (booking platform, payment processing). Abbey's silence is most likely confirmation that the draft reflects her process accurately.
+This constitutes explicit partner validation of the SOP and BPMN as accurate representations of her process. The SOP remains at v1.1 — no revisions were required as a result of the review.
 
-The BPMN diagram is a structured interpretation of the SOP rather than a direct transcript of Abbey's outline. It introduces swimlane organization, XOR gateway notation, and a looping construct for daily care that were not present in Abbey's original document. This is the area most likely to require adjustment if Abbey has a different mental model of the process flow.
+The review outcome is consistent with how the draft was built. The SOP was constructed directly from Abbey's own written process outline (submitted 2026-04-05). The consultant's contributions were formalizing the language, resolving two structural ambiguities (G-01: meet and greet trigger; G-03: Step 6/7 escalation boundary), and explicitly labeling two items as out of scope (booking platform, payment processing). Abbey's confirmation indicates these decisions were accurate.
+
+The BPMN diagram — which introduced swimlane organization, XOR gateway notation, and a looping construct not present in Abbey's original outline — was also accepted without revision. This validates the structural interpretation the consultant applied.
 
 ---
 

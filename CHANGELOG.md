@@ -1,5 +1,23 @@
 # Changelog
 
+## [2.6.0] — 2026-04-19
+
+### Added
+
+- `capstone/process.png` — PNG export of BPMN diagram for embedding in consolidated package.
+- `capstone/capstone-package.md` — Master consolidated capstone document: SOP (Parts I), BPMN diagram (Part II), Stakeholder Identification (Part III), Governance Notes (Part IV), Improvement Recommendations (Part V).
+- `capstone/capstone-package.pdf` — PDF export of consolidated package; BPMN diagram renders on its own landscape page.
+- `A15/01 SOP Package Geanuracos.pdf` — Final submission package for Module 15 Canvas submission.
+
+### Changed
+
+- `capstone/SOP.md` — Next Review Date corrected to 2026-07-12 (quarterly per governance plan; was 2027-04-07). Partner review confirmation added to Change Summary. Section 8 (Improvement Recommendations) added: Recommendation 1 (Standardized Client Intake Form, High priority) and Recommendation 2 (Pre-Stay Emergency Veterinary Authorization, Medium priority).
+- `capstone/SOP.pdf` — Regenerated to reflect SOP v1.1 changes.
+- `capstone/discovery-notes.md` — Open Questions section converted to status table; Q1 and Q4 marked Resolved (Abbey confirmed); Q2 and Q3 marked Out of Scope.
+- `capstone/checkpoint-partner-reaction.md` — Partner Review Status updated: Abbey Cohen responded on 2026-04-12 with confirmation ("It looks great!"); no concerns or modifications requested. SOP remains at v1.1.
+
+---
+
 ## [2.5.0] — 2026-04-15
 
 ### Added
